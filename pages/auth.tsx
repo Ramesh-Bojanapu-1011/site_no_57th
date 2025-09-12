@@ -14,6 +14,11 @@ const Auth = () => {
     email: "",
     password: "",
   });
+  const [showRegisterPassword, setShowRegisterPassword] = useState(false);
+  const [showForgotPassword, setShowForgotPassword] = useState(false);
+  const [showAdminPassword, setShowAdminPassword] = useState(false);
+  const [showLoginPassword, setShowLoginPassword] = useState(false);
+
   const [userForgot, setUserForgot] = useState({ email: "", password: "" });
   const [adminLogin, setAdminLogin] = useState({ email: "", password: "" });
   const [message, setMessage] = useState("");
@@ -185,7 +190,7 @@ const Auth = () => {
                     }
                   />
                   <input
-                    type="password"
+                    type={showRegisterPassword ? "text" : "password"}
                     required
                     placeholder="Password"
                     className="w-full px-4 py-2 rounded border"
@@ -197,6 +202,15 @@ const Auth = () => {
                       })
                     }
                   />
+                  <div className="w-full flex justify-end mt-1">
+                    <button
+                      type="button"
+                      className="text-sm text-blue-600 dark:text-blue-400 hover:underline focus:outline-none"
+                      onClick={() => setShowRegisterPassword((prev) => !prev)}
+                    >
+                      {showRegisterPassword ? "Hide Password" : "Show Password"}
+                    </button>
+                  </div>
                   <button
                     type="submit"
                     className="w-full py-2 bg-blue-600 text-white rounded font-bold hover:bg-blue-700 transition"
@@ -239,7 +253,7 @@ const Auth = () => {
                     }
                   />
                   <input
-                    type="password"
+                    type={showLoginPassword ? "text" : "password"}
                     required
                     placeholder="Password"
                     className="w-full px-4 py-2 rounded border"
@@ -248,6 +262,15 @@ const Auth = () => {
                       setUserLogin({ ...userLogin, password: e.target.value })
                     }
                   />
+                  <div className="w-full flex justify-end mt-1">
+                    <button
+                      type="button"
+                      className="text-sm text-blue-600 dark:text-blue-400 hover:underline focus:outline-none"
+                      onClick={() => setShowLoginPassword((prev) => !prev)}
+                    >
+                      {showLoginPassword ? "Hide Password" : "Show Password"}
+                    </button>
+                  </div>
                   <span
                     className="text-sm w-full flex justify-end text-blue-600 dark:text-blue-400 hover:underline cursor-pointer"
                     onClick={() => {
@@ -299,7 +322,7 @@ const Auth = () => {
                     }
                   />
                   <input
-                    type="password"
+                    type={showForgotPassword ? "text" : "password"}
                     required
                     placeholder="New Password"
                     className="w-full px-4 py-2 rounded border"
@@ -308,6 +331,15 @@ const Auth = () => {
                       setUserForgot({ ...userForgot, password: e.target.value })
                     }
                   />
+                  <div className="w-full flex justify-end mt-1">
+                    <button
+                      type="button"
+                      className="text-sm text-blue-600 dark:text-blue-400 hover:underline focus:outline-none"
+                      onClick={() => setShowForgotPassword((prev) => !prev)}
+                    >
+                      {showForgotPassword ? "Hide Password" : "Show Password"}
+                    </button>
+                  </div>
                   <button
                     type="submit"
                     className="w-full py-2 bg-blue-600 text-white rounded font-bold hover:bg-blue-700 transition"
@@ -347,7 +379,7 @@ const Auth = () => {
               }
             />
             <input
-              type="password"
+              type={showAdminPassword ? "text" : "password"}
               required
               placeholder="Admin Password"
               className="w-full px-4 py-2 rounded border"
@@ -356,6 +388,15 @@ const Auth = () => {
                 setAdminLogin({ ...adminLogin, password: e.target.value })
               }
             />
+            <div className="w-full flex justify-end mt-1">
+              <button
+                type="button"
+                className="text-sm text-blue-600 dark:text-blue-400 hover:underline focus:outline-none"
+                onClick={() => setShowAdminPassword((prev) => !prev)}
+              >
+                {showAdminPassword ? "Hide Password" : "Show Password"}
+              </button>
+            </div>
             <button
               type="submit"
               className="w-full py-2 bg-blue-600 text-white rounded font-bold hover:bg-blue-700 transition"
