@@ -1,12 +1,12 @@
+import { ThemeProvider } from "@/components/theme/ThemeProvider";
+import i18n from "@/i18n";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import { ThemeProvider } from "@/components/theme/ThemeProvider";
-import { useState, useEffect } from "react";
-import i18n from "@/i18n";
+import React from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [langReady, setLangReady] = useState(false);
-  useEffect(() => {
+  const [langReady, setLangReady] = React.useState(false);
+  React.useEffect(() => {
     if (typeof window !== "undefined") {
       const savedLang = localStorage.getItem("selectedLanguage");
       if (savedLang === "English" && i18n.language !== "en")

@@ -1,4 +1,5 @@
-import { ModeToggle } from "@/components/theme/ModeToggle";
+import Footer from "@/components/Footer";
+import Hedder from "@/components/Hedder";
 import Head from "next/head";
 
 export default function Home() {
@@ -10,8 +11,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className="   flex flex-col items-center justify-center  ">
-        <h1 className="text-2xl font-bold text-amber-600 dark:text-amber-50">hello</h1>
-        <ModeToggle/>
+        <Hedder />
+        <Footer />
       </div>
     </>
   );
