@@ -113,7 +113,7 @@ const Footer = () => {
       </div>
 
       <div className="text-center text-xs text-gray-500 dark:text-gray-400 mt-8">
-        &copy; {new Date().getFullYear()} Enkonix IT. All rights reserved.
+        &copy; {new Date().getFullYear()} Stackly. All rights reserved.
       </div>
     </footer>
   );
