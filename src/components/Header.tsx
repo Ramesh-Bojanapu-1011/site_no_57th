@@ -22,7 +22,7 @@ const languages = [
   { code: 'he', label: 'Hebrew' },
 ];
 
-const Hedder = () => {
+const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [homeOpen, setHomeOpen] = useState(false);
@@ -398,4 +398,4 @@ const Hedder = () => {
   );
 };
 
-export default Hedder;
+export default Header;

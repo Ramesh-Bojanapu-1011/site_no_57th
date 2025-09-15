@@ -1,5 +1,5 @@
 import Footer from '@/components/Footer';
-import Hedder from '@/components/Hedder';
+import Header from '@/components/Header';
 import { Facebook, Mail, Twitch, Twitter } from 'lucide-react';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -207,7 +207,7 @@ const services = (props: Props) => {
         <meta name="description" content="Learn more about our services." />
       </Head>
       <main className="bg-[#f7fafd] dark:bg-[#101624] text-gray-900 dark:text-white caret-transparent">
-        <Hedder />
+        <Header />
         {/* Hero Section */}
         <section className="relative h-[100vh] flex flex-col justify-center items-center text-center bg-gradient-to-r from-blue-500 to-purple-600 dark:from-blue-900 dark:to-purple-900 overflow-hidden">
           {/* Background Video */}
