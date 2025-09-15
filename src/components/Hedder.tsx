@@ -155,6 +155,14 @@ const Hedder = () => {
             </button>
             {servicesOpen && (
               <ul className="absolute left-0 mt-2 w-56 bg-white dark:bg-gray-800 shadow-xl rounded-lg py-2 border border-blue-100 dark:border-gray-700">
+                <li>
+                  <Link
+                    href="/services"
+                    className="block px-4 border-b py-2 hover:bg-blue-50 dark:hover:bg-gray-700"
+                  >
+                    All Services
+                  </Link>
+                </li>
                 {services.map((service) => (
                   <li key={service.name} className="flex ">
                     <Link
@@ -298,6 +306,14 @@ const Hedder = () => {
               </button>
               {servicesOpen && (
                 <ul className="ml-6 mt-1">
+                  <li>
+                    <Link
+                      href="/services"
+                      className="block px-4 border-b py-2 hover:bg-blue-50 dark:hover:bg-gray-700"
+                    >
+                      All Services
+                    </Link>
+                  </li>
                   {services.map((service) => (
                     <li key={service.name}>
                       <Link
