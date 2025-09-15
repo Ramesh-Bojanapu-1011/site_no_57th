@@ -1,5 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 import {
   Facebook,
   Twitter,
@@ -8,22 +8,22 @@ import {
   Mail,
   Phone,
   MapPin,
-} from "lucide-react";
+} from 'lucide-react';
 
 const services = [
-  { name: "Network Security" },
-  { name: "Cloud Backup and Recovery" },
-  { name: "IT Infrastructure" },
-  { name: "Endpoint Protection" },
-  { name: "Security Awareness Training" },
-  { name: "Vulnerability Assessment" },
+  { name: 'Network Security' },
+  { name: 'Cloud Backup and Recovery' },
+  { name: 'IT Infrastructure' },
+  { name: 'Endpoint Protection' },
+  { name: 'Security Awareness Training' },
+  { name: 'Vulnerability Assessment' },
 ];
 
 const quickLinks = [
-  { name: "Home", href: "/home1" },
-  { name: "About Us", href: "/about-us" },
-  { name: "Blog", href: "/blog" },
-  { name: "Contact Us", href: "/contact" },
+  { name: 'Home', href: '/home1' },
+  { name: 'About Us', href: '/about-us' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Contact Us', href: '/contact' },
 ];
 
 const Footer = () => {
@@ -85,7 +85,7 @@ const Footer = () => {
             {services.map((service, index) => (
               <li key={index}>
                 <Link
-                  href={`/${service.name.replace(/\s+/g, "-").toLowerCase()}`}
+                  href={`/${service.name.replace(/\s+/g, '-').toLowerCase()}`}
                   className="hover:text-blue-600 transition"
                 >
                   {service.name}

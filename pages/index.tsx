@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Head from 'next/head';
 
 export default function Home() {
   return (
@@ -45,12 +45,12 @@ export default function Home() {
             <br />
             <span className="text-blue-600 dark:text-blue-400 font-semibold">
               Cybersecurity
-            </span>{" "}
-            |{" "}
+            </span>{' '}
+            |{' '}
             <span className="text-blue-600 dark:text-blue-400 font-semibold">
               Cloud Services
-            </span>{" "}
-            |{" "}
+            </span>{' '}
+            |{' '}
             <span className="text-blue-600 dark:text-blue-400 font-semibold">
               IT Consulting
             </span>

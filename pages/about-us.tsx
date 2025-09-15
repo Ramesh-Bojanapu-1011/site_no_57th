@@ -1,36 +1,36 @@
-import Footer from "@/components/Footer";
-import Hedder from "@/components/Hedder";
-import React from "react";
-import Image from "next/image";
-import Head from "next/head";
+import Footer from '@/components/Footer';
+import Hedder from '@/components/Hedder';
+import React from 'react';
+import Image from 'next/image';
+import Head from 'next/head';
 
 const team = [
   {
-    name: "Ramesh Bojanapu",
-    role: "Founder & CEO",
-    img: "/team1.jpg",
+    name: 'Ramesh Bojanapu',
+    role: 'Founder & CEO',
+    img: '/team1.jpg',
   },
   {
-    name: "Priya Sharma",
-    role: "CTO",
-    img: "/team2.jpg",
+    name: 'Priya Sharma',
+    role: 'CTO',
+    img: '/team2.jpg',
   },
   {
-    name: "Amit Patel",
-    role: "Lead Developer",
-    img: "/team3.jpg",
+    name: 'Amit Patel',
+    role: 'Lead Developer',
+    img: '/team3.jpg',
   },
   {
-    name: "Sara Lee",
-    role: "UI/UX Designer",
-    img: "/team4.jpg",
+    name: 'Sara Lee',
+    role: 'UI/UX Designer',
+    img: '/team4.jpg',
   },
 ];
 
 const achievements = [
   {
-    title: "100+ Projects",
-    desc: "Successfully delivered over 100 projects across industries.",
+    title: '100+ Projects',
+    desc: 'Successfully delivered over 100 projects across industries.',
     icon: (
       <svg width="40" height="40" fill="none" viewBox="0 0 24 24">
         <circle cx="12" cy="12" r="10" stroke="#38bdf8" strokeWidth="2" />
@@ -39,8 +39,8 @@ const achievements = [
     ),
   },
   {
-    title: "Award Winning",
-    desc: "Recognized for innovation and excellence in software.",
+    title: 'Award Winning',
+    desc: 'Recognized for innovation and excellence in software.',
     icon: (
       <svg width="40" height="40" fill="none" viewBox="0 0 24 24">
         <rect
@@ -55,8 +55,8 @@ const achievements = [
     ),
   },
   {
-    title: "Global Clients",
-    desc: "Trusted by clients in 15+ countries worldwide.",
+    title: 'Global Clients',
+    desc: 'Trusted by clients in 15+ countries worldwide.',
     icon: (
       <svg width="40" height="40" fill="none" viewBox="0 0 24 24">
         <path d="M12 2v20M2 12h20" stroke="#8b5cf6" strokeWidth="2" />
@@ -130,11 +130,11 @@ const AboutUs = () => {
                         />
                       </svg>
                     ),
-                    bg: "bg-blue-500 dark:bg-blue-700",
-                    title: "2015: Founded",
-                    titleClass: "text-blue-700 dark:text-blue-300",
-                    desc: "Started as a small startup with a vision for innovative IT solutions.",
-                    mb: "mb-10",
+                    bg: 'bg-blue-500 dark:bg-blue-700',
+                    title: '2015: Founded',
+                    titleClass: 'text-blue-700 dark:text-blue-300',
+                    desc: 'Started as a small startup with a vision for innovative IT solutions.',
+                    mb: 'mb-10',
                   },
                   {
                     icon: (
@@ -154,11 +154,11 @@ const AboutUs = () => {
                         />
                       </svg>
                     ),
-                    bg: "bg-purple-500 dark:bg-purple-700",
-                    title: "2018: First Major Award",
-                    titleClass: "text-purple-700 dark:text-purple-300",
-                    desc: "Recognized for excellence in software development and client service.",
-                    mb: "mb-10",
+                    bg: 'bg-purple-500 dark:bg-purple-700',
+                    title: '2018: First Major Award',
+                    titleClass: 'text-purple-700 dark:text-purple-300',
+                    desc: 'Recognized for excellence in software development and client service.',
+                    mb: 'mb-10',
                   },
                   {
                     icon: (
@@ -175,11 +175,11 @@ const AboutUs = () => {
                         />
                       </svg>
                     ),
-                    bg: "bg-orange-500 dark:bg-orange-700",
-                    title: "2021: 100+ Projects",
-                    titleClass: "text-orange-600 dark:text-orange-400",
-                    desc: "Delivered over 100 successful projects for clients worldwide.",
-                    mb: "mb-10",
+                    bg: 'bg-orange-500 dark:bg-orange-700',
+                    title: '2021: 100+ Projects',
+                    titleClass: 'text-orange-600 dark:text-orange-400',
+                    desc: 'Delivered over 100 successful projects for clients worldwide.',
+                    mb: 'mb-10',
                   },
                   {
                     icon: (
@@ -198,11 +198,11 @@ const AboutUs = () => {
                         />
                       </svg>
                     ),
-                    bg: "bg-green-500 dark:bg-green-700",
-                    title: "2025: Global Expansion",
-                    titleClass: "text-green-700 dark:text-green-300",
-                    desc: "Expanded our reach to serve clients in 15+ countries.",
-                    mb: "",
+                    bg: 'bg-green-500 dark:bg-green-700',
+                    title: '2025: Global Expansion',
+                    titleClass: 'text-green-700 dark:text-green-300',
+                    desc: 'Expanded our reach to serve clients in 15+ countries.',
+                    mb: '',
                   },
                 ].map((item, idx) => (
                   <div className={`${item.mb} relative`} key={idx}>
@@ -275,10 +275,10 @@ const AboutUs = () => {
                       </svg>
                     </span>
                   ),
-                  title: "Innovation",
-                  titleClass: "text-blue-700 dark:text-blue-300",
-                  desc: "We embrace new technologies and creative solutions to drive progress for our clients.",
-                  connector: "bg-blue-200 dark:bg-blue-900",
+                  title: 'Innovation',
+                  titleClass: 'text-blue-700 dark:text-blue-300',
+                  desc: 'We embrace new technologies and creative solutions to drive progress for our clients.',
+                  connector: 'bg-blue-200 dark:bg-blue-900',
                 },
                 {
                   icon: (
@@ -300,10 +300,10 @@ const AboutUs = () => {
                       </svg>
                     </span>
                   ),
-                  title: "Integrity",
-                  titleClass: "text-purple-700 dark:text-purple-300",
-                  desc: "Honesty, transparency, and ethical practices are at the heart of everything we do.",
-                  connector: "bg-purple-200 dark:bg-purple-900",
+                  title: 'Integrity',
+                  titleClass: 'text-purple-700 dark:text-purple-300',
+                  desc: 'Honesty, transparency, and ethical practices are at the heart of everything we do.',
+                  connector: 'bg-purple-200 dark:bg-purple-900',
                 },
                 {
                   icon: (
@@ -322,10 +322,10 @@ const AboutUs = () => {
                       </svg>
                     </span>
                   ),
-                  title: "Excellence",
-                  titleClass: "text-orange-600 dark:text-orange-400",
-                  desc: "We strive for excellence in every project, ensuring top-quality results and client satisfaction.",
-                  connector: "",
+                  title: 'Excellence',
+                  titleClass: 'text-orange-600 dark:text-orange-400',
+                  desc: 'We strive for excellence in every project, ensuring top-quality results and client satisfaction.',
+                  connector: '',
                 },
               ].map((step, idx, arr) => (
                 <div
@@ -394,28 +394,28 @@ const AboutUs = () => {
                 <div
                   key={idx}
                   className={`relative z-10 flex flex-col items-center mb-12 last:mb-0 w-full ${
-                    idx % 2 === 0 ? " md:ml-0 md:mr-auto" : "md:mr-0 md:ml-auto"
+                    idx % 2 === 0 ? ' md:ml-0 md:mr-auto' : 'md:mr-0 md:ml-auto'
                   }`}
                   style={{
                     //   marginLeft: idx % 2 === 0 ? "0" : "auto",
                     //   marginRight: idx % 2 === 0 ? "auto" : "0",
-                    maxWidth: "400px",
+                    maxWidth: '400px',
                   }}
                 >
                   {/* Connector dot */}
                   <div
                     className={`w-10 h-10 flex items-center justify-center rounded-full shadow-lg mb-4 ${
                       idx === 0
-                        ? "bg-blue-100 dark:bg-blue-900"
+                        ? 'bg-blue-100 dark:bg-blue-900'
                         : idx === 1
-                        ? "bg-orange-100 dark:bg-orange-900"
-                        : "bg-purple-100 dark:bg-purple-900"
+                          ? 'bg-orange-100 dark:bg-orange-900'
+                          : 'bg-purple-100 dark:bg-purple-900'
                     }`}
                     style={{
-                      position: "absolute",
-                      left: "50%",
-                      transform: "translate(-50%, -50%)",
-                      top: "-20px",
+                      position: 'absolute',
+                      left: '50%',
+                      transform: 'translate(-50%, -50%)',
+                      top: '-20px',
                     }}
                   >
                     {ach.icon}

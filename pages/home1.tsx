@@ -1,8 +1,8 @@
-import Footer from "@/components/Footer";
-import Hedder from "@/components/Hedder";
-import Head from "next/head";
-import Image from "next/image";
-import React from "react";
+import Footer from '@/components/Footer';
+import Hedder from '@/components/Hedder';
+import Head from 'next/head';
+import Image from 'next/image';
+import React from 'react';
 import {
   Cloud,
   Lightbulb,
@@ -10,35 +10,35 @@ import {
   Shield,
   ShieldCheck,
   HouseHeart,
-} from "lucide-react";
+} from 'lucide-react';
 
 type Props = {};
 
 const testimonialsData = [
   {
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
-    text: "Our IT infrastructure is now robust and scalable. The team delivered seamless migration to the cloud and ongoing support is top-notch!",
-    name: "David Kim, CTO, FinTechPro",
+    image: 'https://randomuser.me/api/portraits/men/32.jpg',
+    text: 'Our IT infrastructure is now robust and scalable. The team delivered seamless migration to the cloud and ongoing support is top-notch!',
+    name: 'David Kim, CTO, FinTechPro',
   },
   {
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
-    text: "Their cybersecurity experts helped us achieve compliance and peace of mind. Threats are detected and resolved before they impact our business.",
-    name: "Priya Singh, IT Manager, HealthSecure",
+    image: 'https://randomuser.me/api/portraits/women/44.jpg',
+    text: 'Their cybersecurity experts helped us achieve compliance and peace of mind. Threats are detected and resolved before they impact our business.',
+    name: 'Priya Singh, IT Manager, HealthSecure',
   },
   {
-    image: "https://randomuser.me/api/portraits/men/65.jpg",
-    text: "We saved 30% on IT costs and improved uptime after switching to their managed cloud services. Highly recommended for any growing company!",
-    name: "Alex Chen, CEO, Cloudify Solutions",
+    image: 'https://randomuser.me/api/portraits/men/65.jpg',
+    text: 'We saved 30% on IT costs and improved uptime after switching to their managed cloud services. Highly recommended for any growing company!',
+    name: 'Alex Chen, CEO, Cloudify Solutions',
   },
   {
-    image: "https://randomuser.me/api/portraits/women/68.jpg",
-    text: "The team’s proactive approach to cybersecurity keeps our data safe and our clients confident. Their training sessions are engaging and effective.",
-    name: "Maria Lopez, Operations Director, MedTechCare",
+    image: 'https://randomuser.me/api/portraits/women/68.jpg',
+    text: 'The team’s proactive approach to cybersecurity keeps our data safe and our clients confident. Their training sessions are engaging and effective.',
+    name: 'Maria Lopez, Operations Director, MedTechCare',
   },
   {
-    image: "https://randomuser.me/api/portraits/men/21.jpg",
-    text: "From IT consulting to cloud migration, every step was handled professionally. We now have a future-proof digital strategy.",
-    name: "John Evans, CIO, RetailNext",
+    image: 'https://randomuser.me/api/portraits/men/21.jpg',
+    text: 'From IT consulting to cloud migration, every step was handled professionally. We now have a future-proof digital strategy.',
+    name: 'John Evans, CIO, RetailNext',
   },
 ];
 
@@ -312,7 +312,7 @@ const home1 = (props: Props) => {
                     <HouseHeart className="w-5 h-5 text-purple-600 dark:text-purple-300" />
                   </div>
                   <span className="text-sm text-gray-700 dark:text-gray-300">
-                    Call Us:{" "}
+                    Call Us:{' '}
                     <span className="font-semibold">1-888-555-8780</span>
                   </span>
                 </div>
@@ -537,7 +537,7 @@ const home1 = (props: Props) => {
               <div className="overflow-hidden">
                 <div
                   className="flex justify-center items-center transition-transform duration-500 ease-in-out"
-                  style={{ width: "100%", overflow: "hidden" }}
+                  style={{ width: '100%', overflow: 'hidden' }}
                 >
                   {/* Show previous, active, and next testimonials */}
                   {(() => {
@@ -549,11 +549,11 @@ const home1 = (props: Props) => {
                     return [prevIndex, activeIndex, nextIndex].map(
                       (indexToShow, idx) => {
                         let cardClass =
-                          "flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-5 transition-all duration-300 ";
+                          'flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-5 transition-all duration-300 ';
                         if (indexToShow === activeIndex) {
-                          cardClass += "opacity-100 scale-105 z-10";
+                          cardClass += 'opacity-100 scale-105 z-10';
                         } else {
-                          cardClass += "opacity-40 scale-90 z-0";
+                          cardClass += 'opacity-40 scale-90 z-0';
                         }
                         const testimonial = testimonialsData[indexToShow];
                         return (
@@ -561,15 +561,15 @@ const home1 = (props: Props) => {
                             <div
                               className={`bg-white dark:bg-gray-800 p-5 rounded-md text-center border border-gray-200 dark:border-gray-700 shadow-xl ${
                                 indexToShow === activeIndex
-                                  ? "ring-2 ring-blue-500"
-                                  : ""
+                                  ? 'ring-2 ring-blue-500'
+                                  : ''
                               }`}
                             >
                               <Image
                                 className={`w-20 h-20 mx-auto mb-4 rounded-full ${
                                   indexToShow === activeIndex
-                                    ? "ring-4 ring-blue-500"
-                                    : ""
+                                    ? 'ring-4 ring-blue-500'
+                                    : ''
                                 }`}
                                 src={testimonial.image}
                                 width={80}
@@ -579,8 +579,8 @@ const home1 = (props: Props) => {
                               <p
                                 className={`text-base leading-relaxed font-light mb-4 ${
                                   indexToShow === activeIndex
-                                    ? "text-blue-700 dark:text-blue-300"
-                                    : "text-gray-500 dark:text-gray-400"
+                                    ? 'text-blue-700 dark:text-blue-300'
+                                    : 'text-gray-500 dark:text-gray-400'
                                 }`}
                               >
                                 {testimonial.text}
@@ -589,8 +589,8 @@ const home1 = (props: Props) => {
                             <div
                               className={`testimonial-name -mt-4 mx-auto w-auto px-8 py-2 rounded-xl text-center shadow-lg ${
                                 indexToShow === activeIndex
-                                  ? "bg-blue-500 text-white font-bold"
-                                  : "bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300"
+                                  ? 'bg-blue-500 text-white font-bold'
+                                  : 'bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300'
                               }`}
                             >
                               {testimonial.name}
@@ -607,7 +607,7 @@ const home1 = (props: Props) => {
                   <button
                     key={index}
                     className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                      index === activeIndex ? "bg-blue-500 w-6" : "bg-gray-400"
+                      index === activeIndex ? 'bg-blue-500 w-6' : 'bg-gray-400'
                     }`}
                     onClick={() => setActiveIndex(index)}
                   ></button>
