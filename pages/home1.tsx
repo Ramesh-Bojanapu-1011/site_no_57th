@@ -597,7 +597,7 @@ const home1 = (props: Props) => {
                             </div>
                           </div>
                         );
-                      }
+                      },
                     );
                   })()}
                 </div>
