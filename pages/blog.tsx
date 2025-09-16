@@ -1,5 +1,5 @@
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
+import SiteFooter from '@/components/SiteFooter';
+import SiteHeader from '@/components/SiteHeader';
 import {
   BoltIcon,
   CloudAlert,
@@ -25,7 +25,7 @@ const blog = (props: Props) => {
         />
       </Head>
       <main className="bg-[#101624] text-white min-h-screen caret-transparent">
-        <Header />
+        <SiteHeader />
         {/* Hero Section */}
         <section className="relative h-[100vh] flex flex-col justify-center items-center text-center bg-gradient-to-r from-blue-700 to-purple-800 overflow-hidden">
           <h1 className="text-5xl font-extrabold mb-4 text-white drop-shadow-lg">
@@ -296,7 +296,7 @@ const blog = (props: Props) => {
           </div>
         </section>
 
-        <Footer />
+        <SiteFooter />
       </main>
     </>
   );

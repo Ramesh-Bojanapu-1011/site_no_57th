@@ -1,5 +1,5 @@
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
+import SiteFooter from '@/components/SiteFooter';
+import SiteHeader from '@/components/SiteHeader';
 import Head from 'next/head';
 import Image from 'next/image';
 
@@ -75,7 +75,7 @@ const AboutUs = () => {
         />
       </Head>
       <main className="bg-[#f7fafd] dark:bg-[#101624] text-gray-900 dark:text-white caret-transparent">
-        <Header />
+        <SiteHeader />
         {/* 1. Hero Section */}
         <section className="relative h-screen flex justify-center items-center flex-col bg-gradient-to-r from-blue-500 to-purple-600 dark:from-blue-900 dark:to-purple-900 text-white text-center overflow-hidden">
           {/* Background Video */}
@@ -451,7 +451,7 @@ const AboutUs = () => {
             </a>
           </div>
         </section>
-        <Footer />
+        <SiteFooter />
       </main>
     </>
   );

@@ -22,7 +22,7 @@ const languages = [
   { code: 'he', label: 'Hebrew' },
 ];
 
-const Header = () => {
+const SiteHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [homeOpen, setHomeOpen] = useState(false);
@@ -408,4 +408,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default SiteHeader;

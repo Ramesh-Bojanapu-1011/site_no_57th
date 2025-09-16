@@ -1,5 +1,5 @@
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
+import SiteFooter from '@/components/SiteFooter';
+import SiteHeader from '@/components/SiteHeader';
 import {
   Cloud,
   HouseHeart,
@@ -63,7 +63,7 @@ const home1 = (props: Props) => {
         />
       </Head>
       <main className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen caret-transparent">
-        <Header />
+        <SiteHeader />
         {/* Hero Section */}
         <section className="relative h-screen flex flex-col items-center justify-center py-20 px-4 bg-gradient-to-r from-blue-500 to-purple-600 dark:from-blue-900 dark:to-purple-900 overflow-hidden">
           {/* Background Video */}
@@ -616,7 +616,7 @@ const home1 = (props: Props) => {
             </div>
           </div>
         </section>
-        <Footer />
+        <SiteFooter />
       </main>
     </>
   );

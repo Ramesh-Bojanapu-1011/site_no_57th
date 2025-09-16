@@ -1,5 +1,5 @@
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
+import SiteFooter from '@/components/SiteFooter';
+import SiteHeader from '@/components/SiteHeader';
 import AOS from 'aos';
 import Head from 'next/head';
 import React from 'react';
@@ -379,7 +379,7 @@ const home2 = (props: Props) => {
         />
       </Head>
       <main className="caret-transparent">
-        <Header />
+        <SiteHeader />
         {/* Hero Section - Software Innovation & Development */}
         <section className="relative flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-blue-500 to-purple-600 dark:from-blue-900 dark:to-purple-900 text-white px-8 py-20 overflow-hidden">
           {/* Background Video */}
@@ -801,7 +801,7 @@ const home2 = (props: Props) => {
           </div>
         </section>
 
-        <Footer />
+        <SiteFooter />
       </main>
     </>
   );

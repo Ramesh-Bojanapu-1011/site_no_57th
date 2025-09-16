@@ -26,7 +26,7 @@ const quickLinks = [
   { name: 'Contact Us', href: '/contact-us' },
 ];
 
-const Footer = () => {
+const SiteFooter = () => {
   return (
     <footer className="bg-gradient-to-r from-blue-50 via-white to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-gray-900 dark:text-white border-t border-blue-100 dark:border-gray-800 pt-10 pb-4 px-4">
       <div className=" max-w-screen   mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -119,4 +119,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default SiteFooter;
