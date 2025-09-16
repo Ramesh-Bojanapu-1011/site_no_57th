@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 import Image from 'next/image';
+import React, { useState } from 'react';
 
 const ADMIN_EMAIL = 'admin@enconix.in';
 const ADMIN_PASSWORD = 'admin123';

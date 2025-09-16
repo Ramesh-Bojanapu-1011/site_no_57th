@@ -87,7 +87,7 @@ const Header = () => {
 
   return (
     <header
-      className={`w-full sticky top-0 left-0 z-50 transition-colors duration-300 max-w-screen bg-gradient-to-r from-blue-50 via-white to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-gray-900 dark:text-white shadow-2xl  border-blue-100 dark:border-gray-800`}
+      className={`w-full sticky top-0 left-0 z-50 -colors duration-300 max-w-screen bg-gradient-to-r from-blue-50 via-white to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-gray-900 dark:text-white shadow-2xl  border-blue-100 dark:border-gray-800`}
       style={{ fontFamily: 'Segoe UI, Roboto, Arial, sans-serif' }}
     >
       <nav className="mx-auto flex items-center justify-between px-6 py-3">
@@ -101,7 +101,7 @@ const Header = () => {
           {/* Home Dropdown */}
           <li className="relative group ">
             <button
-              className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 transition"
+              className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 "
               onClick={() => {
                 setHomeOpen((prev) => !prev);
                 setServicesOpen(false);
@@ -135,7 +135,7 @@ const Header = () => {
           <li>
             <Link
               href="/about-us"
-              className="px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 transition"
+              className="px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800"
             >
               About Us
             </Link>
@@ -143,7 +143,7 @@ const Header = () => {
           {/* Services Dropdown */}
           <li className="relative group">
             <button
-              className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 transition"
+              className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 "
               onClick={() => {
                 setServicesOpen((prev) => !prev);
                 setHomeOpen(false);
@@ -169,7 +169,7 @@ const Header = () => {
                       href={`/${service.name
                         .replace(/\s+/g, '-')
                         .toLowerCase()}`}
-                      className="flex items-center w-full gap-2 px-4 py-2 rounded hover:bg-blue-50 dark:hover:bg-gray-700 transition"
+                      className="flex items-center w-full gap-2 px-4 py-2 rounded hover:bg-blue-50 dark:hover:bg-gray-700 "
                     >
                       {service.name}
                     </Link>
@@ -181,7 +181,7 @@ const Header = () => {
           <li>
             <Link
               href="/blog"
-              className="px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 transition"
+              className="px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800"
             >
               Blog
             </Link>
@@ -189,7 +189,7 @@ const Header = () => {
           <li>
             <Link
               href="/contact"
-              className="px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 transition"
+              className="px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800"
             >
               Contact Us
             </Link>
@@ -197,7 +197,7 @@ const Header = () => {
           {/* Languages Dropdown */}
           <li className="relative group">
             <button
-              className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 transition"
+              className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 "
               onClick={() => {
                 setLangOpen((prev) => !prev);
                 setHomeOpen(false);
@@ -213,7 +213,10 @@ const Header = () => {
                   <li key={lang.code}>
                     <button
                       className="block w-full text-left px-4 py-2 hover:bg-blue-50 dark:hover:bg-gray-700"
-                      onClick={() => handleLanguageChange(lang.label)}
+                      onClick={() => {
+                        handleLanguageChange(lang.label);
+                        setLangOpen(false);
+                      }}
                     >
                       {lang.label}
                     </button>
@@ -225,7 +228,7 @@ const Header = () => {
           {/* Profile Dropdown */}
           <li className="relative group">
             <button
-              className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 transition"
+              className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 "
               onClick={() => {
                 setProfileOpen((prev) => !prev);
                 setHomeOpen(false);
@@ -255,7 +258,7 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden p-2 rounded-full border border-blue-100 dark:border-gray-700 bg-blue-50 dark:bg-gray-800 shadow hover:bg-blue-200 dark:hover:bg-gray-700 transition"
+          className="lg:hidden p-2 rounded-full border border-blue-100 dark:border-gray-700 bg-blue-50 dark:bg-gray-800 shadow hover:bg-blue-200 dark:hover:bg-gray-700 "
           onClick={toggleMenu}
           aria-label="Open menu"
         >
@@ -269,7 +272,7 @@ const Header = () => {
           <ul className="flex flex-col gap-3">
             <li>
               <button
-                className="flex items-center gap-2 w-full px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 transition"
+                className="flex items-center gap-2 w-full px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 "
                 onClick={() => setHomeOpen((prev) => !prev)}
               >
                 Home <ChevronDown size={16} />
@@ -292,14 +295,14 @@ const Header = () => {
             <li>
               <Link
                 href="/about-us"
-                className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 transition"
+                className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 "
               >
                 <span>About Us</span>
               </Link>
             </li>
             <li>
               <button
-                className="flex items-center gap-2 w-full px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 transition"
+                className="flex items-center gap-2 w-full px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 "
                 onClick={() => setServicesOpen((prev) => !prev)}
               >
                 Services <ChevronDown size={16} />
@@ -320,7 +323,7 @@ const Header = () => {
                         href={`/${service.name
                           .replace(/\s+/g, '-')
                           .toLowerCase()}`}
-                        className="flex items-center gap-2 py-1 rounded hover:bg-blue-50 dark:hover:bg-gray-700 transition"
+                        className="flex items-center gap-2 py-1 rounded hover:bg-blue-50 dark:hover:bg-gray-700 "
                       >
                         {service.name}
                       </Link>
@@ -332,7 +335,7 @@ const Header = () => {
             <li>
               <Link
                 href="/blog"
-                className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 transition"
+                className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 "
               >
                 Blog
               </Link>
@@ -340,7 +343,7 @@ const Header = () => {
             <li>
               <Link
                 href="/contact"
-                className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 transition"
+                className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 "
               >
                 Contact Us
               </Link>
@@ -351,7 +354,7 @@ const Header = () => {
               {/* Language Dropdown */}
               <div className="relative">
                 <button
-                  className="flex items-center gap-2 px-3 py-2 rounded-lg bg-blue-50 dark:bg-gray-900 hover:bg-blue-200 dark:hover:bg-gray-700 shadow transition"
+                  className="flex items-center gap-2 px-3 py-2 rounded-lg bg-blue-50 dark:bg-gray-900 hover:bg-blue-200 dark:hover:bg-gray-700 shadow "
                   onClick={() => setLangOpen((prev) => !prev)}
                 >
                   <Globe size={18} /> <ChevronDown size={16} />
@@ -360,7 +363,7 @@ const Header = () => {
                   <ul className="absolute left-0 mt-2 w-32 bg-white dark:bg-gray-800 shadow-xl rounded-lg py-2 border border-blue-100 dark:border-gray-700 z-10">
                     {languages.map((lang) => (
                       <li key={lang.code}>
-                        <button className="block px-3 py-1 w-full text-left rounded hover:bg-blue-100 dark:hover:bg-gray-700 transition font-semibold text-blue-700 dark:text-blue-200">
+                        <button className="block px-3 py-1 w-full text-left rounded hover:bg-blue-100 dark:hover:bg-gray-700  font-semibold text-blue-700 dark:text-blue-200">
                           {lang.label}
                         </button>
                       </li>
@@ -371,7 +374,7 @@ const Header = () => {
               {/* Profile Dropdown */}
               <div className="relative">
                 <button
-                  className="flex items-center gap-2 px-3 py-2 rounded-lg bg-blue-50 dark:bg-gray-900 hover:bg-blue-200 dark:hover:bg-gray-700 shadow transition"
+                  className="flex items-center gap-2 px-3 py-2 rounded-lg bg-blue-50 dark:bg-gray-900 hover:bg-blue-200 dark:hover:bg-gray-700 shadow "
                   onClick={() => setProfileOpen((prev) => !prev)}
                 >
                   <User size={18} /> <ChevronDown size={16} />
@@ -379,7 +382,7 @@ const Header = () => {
                 {profileOpen && (
                   <ul className="absolute right-0 mt-2 w-32 bg-white dark:bg-gray-800 shadow-xl rounded-lg py-2 border border-blue-100 dark:border-gray-700 z-10">
                     <li>
-                      <button className="flex items-center gap-2 py-1 w-full rounded hover:bg-blue-100 dark:hover:bg-gray-700 transition font-semibold text-red-600 dark:text-red-400">
+                      <button className="flex items-center gap-2 py-1 w-full rounded hover:bg-blue-100 dark:hover:bg-gray-700  font-semibold text-red-600 dark:text-red-400">
                         <LogOut size={16} /> Logout
                       </button>
                     </li>

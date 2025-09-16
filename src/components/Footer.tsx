@@ -1,14 +1,14 @@
-import Image from 'next/image';
-import Link from 'next/link';
 import {
   Facebook,
-  Twitter,
-  Linkedin,
   Instagram,
+  Linkedin,
   Mail,
-  Phone,
   MapPin,
+  Phone,
+  Twitter,
 } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const services = [
   { name: 'Network Security' },

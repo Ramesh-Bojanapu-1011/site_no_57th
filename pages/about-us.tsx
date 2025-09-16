@@ -1,8 +1,7 @@
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-import React from 'react';
-import Image from 'next/image';
 import Head from 'next/head';
+import Image from 'next/image';
 
 const team = [
   {

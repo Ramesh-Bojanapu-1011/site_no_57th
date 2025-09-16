@@ -1,16 +1,16 @@
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-import Head from 'next/head';
-import Image from 'next/image';
-import React from 'react';
 import {
   Cloud,
+  HouseHeart,
   Lightbulb,
   Rocket,
   Shield,
   ShieldCheck,
-  HouseHeart,
 } from 'lucide-react';
+import Head from 'next/head';
+import Image from 'next/image';
+import React from 'react';
 
 type Props = {};
 
