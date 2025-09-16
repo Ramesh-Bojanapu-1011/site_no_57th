@@ -793,7 +793,7 @@ const home2 = (props: Props) => {
               growth for your company.
             </p>
             <a
-              href="/contact"
+              href="/contact-us"
               className="inline-block bg-blue-600 dark:bg-blue-400 hover:bg-blue-700 dark:hover:bg-blue-500 text-white font-bold py-4 px-10 rounded-full shadow-lg transition-all text-lg"
             >
               Book Free Consultation

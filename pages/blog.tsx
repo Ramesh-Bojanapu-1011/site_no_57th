@@ -99,7 +99,7 @@ const blog = (props: Props) => {
         <section className="py-20 px-4 bg-gradient-to-br from-purple-100 to-blue-50 dark:from-purple-900 dark:to-blue-950 flex justify-center items-center">
           <div className="max-w-3xl w-full mx-auto">
             <div className="relative rounded-3xl bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl border-4 border-transparent bg-clip-padding shadow-2xl p-10 flex flex-col items-center text-center transition-all duration-300 hover:scale-[1.02] hover:border-gradient-to-r hover:from-purple-400 hover:to-blue-400">
-              <span className="absolute  -left-10 top-25 bg-gradient-to-r from-purple-500 to-blue-500 p-4 rounded-full shadow-lg">
+              <span className="absolute block not-md:hidden  -left-10 top-25 bg-gradient-to-r from-purple-500 to-blue-500 p-4 rounded-full shadow-lg">
                 <svg width="40" height="40" fill="none" viewBox="0 0 24 24">
                   <path
                     fill="white"
@@ -158,7 +158,7 @@ const blog = (props: Props) => {
               </p>
             </div>
             <div className=" pb-2">
-              <div className="flex  gap-8 min-w-[600px] justify-center px-2">
+              <div className="flex  gap-8 flex-wrap justify-center px-2">
                 {[
                   {
                     name: 'Network Security',
@@ -289,12 +289,7 @@ const blog = (props: Props) => {
                   type="submit"
                   className="px-8 py-3 rounded-2xl bg-gradient-to-r from-purple-500 to-blue-500 text-white font-bold shadow-lg hover:scale-105 transition-all"
                 >
-                  <span className="inline-flex items-center gap-2">
-                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24">
-                      <path fill="white" d="M2 6l10 7 10-7v2l-10 7-10-7V6z" />
-                    </svg>
-                    Subscribe
-                  </span>
+                  Subscribe
                 </button>
               </form>
             </div>

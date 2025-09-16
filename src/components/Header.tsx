@@ -28,7 +28,7 @@ const Header = () => {
   const [homeOpen, setHomeOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
-  const [langReady, setLangReady] = useState(false);
+
   const router = useRouter();
   const { t } = useTranslation();
 
@@ -54,7 +54,7 @@ const Header = () => {
         }
       };
       setLangFromStorage();
-      setLangReady(true);
+
       // Listen for route changes to re-apply language
       const handleRouteChange = () => {
         setLangFromStorage();
@@ -84,6 +84,7 @@ const Header = () => {
 
   // Responsive mobile menu toggle
   const toggleMenu = () => setMenuOpen((prev) => !prev);
+  console.log('Current route:', window.location.pathname);
 
   return (
     <header
@@ -92,8 +93,14 @@ const Header = () => {
     >
       <nav className="mx-auto flex items-center justify-between px-6 py-3">
         {/* Logo */}
-        <Link href="/home1" className="flex items-center gap-3">
-          <Image src="/logo-stackly.png" alt="Logo" width={100} height={100} />
+        <Link href="/home1" className=" w-auto h-auto">
+          <Image
+            src="/logo-stackly.png"
+            alt="Logo"
+            width={100}
+            height={100}
+            className="w-auto h-auto"
+          />
         </Link>
 
         {/* Desktop Menu */}
@@ -188,7 +195,7 @@ const Header = () => {
           </li>
           <li>
             <Link
-              href="/contact"
+              href="/contact-us"
               className="px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800"
             >
               Contact Us
@@ -342,7 +349,7 @@ const Header = () => {
             </li>
             <li>
               <Link
-                href="/contact"
+                href="/contact-us"
                 className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 "
               >
                 Contact Us
