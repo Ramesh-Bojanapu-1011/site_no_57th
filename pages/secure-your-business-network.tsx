@@ -1,3 +1,4 @@
+import SiteFooter from '@/components/SiteFooter';
 import SiteHeader from '@/components/SiteHeader';
 import React from 'react';
 
@@ -22,7 +23,7 @@ const NetworkSecurity = (props: Props) => {
         />
       </section>
 
-      <section className="mx-auto py-10 px-4 bg-white/80 dark:bg-gray-900/80 rounded-2xl shadow-xl border border-blue-100 dark:border-blue-900 backdrop-blur-lg">
+      <section className="mx-auto py-10 px-4 bg-white/80 dark:bg-gray-900/80   shadow-xl border border-blue-100 dark:border-blue-900 backdrop-blur-lg">
         <h2 className="text-3xl font-bold mb-6 text-blue-700 dark:text-blue-300">
           Introduction
         </h2>
@@ -163,6 +164,7 @@ const NetworkSecurity = (props: Props) => {
           business’s future depends on the strength of your network security.
         </p>
       </section>
+      <SiteFooter />
     </main>
   );
 };

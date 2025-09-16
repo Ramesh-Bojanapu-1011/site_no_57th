@@ -49,7 +49,7 @@ const blog = (props: Props) => {
                   title: '5 Ways to Secure Your Business Network',
                   desc: 'Practical strategies to protect your company from cyber threats.',
                   image: '/globe.svg',
-                  link: '/network-security',
+                  link: '/secure-your-business-network',
                 },
                 {
                   title: 'Cloud Backup: Why It Matters',
