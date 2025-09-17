@@ -1015,5 +1015,111 @@
       "subtitle": "Contact our security awareness experts for a free assessment and discover how we can strengthen your business.",
       "button": "Contact Us"
     }
+  },
+  "vulnerabilityAssessment": {
+    "title": "Vulnerability Assessment | IT Services, Cybersecurity & Cloud",
+    "metaDescription": "Identify and remediate security gaps with expert vulnerability assessment, risk analysis, and compliance solutions.",
+    "hero": {
+      "title": "Vulnerability Assessment",
+      "subtitle": "Uncover and address security weaknesses with comprehensive vulnerability scans, risk analysis, and actionable remediation."
+    },
+    "why": {
+      "title": "Why Vulnerability Assessment Matters",
+      "subtitle": "Regular vulnerability assessments are essential for identifying risks, protecting sensitive data, and maintaining compliance in a dynamic threat landscape.",
+      "risk": "Risk Identification",
+      "remediation": "Actionable Remediation",
+      "compliance": "Compliance & Trust",
+      "continuous": "Continuous Improvement"
+    },
+    "solutions": {
+      "title": "Our Vulnerability Assessment Solutions",
+      "0": {
+        "title": "Automated Scanning",
+        "items": {
+          "0": "Comprehensive vulnerability scans",
+          "1": "Real-time risk detection",
+          "2": "Automated reporting"
+        }
+      },
+      "1": {
+        "title": "Risk Analysis & Prioritization",
+        "items": {
+          "0": "Detailed risk scoring",
+          "1": "Prioritized remediation",
+          "2": "Executive summary reports"
+        }
+      },
+      "2": {
+        "title": "Compliance & Monitoring",
+        "items": {
+          "0": "GDPR, HIPAA, PCI DSS, ISO 27001",
+          "1": "Continuous compliance checks",
+          "2": "Audit-ready documentation"
+        }
+      }
+    },
+    "managed": {
+      "title": "Managed IT & Cloud Services",
+      "cards": {
+        "0": {
+          "title": "IT Strategy & Consulting",
+          "items": {
+            "0": "Custom IT roadmaps for secure growth",
+            "1": "Digital transformation leadership",
+            "2": "Process automation & workflow optimization"
+          }
+        },
+        "1": {
+          "title": "Cloud Services",
+          "items": {
+            "0": "Scalable cloud hosting & infrastructure",
+            "1": "Disaster recovery & backup solutions",
+            "2": "Hybrid & multi-cloud deployments"
+          }
+        },
+        "2": {
+          "title": "Managed IT Support",
+          "items": {
+            "0": "24/7 monitoring & helpdesk",
+            "1": "Proactive maintenance & updates",
+            "2": "Rapid issue resolution"
+          }
+        }
+      }
+    },
+    "awareness": {
+      "title": "Assessment Awareness & Compliance",
+      "steps": {
+        "0": {
+          "title": "Assessment Training & Awareness",
+          "items": {
+            "0": "Workshops & e-learning",
+            "1": "Simulated vulnerability drills",
+            "2": "Employee engagement"
+          }
+        },
+        "1": {
+          "title": "Compliance Management",
+          "items": {
+            "0": "GDPR, HIPAA, PCI DSS, ISO 27001",
+            "1": "Automated reporting",
+            "2": "Policy & audit support"
+          }
+        },
+        "2": {
+          "title": "Resilient Culture",
+          "items": {
+            "0": "Leadership buy-in",
+            "1": "Continuous improvement",
+            "2": "Celebrating successful risk reduction"
+          }
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Assess Your Security?",
+      "subtitle": "Contact our vulnerability assessment experts for a free assessment and discover how we can strengthen your business.",
+      "button": "Contact Us"
+    }
   }
 }
