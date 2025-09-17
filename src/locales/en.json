@@ -1274,5 +1274,54 @@
       "p1": "By following these five steps, you can significantly reduce your business’s risk and build a secure, resilient network. Stay proactive, keep security top of mind, and revisit your policies regularly to adapt to new threats.",
       "p2": "Remember, cybercriminals are always looking for new ways to exploit vulnerabilities. Make security a priority, invest in the right tools and training, and don’t hesitate to seek expert advice if needed. Your business’s future depends on the strength of your network security."
     }
+  },
+  "cloudBackup": {
+    "hero": {
+      "title": "Cloud Backup: Why It Matters",
+      "subtitle": "Discover the benefits of cloud backup and disaster recovery for your business.",
+      "imgAlt": "Cloud Backup"
+    },
+    "intro": {
+      "title": "Introduction",
+      "p1": "Data is the lifeblood of modern organizations. Losing access to critical files, customer records, or business applications can halt operations and damage your reputation. Cloud backup offers a reliable, scalable solution to protect your data and ensure business continuity—even in the face of disaster."
+    },
+    "what": {
+      "title": "What Is Cloud Backup?",
+      "p": "Cloud backup is the process of storing copies of your data on remote servers managed by a cloud provider. Unlike traditional backups, cloud solutions are accessible from anywhere, automatically updated, and protected by advanced security measures.",
+      "list": {
+        "0": "Automated backups reduce human error",
+        "1": "Data is encrypted in transit and at rest",
+        "2": "Access files from any device, anywhere"
+      }
+    },
+    "why": {
+      "title": "Why Cloud Backup Matters",
+      "p": "The risks of data loss are everywhere: hardware failure, cyberattacks, accidental deletion, and natural disasters. Cloud backup provides peace of mind by ensuring your data is always recoverable, no matter what happens.",
+      "list": {
+        "0": "Protects against ransomware and malware attacks",
+        "1": "Enables fast disaster recovery and minimal downtime",
+        "2": "Scales with your business as data grows",
+        "3": "Reduces costs compared to on-premises solutions"
+      }
+    },
+    "best": {
+      "title": "Best Practices for Cloud Backup",
+      "p": "To get the most from your cloud backup solution, follow these best practices:",
+      "list": {
+        "0": "Choose a reputable cloud provider with strong security credentials",
+        "1": "Set up automated, scheduled backups for all critical data",
+        "2": "Test your backups regularly to ensure data can be restored",
+        "3": "Encrypt sensitive information before uploading",
+        "4": "Monitor backup logs and alerts for issues"
+      }
+    },
+    "example": {
+      "title": "Real-World Example",
+      "p": "In 2023, a mid-sized retail company suffered a ransomware attack that encrypted all local files. Thanks to their cloud backup solution, they restored operations within hours, avoided paying a ransom, and maintained customer trust."
+    },
+    "conclusion": {
+      "title": "Conclusion",
+      "p": "Cloud backup is no longer optional—it’s a vital part of any business continuity plan. Invest in a robust solution, follow best practices, and regularly review your backup strategy to keep your data safe and your business running smoothly."
+    }
   }
 }
