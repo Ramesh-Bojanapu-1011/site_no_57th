@@ -1200,5 +1200,79 @@
       "subtitle": "Contact our vulnerability assessment experts for a free assessment and discover how we can strengthen your business.",
       "button": "Contact Us"
     }
+  },
+  "secureNetwork": {
+    "hero": {
+      "title": "5 Ways to Secure Your Business Network",
+      "subtitle": "Practical strategies to protect your company from cyber threats and keep your data safe.",
+      "imgAlt": "Network Security"
+    },
+    "intro": {
+      "title": "Introduction",
+      "p1": "In today’s digital world, network security is essential for every business. Cyber threats are constantly evolving, and a single breach can have devastating consequences. This guide covers five proven strategies to help you secure your business network and protect your valuable data.",
+      "p2": "Whether you’re a small business owner or an IT manager at a large enterprise, these steps will help you build a strong security foundation. Remember, network security is not a one-time task—it’s an ongoing process that requires vigilance, education, and adaptation to new threats."
+    },
+    "steps": {
+      "0": {
+        "title": "1. Implement Strong Password Policies",
+        "p": "Passwords are the first line of defense against unauthorized access. Enforce complex password requirements, mandate regular password changes, and prohibit password reuse. Consider using password managers to help employees maintain secure credentials. Weak passwords are one of the most common causes of data breaches.",
+        "list": {
+          "0": "Require a mix of uppercase, lowercase, numbers, and symbols",
+          "1": "Set minimum password length (e.g., 12 characters)",
+          "2": "Enable multi-factor authentication (MFA) wherever possible",
+          "3": "Educate staff about phishing attacks that target password theft",
+          "4": "Example: Use tools like LastPass or 1Password to securely store and share passwords"
+        }
+      },
+      "1": {
+        "title": "2. Use Firewalls and Antivirus Software",
+        "p": "Firewalls act as barriers between your internal network and external threats. Deploy both hardware and software firewalls, and keep them updated. Antivirus software helps detect and remove malware before it can cause harm. Without these tools, your network is exposed to viruses, ransomware, and other malicious attacks.",
+        "list": {
+          "0": "Install firewalls at network entry points and on individual devices",
+          "1": "Schedule regular antivirus scans and updates",
+          "2": "Block suspicious IP addresses and monitor firewall logs",
+          "3": "Example: Use solutions like Cisco ASA, Fortinet, or Bitdefender for enterprise-grade protection",
+          "4": "Tip: Set up alerts for real-time threat detection"
+        }
+      },
+      "2": {
+        "title": "3. Regularly Update and Patch Systems",
+        "p": "Outdated software is a common target for cybercriminals. Ensure all operating systems, applications, and network devices are updated with the latest security patches. Automate updates where possible to reduce human error. Unpatched vulnerabilities are often exploited in attacks like WannaCry and NotPetya.",
+        "list": {
+          "0": "Enable automatic updates for critical systems",
+          "1": "Maintain an inventory of all software and hardware",
+          "2": "Test patches in a controlled environment before deployment",
+          "3": "Subscribe to vendor security bulletins for timely alerts",
+          "4": "Example: Use WSUS or SCCM for centralized patch management"
+        }
+      },
+      "3": {
+        "title": "4. Educate Your Team on Security Awareness",
+        "p": "Human error is a leading cause of security breaches. Provide regular training on recognizing phishing emails, avoiding suspicious downloads, and reporting unusual activity. Foster a culture of security awareness throughout your organization. Employees who know what to look for can stop attacks before they start.",
+        "list": {
+          "0": "Conduct quarterly security workshops and simulations",
+          "1": "Share real-world examples of cyber attacks",
+          "2": "Encourage employees to report anything suspicious",
+          "3": "Example: Use platforms like KnowBe4 or PhishMe for interactive training",
+          "4": "Tip: Create a security newsletter to keep staff informed"
+        }
+      },
+      "4": {
+        "title": "5. Monitor Network Activity",
+        "p": "Continuous monitoring helps you detect threats before they escalate. Use network monitoring tools to track traffic, identify anomalies, and respond quickly to incidents. Set up alerts for unusual login attempts or data transfers. Proactive monitoring can prevent data loss and minimize downtime.",
+        "list": {
+          "0": "Deploy intrusion detection and prevention systems (IDS/IPS)",
+          "1": "Review network logs regularly",
+          "2": "Establish an incident response plan",
+          "3": "Example: Use tools like SolarWinds, Nagios, or Splunk for network visibility",
+          "4": "Tip: Set up automated alerts for critical events"
+        }
+      }
+    },
+    "conclusion": {
+      "title": "Conclusion",
+      "p1": "By following these five steps, you can significantly reduce your business’s risk and build a secure, resilient network. Stay proactive, keep security top of mind, and revisit your policies regularly to adapt to new threats.",
+      "p2": "Remember, cybercriminals are always looking for new ways to exploit vulnerabilities. Make security a priority, invest in the right tools and training, and don’t hesitate to seek expert advice if needed. Your business’s future depends on the strength of your network security."
+    }
   }
 }
