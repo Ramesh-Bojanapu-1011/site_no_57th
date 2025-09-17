@@ -12,12 +12,12 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
 const services = [
-  { key: "home.services.0", href: "/network-security" },
-  { key: "home.services.1", href: "/cloud-backup" },
-  { key: "home.services.2", href: "/it-infrastructure" },
-  { key: "home.services.3", href: "/endpoint-protection" },
-  { key: "home.services.4", href: "/security-awareness" },
-  { key: "home.services.5", href: "/vulnerability-assessment" },
+  { name: "home.services.0", link: " /network-security" },
+  { name: "home.services.1", link: " /cloud-backup-and-recovery" },
+  { name: "home.services.2", link: " /it-infrastructure" },
+  { name: "home.services.3", link: " /endpoint-protection" },
+  { name: "home.services.4", link: " /security-awareness-training" },
+  { name: "home.services.5", link: " /vulnerability-assessment" },
 ];
 
 const quickLinks = [
@@ -83,13 +83,13 @@ const SiteFooter = () => {
         <div>
           <h3 className="font-bold text-base mb-3">{t("footer.services")}</h3>
           <ul className="space-y-2">
-            {services.map((service) => (
-              <li key={service.key}>
+            {services.map((service, index) => (
+              <li key={index}>
                 <Link
-                  href={service.href}
+                  href={service.link}
                   className="hover:text-blue-600 transition"
                 >
-                  {t(service.key)}
+                  {t(service.name)}
                 </Link>
               </li>
             ))}

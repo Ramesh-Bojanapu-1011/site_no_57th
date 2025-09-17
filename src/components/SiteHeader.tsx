@@ -9,10 +9,10 @@ import { ModeToggle } from "./theme/ModeToggle";
 
 const services = [
   { name: "home.services.0", link: " /network-security" },
-  { name: "home.services.1", link: " /cloud-backup" },
+  { name: "home.services.1", link: " /cloud-backup-and-recovery" },
   { name: "home.services.2", link: " /it-infrastructure" },
   { name: "home.services.3", link: " /endpoint-protection" },
-  { name: "home.services.4", link: " /security-awareness" },
+  { name: "home.services.4", link: " /security-awareness-training" },
   { name: "home.services.5", link: " /vulnerability-assessment" },
 ];
 
