@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
+import { ModeToggle } from '@/components/theme/ModeToggle';
+import Image from 'next/image';
+import { useState } from 'react';
 import {
-  BarChart,
   Bar,
+  BarChart,
+  CartesianGrid,
+  Cell,
+  Legend,
+  Pie,
+  PieChart,
+  ResponsiveContainer,
+  Tooltip,
   XAxis,
   YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-  PieChart,
-  Pie,
-  Cell,
 } from 'recharts';
-import Image from 'next/image';
-import { ModeToggle } from '@/components/theme/ModeToggle';
 
 const staticStats = [
   { label: 'Total IT Services', value: 42 },
