@@ -87,32 +87,32 @@ const ContactUs: React.FC = (props) => {
     {
       name: t("contactUs.team.0.name"),
       role: t("contactUs.team.0.role"),
-      image: "/avatar1.png",
+      image: "https://randomuser.me/api/portraits/women/90.jpg",
     },
     {
       name: t("contactUs.team.1.name"),
       role: t("contactUs.team.1.role"),
-      image: "/avatar2.png",
+      image: "https://randomuser.me/api/portraits/women/60.jpg",
     },
     {
       name: t("contactUs.team.2.name"),
       role: t("contactUs.team.2.role"),
-      image: "/avatar3.png",
+      image: "https://randomuser.me/api/portraits/men/22.jpg",
     },
     {
       name: t("contactUs.team.3.name"),
       role: t("contactUs.team.3.role"),
-      image: "/avatar4.png",
+      image: "https://randomuser.me/api/portraits/men/40.jpg",
     },
     {
       name: t("contactUs.team.4.name"),
       role: t("contactUs.team.4.role"),
-      image: "/avatar5.png",
+      image: "https://randomuser.me/api/portraits/men/62.jpg",
     },
     {
       name: t("contactUs.team.5.name"),
       role: t("contactUs.team.5.role"),
-      image: "/avatar6.png",
+      image: "https://randomuser.me/api/portraits/women/56.jpg",
     },
   ];
   const [openIdx, setOpenIdx] = React.useState<number | null>(null);
