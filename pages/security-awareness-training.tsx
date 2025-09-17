@@ -2,17 +2,17 @@ import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import Head from "next/head";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const SecurityAwarenessTraining = () => {
+  const { t } = useTranslation();
   return (
     <>
       <Head>
-        <title>
-          Security Awareness Training | IT Services, Cybersecurity & Cloud
-        </title>
+        <title>{t("securityAwarenessTraining.title")}</title>
         <meta
           name="description"
-          content="Empower your team with security awareness training, phishing simulations, and compliance support."
+          content={t("securityAwarenessTraining.metaDescription")}
         />
       </Head>
       <main className="bg-[#f7fafd] dark:bg-[#101624] text-gray-900 dark:text-white caret-transparent">
@@ -30,11 +30,10 @@ const SecurityAwarenessTraining = () => {
           </video>
           <div className="relative z-10 flex flex-col items-center justify-center w-full h-full">
             <h1 className="text-5xl font-extrabold mb-4">
-              Security Awareness Training
+              {t("securityAwarenessTraining.hero.title")}
             </h1>
             <p className="text-lg max-w-2xl mx-auto mb-8">
-              Build a resilient security culture with engaging training,
-              real-world simulations, and compliance expertise.
+              {t("securityAwarenessTraining.hero.subtitle")}
             </p>
           </div>
         </section>
@@ -52,65 +51,63 @@ const SecurityAwarenessTraining = () => {
                   height={48}
                 />
                 <h2 className="text-4xl font-extrabold text-blue-700 dark:text-blue-300">
-                  Why Security Awareness Matters
+                  {t("securityAwarenessTraining.why.title")}
                 </h2>
               </div>
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 max-w-xl">
-                Human error is the leading cause of security breaches. Empower
-                your team to recognize threats, respond effectively, and protect
-                your business.
+                {t("securityAwarenessTraining.why.subtitle")}
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex items-center gap-3">
                   <span className="bg-blue-200 dark:bg-blue-800 p-3 rounded-full">
                     <Image
                       src="/window.svg"
-                      alt="Training"
+                      alt={t("securityAwarenessTraining.why.training")}
                       width={32}
                       height={32}
                     />
                   </span>
                   <span className="font-semibold text-blue-700 dark:text-blue-300">
-                    Engaging Training
+                    {t("securityAwarenessTraining.why.training")}
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="bg-purple-200 dark:bg-purple-800 p-3 rounded-full">
                     <Image
                       src="/cloud-backup.svg"
-                      alt="Simulations"
+                      alt={t("securityAwarenessTraining.why.simulations")}
                       width={32}
                       height={32}
                     />
                   </span>
                   <span className="font-semibold text-purple-700 dark:text-purple-300">
-                    Real-World Simulations
+                    {t("securityAwarenessTraining.why.simulations")}
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="bg-orange-200 dark:bg-orange-800 p-3 rounded-full">
                     <Image
                       src="/globe.svg"
-                      alt="Compliance"
+                      alt={t("securityAwarenessTraining.why.compliance")}
                       width={32}
                       height={32}
                     />
                   </span>
                   <span className="font-semibold text-orange-700 dark:text-orange-400">
-                    Compliance & Trust
+                    {t("securityAwarenessTraining.why.compliance")}
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="bg-green-200 dark:bg-green-800 p-3 rounded-full">
                     <Image
                       src="/security-awareness.svg"
-                      alt="Culture"
+                      alt={t("securityAwarenessTraining.why.culture")}
                       width={32}
                       height={32}
                     />
                   </span>
                   <span className="font-semibold text-green-700 dark:text-green-400">
-                    Security Culture
+                    {t("securityAwarenessTraining.why.culture")}
                   </span>
                 </div>
               </div>
@@ -142,48 +139,48 @@ const SecurityAwarenessTraining = () => {
                   height={32}
                 />
               </span>
-              Our Security Awareness Solutions
+              {t("securityAwarenessTraining.solutions.title")}
             </h2>
             {/* Zigzag Layout using array and map */}
             {(() => {
               const solutions = [
                 {
                   icon: "/window.svg",
-                  alt: "Training Programs",
+                  alt: t("securityAwarenessTraining.solutions.0.title"),
                   bg: "bg-blue-100 dark:bg-blue-900",
                   border: "border-blue-200 dark:border-blue-800",
-                  title: "Security Awareness Workshops",
+                  title: t("securityAwarenessTraining.solutions.0.title"),
                   titleClass: "text-blue-700 dark:text-blue-300",
                   items: [
-                    "Live and virtual security workshops",
-                    "Interactive e-learning modules",
-                    "Practical threat recognition exercises",
+                    t("securityAwarenessTraining.solutions.0.items.0"),
+                    t("securityAwarenessTraining.solutions.0.items.1"),
+                    t("securityAwarenessTraining.solutions.0.items.2"),
                   ],
                 },
                 {
                   icon: "/cloud-backup.svg",
-                  alt: "Phishing Simulations",
+                  alt: t("securityAwarenessTraining.solutions.1.title"),
                   bg: "bg-purple-100 dark:bg-purple-900",
                   border: "border-purple-200 dark:border-purple-800",
-                  title: "Phishing & Social Engineering Simulations",
+                  title: t("securityAwarenessTraining.solutions.1.title"),
                   titleClass: "text-purple-700 dark:text-purple-300",
                   items: [
-                    "Simulated phishing campaigns",
-                    "Social engineering scenario training",
-                    "Immediate feedback and reporting",
+                    t("securityAwarenessTraining.solutions.1.items.0"),
+                    t("securityAwarenessTraining.solutions.1.items.1"),
+                    t("securityAwarenessTraining.solutions.1.items.2"),
                   ],
                 },
                 {
                   icon: "/globe.svg",
-                  alt: "Compliance",
+                  alt: t("securityAwarenessTraining.solutions.2.title"),
                   bg: "bg-blue-100 dark:bg-blue-900",
                   border: "border-blue-200 dark:border-blue-800",
-                  title: "Policy & Compliance Education",
+                  title: t("securityAwarenessTraining.solutions.2.title"),
                   titleClass: "text-blue-700 dark:text-blue-300",
                   items: [
-                    "GDPR, HIPAA, PCI DSS, ISO 27001 essentials",
-                    "Security policy awareness",
-                    "Continuous compliance monitoring",
+                    t("securityAwarenessTraining.solutions.2.items.0"),
+                    t("securityAwarenessTraining.solutions.2.items.1"),
+                    t("securityAwarenessTraining.solutions.2.items.2"),
                   ],
                 },
               ];
@@ -245,7 +242,7 @@ const SecurityAwarenessTraining = () => {
               width={40}
               height={40}
             />
-            Managed IT & Cloud Services
+            {t("securityAwarenessTraining.managed.title")}
           </h2>
           <div className="grid md:grid-cols-3 gap-10">
             {/* IT Strategy Card */}
@@ -259,12 +256,18 @@ const SecurityAwarenessTraining = () => {
                 className="mb-4"
               />
               <h3 className="text-2xl font-bold mb-3 text-blue-700 dark:text-blue-300">
-                IT Strategy & Consulting
+                {t("securityAwarenessTraining.managed.cards.0.title")}
               </h3>
               <ul className="list-disc ml-4 text-gray-700 dark:text-gray-300 text-left space-y-2">
-                <li>Custom IT roadmaps for secure growth</li>
-                <li>Digital transformation leadership</li>
-                <li>Process automation & workflow optimization</li>
+                <li>
+                  {t("securityAwarenessTraining.managed.cards.0.items.0")}
+                </li>
+                <li>
+                  {t("securityAwarenessTraining.managed.cards.0.items.1")}
+                </li>
+                <li>
+                  {t("securityAwarenessTraining.managed.cards.0.items.2")}
+                </li>
               </ul>
             </div>
             {/* Cloud Services Card */}
@@ -278,12 +281,18 @@ const SecurityAwarenessTraining = () => {
                 className="mb-4"
               />
               <h3 className="text-2xl font-bold mb-3 text-purple-700 dark:text-purple-300">
-                Cloud Services
+                {t("securityAwarenessTraining.managed.cards.1.title")}
               </h3>
               <ul className="list-disc ml-4 text-gray-700 dark:text-gray-300 text-left space-y-2">
-                <li>Scalable cloud hosting & infrastructure</li>
-                <li>Disaster recovery & backup solutions</li>
-                <li>Hybrid & multi-cloud deployments</li>
+                <li>
+                  {t("securityAwarenessTraining.managed.cards.1.items.0")}
+                </li>
+                <li>
+                  {t("securityAwarenessTraining.managed.cards.1.items.1")}
+                </li>
+                <li>
+                  {t("securityAwarenessTraining.managed.cards.1.items.2")}
+                </li>
               </ul>
             </div>
             {/* Managed Support Card */}
@@ -297,12 +306,18 @@ const SecurityAwarenessTraining = () => {
                 className="mb-4"
               />
               <h3 className="text-2xl font-bold mb-3 text-green-700 dark:text-green-400">
-                Managed IT Support
+                {t("securityAwarenessTraining.managed.cards.2.title")}
               </h3>
               <ul className="list-disc ml-4 text-gray-700 dark:text-gray-300 text-left space-y-2">
-                <li>24/7 monitoring & helpdesk</li>
-                <li>Proactive maintenance & updates</li>
-                <li>Rapid issue resolution</li>
+                <li>
+                  {t("securityAwarenessTraining.managed.cards.2.items.0")}
+                </li>
+                <li>
+                  {t("securityAwarenessTraining.managed.cards.2.items.1")}
+                </li>
+                <li>
+                  {t("securityAwarenessTraining.managed.cards.2.items.2")}
+                </li>
               </ul>
             </div>
           </div>
@@ -318,47 +333,47 @@ const SecurityAwarenessTraining = () => {
                 width={36}
                 height={36}
               />
-              Security Awareness & Compliance
+              {t("securityAwarenessTraining.awareness.title")}
             </h2>
             {/* Horizontal Stepper Layout using array and map */}
             {(() => {
               const steps = [
                 {
                   icon: "/security-awareness.svg",
-                  alt: "Training",
+                  alt: t("securityAwarenessTraining.awareness.steps.0.title"),
                   bg: "bg-blue-100 dark:bg-blue-900",
-                  title: "Security Awareness Training",
+                  title: t("securityAwarenessTraining.awareness.steps.0.title"),
                   titleClass: "text-blue-700 dark:text-blue-300",
                   items: [
-                    "Workshops & e-learning",
-                    "Phishing simulations",
-                    "Employee engagement",
+                    t("securityAwarenessTraining.awareness.steps.0.items.0"),
+                    t("securityAwarenessTraining.awareness.steps.0.items.1"),
+                    t("securityAwarenessTraining.awareness.steps.0.items.2"),
                   ],
                   connector: "bg-blue-200 dark:bg-blue-900",
                 },
                 {
                   icon: "/globe.svg",
-                  alt: "Compliance",
+                  alt: t("securityAwarenessTraining.awareness.steps.1.title"),
                   bg: "bg-purple-100 dark:bg-purple-900",
-                  title: "Compliance Management",
+                  title: t("securityAwarenessTraining.awareness.steps.1.title"),
                   titleClass: "text-purple-700 dark:text-purple-300",
                   items: [
-                    "GDPR, HIPAA, PCI DSS, ISO 27001",
-                    "Automated reporting",
-                    "Policy & audit support",
+                    t("securityAwarenessTraining.awareness.steps.1.items.0"),
+                    t("securityAwarenessTraining.awareness.steps.1.items.1"),
+                    t("securityAwarenessTraining.awareness.steps.1.items.2"),
                   ],
                   connector: "bg-purple-200 dark:bg-purple-900",
                 },
                 {
                   icon: "/window.svg",
-                  alt: "Culture",
+                  alt: t("securityAwarenessTraining.awareness.steps.2.title"),
                   bg: "bg-green-100 dark:bg-green-900",
-                  title: "Security Culture",
+                  title: t("securityAwarenessTraining.awareness.steps.2.title"),
                   titleClass: "text-green-700 dark:text-green-400",
                   items: [
-                    "Leadership buy-in",
-                    "Continuous improvement",
-                    "Celebrating wins",
+                    t("securityAwarenessTraining.awareness.steps.2.items.0"),
+                    t("securityAwarenessTraining.awareness.steps.2.items.1"),
+                    t("securityAwarenessTraining.awareness.steps.2.items.2"),
                   ],
                   connector: "bg-green-200 dark:bg-green-900",
                 },
@@ -406,17 +421,16 @@ const SecurityAwarenessTraining = () => {
         <section className="py-16 px-4 bg-gradient-to-r from-blue-500 to-purple-600 dark:from-blue-900 dark:to-purple-900 text-center">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-white dark:text-blue-300 tracking-tight">
-              Ready to Empower Your Team?
+              {t("securityAwarenessTraining.cta.title")}
             </h2>
             <p className="text-lg text-white/80 dark:text-white/70 mb-8">
-              Contact our security awareness experts for a free assessment and
-              discover how we can strengthen your business.
+              {t("securityAwarenessTraining.cta.subtitle")}
             </p>
             <a
               href="/contact-us"
               className="inline-block bg-blue-600 dark:bg-blue-400 hover:bg-blue-700 dark:hover:bg-blue-500 text-white font-bold py-4 px-10 rounded-full shadow-lg transition-all text-lg"
             >
-              Contact Us
+              {t("securityAwarenessTraining.cta.button")}
             </a>
           </div>
         </section>
