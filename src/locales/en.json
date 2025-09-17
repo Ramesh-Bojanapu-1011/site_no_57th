@@ -461,5 +461,123 @@
     "ctaNoObligation": "No obligation",
     "ctaQuickResponse": "Quick response",
     "ctaExpertAdvice": "Expert advice"
+  },
+  "networkSecurity": {
+    "title": "Network Security",
+    "metaDescription": "Protect your business with advanced network security solutions, cybersecurity, and compliance.",
+    "hero": {
+      "title": "Network Security",
+      "subtitle": "Safeguard your business with expert IT services,cutting-edge cybersecurity, and reliable cloud solutions."
+    },
+    "why": {
+      "title": "Why Network Security Matters",
+      "subtitle": "In today's digital landscape, robust network security is essential for every business. It protects your data, ensures compliance, and keeps your operations running smoothly.",
+      "dataProtection": "Data Protection",
+      "businessContinuity": "Business Continuity",
+      "complianceTrust": "Compliance & Trust",
+      "threatPrevention": "Threat Prevention",
+      "imageAlt": "Network Security Illustration"
+    },
+    "solutions": {
+      "title": "Our Cybersecurity Solutions",
+      "0": {
+        "alt": "Firewall & Threat Detection",
+        "title": "Firewall & Threat Detection",
+        "items": {
+          "0": "Advanced firewall protection",
+          "1": "Intrusion detection & response",
+          "2": "Real-time threat monitoring"
+        }
+      },
+      "1": {
+        "alt": "Endpoint Security",
+        "title": "Endpoint Security",
+        "items": {
+          "0": "Device management",
+          "1": "Antivirus & anti-malware",
+          "2": "Remote work protection"
+        }
+      },
+      "2": {
+        "alt": "Cloud Security",
+        "title": "Cloud Security",
+        "items": {
+          "0": "Cloud data encryption",
+          "1": "Backup & disaster recovery",
+          "2": "Multi-cloud security"
+        }
+      }
+    },
+    "managed": {
+      "titleIconAlt": "Cloud Services Icon",
+      "title": "Managed IT & Cloud Services",
+      "cards": {
+        "0": {
+          "iconAlt": "IT Strategy Icon",
+          "title": "IT Strategy & Consulting",
+          "items": {
+            "0": "Custom IT roadmaps",
+            "1": "Cloud migration",
+            "2": "Process automation"
+          }
+        },
+        "1": {
+          "iconAlt": "Cloud Services Icon",
+          "title": "Cloud Services",
+          "items": {
+            "0": "Scalable cloud hosting",
+            "1": "Disaster recovery",
+            "2": "Ongoing optimization"
+          }
+        },
+        "2": {
+          "iconAlt": "Managed Support Icon",
+          "title": "Managed Support",
+          "items": {
+            "0": "24/7 monitoring",
+            "1": "Proactive support",
+            "2": "Security updates"
+          }
+        }
+      }
+    },
+    "awareness": {
+      "titleIconAlt": "Security Awareness Icon",
+      "title": "Security Awareness & Compliance",
+      "steps": {
+        "0": {
+          "alt": "Training Icon",
+          "title": "Employee Training",
+          "items": {
+            "0": "Phishing awareness",
+            "1": "Social engineering prevention",
+            "2": "Best practices"
+          }
+        },
+        "1": {
+          "alt": "Compliance Icon",
+          "title": "Compliance Management",
+          "items": {
+            "0": "GDPR, HIPAA, etc.",
+            "1": "Policy enforcement",
+            "2": "Audit readiness"
+          }
+        },
+        "2": {
+          "alt": "Continuous Improvement Icon",
+          "title": "Continuous Improvement",
+          "items": {
+            "0": "Regular assessments",
+            "1": "Incident response",
+            "2": "Security updates"
+          }
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Secure Your Network?",
+      "subtitle": "Contact our cybersecurity experts for a free assessment and discover how we can protect your business.",
+      "button": "Contact Us"
+    }
   }
 }

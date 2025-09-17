@@ -1,16 +1,20 @@
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
+import i18n from "@/i18n";
+
 import Head from "next/head";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const NetworkSecurity = () => {
+  const { t } = useTranslation();
   return (
     <>
       <Head>
-        <title>Network Security | IT Services, Cybersecurity & Cloud</title>
+        <title>{t("networkSecurity.title")}</title>
         <meta
           name="description"
-          content="Protect your business with advanced network security, IT services, cybersecurity, and cloud solutions."
+          content={t("networkSecurity.metaDescription")}
         />
       </Head>
       <main className="bg-[#f7fafd] dark:bg-[#101624] text-gray-900 dark:text-white caret-transparent">
@@ -27,10 +31,11 @@ const NetworkSecurity = () => {
             <source src="/network-bg-video.mp4" type="video/mp4" />
           </video>
           <div className="relative z-10 flex flex-col items-center justify-center w-full h-full">
-            <h1 className="text-5xl font-extrabold mb-4">Network Security</h1>
+            <h1 className="text-5xl font-extrabold mb-4">
+              {t("networkSecurity.hero.title")}
+            </h1>
             <p className="text-lg max-w-2xl mx-auto mb-8">
-              Safeguard your business with expert IT services, cutting-edge
-              cybersecurity, and reliable cloud solutions.
+              {t("networkSecurity.hero.subtitle")}
             </p>
           </div>
         </section>
@@ -66,13 +71,11 @@ const NetworkSecurity = () => {
                   </g>
                 </svg>
                 <h2 className="text-4xl font-extrabold text-blue-700 dark:text-blue-300">
-                  Why Network Security Matters
+                  {t("networkSecurity.why.title")}
                 </h2>
               </div>
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 max-w-xl">
-                In today's digital landscape, robust network security is
-                essential for every business. It protects your data, ensures
-                compliance, and keeps your operations running smoothly.
+                {t("networkSecurity.why.subtitle")}
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex items-center gap-3">
@@ -85,7 +88,7 @@ const NetworkSecurity = () => {
                     />
                   </span>
                   <span className="font-semibold text-blue-700 dark:text-blue-300">
-                    Data Protection
+                    {t("networkSecurity.why.dataProtection")}
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
@@ -98,7 +101,7 @@ const NetworkSecurity = () => {
                     />
                   </span>
                   <span className="font-semibold text-purple-700 dark:text-purple-300">
-                    Business Continuity
+                    {t("networkSecurity.why.businessContinuity")}
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
@@ -111,7 +114,7 @@ const NetworkSecurity = () => {
                     />
                   </span>
                   <span className="font-semibold text-orange-700 dark:text-orange-400">
-                    Compliance & Trust
+                    {t("networkSecurity.why.complianceTrust")}
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
@@ -124,7 +127,7 @@ const NetworkSecurity = () => {
                     />
                   </span>
                   <span className="font-semibold text-green-700 dark:text-green-400">
-                    Threat Prevention
+                    {t("networkSecurity.why.threatPrevention")}
                   </span>
                 </div>
               </div>
@@ -134,7 +137,7 @@ const NetworkSecurity = () => {
               <div className="relative">
                 <Image
                   src="https://i.pinimg.com/1200x/71/d4/31/71d431f4a98d470d3ae9de30eca48eaf.jpg"
-                  alt="Network Security"
+                  alt={t("networkSecurity.why.imageAlt")}
                   width={340}
                   height={260}
                   className="relative z-10 rounded-2xl shadow-2xl border-4 border-blue-200 dark:border-blue-900 object-cover"
@@ -174,48 +177,48 @@ const NetworkSecurity = () => {
                   </g>
                 </svg>
               </span>
-              Our Cybersecurity Solutions
+              {t("networkSecurity.solutions.title")}
             </h2>
             {/* Zigzag Layout using array and map */}
             {(() => {
               const solutions = [
                 {
                   icon: "/shield.svg",
-                  alt: "Threat Protection",
+                  alt: t("networkSecurity.solutions.0.alt"),
                   bg: "bg-blue-100 dark:bg-blue-900",
                   border: "border-blue-200 dark:border-blue-800",
-                  title: "Threat Protection",
+                  title: t("networkSecurity.solutions.0.title"),
                   titleClass: "text-blue-700 dark:text-blue-300",
                   items: [
-                    "24/7 monitoring & rapid response",
-                    "Advanced firewalls & intrusion detection",
-                    "Proactive threat intelligence",
+                    t("networkSecurity.solutions.0.items.0"),
+                    t("networkSecurity.solutions.0.items.1"),
+                    t("networkSecurity.solutions.0.items.2"),
                   ],
                 },
                 {
                   icon: "/window.svg",
-                  alt: "Endpoint Security",
+                  alt: t("networkSecurity.solutions.1.alt"),
                   bg: "bg-purple-100 dark:bg-purple-900",
                   border: "border-purple-200 dark:border-purple-800",
-                  title: "Endpoint Security",
+                  title: t("networkSecurity.solutions.1.title"),
                   titleClass: "text-purple-700 dark:text-purple-300",
                   items: [
-                    "Multi-layered device protection",
-                    "Zero-trust access controls",
-                    "Automated patch management",
+                    t("networkSecurity.solutions.1.items.0"),
+                    t("networkSecurity.solutions.1.items.1"),
+                    t("networkSecurity.solutions.1.items.2"),
                   ],
                 },
                 {
                   icon: "/cloud-backup.svg",
-                  alt: "Cloud Security",
+                  alt: t("networkSecurity.solutions.2.alt"),
                   bg: "bg-blue-100 dark:bg-blue-900",
                   border: "border-blue-200 dark:border-blue-800",
-                  title: "Cloud Security",
+                  title: t("networkSecurity.solutions.2.title"),
                   titleClass: "text-blue-700 dark:text-blue-300",
                   items: [
-                    "Secure cloud infrastructure",
-                    "Automated backup & disaster recovery",
-                    "Hybrid & multi-cloud protection",
+                    t("networkSecurity.solutions.2.items.0"),
+                    t("networkSecurity.solutions.2.items.1"),
+                    t("networkSecurity.solutions.2.items.2"),
                   ],
                 },
               ];
@@ -229,7 +232,7 @@ const NetworkSecurity = () => {
                         key={sol.title}
                         className={`flex flex-col ${
                           !isLeft ? "md:flex-row-reverse" : "md:flex-row"
-                        } items-center   gap-10`}
+                        } items-center gap-10`}
                       >
                         <div
                           className={`flex-shrink-0 w-32 h-32 rounded-3xl ${sol.bg} flex items-center justify-center shadow-xl border-4 ${sol.border}`}
@@ -254,8 +257,8 @@ const NetworkSecurity = () => {
                             {sol.title}
                           </h3>
                           <ul className="text-gray-700 dark:text-gray-300 space-y-2">
-                            {sol.items.map((item) => (
-                              <li key={item}>{item}</li>
+                            {sol.items.map((item, i) => (
+                              <li key={i}>{item}</li>
                             ))}
                           </ul>
                         </div>
@@ -273,11 +276,11 @@ const NetworkSecurity = () => {
           <h2 className="text-4xl font-extrabold mb-12 text-center text-blue-600 dark:text-blue-400 flex items-center justify-center gap-3">
             <Image
               src="/cloud-backup.svg"
-              alt="IT & Cloud"
+              alt={t("networkSecurity.managed.titleIconAlt")}
               width={40}
               height={40}
             />
-            Managed IT & Cloud Services
+            {t("networkSecurity.managed.title")}
           </h2>
           <div className="grid md:grid-cols-3 gap-10">
             {/* IT Strategy Card */}
@@ -285,18 +288,18 @@ const NetworkSecurity = () => {
               <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-14 h-14 bg-blue-500/20 dark:bg-blue-900/30 rounded-full blur-xl"></div>
               <Image
                 src="/window.svg"
-                alt="IT Strategy"
+                alt={t("networkSecurity.managed.cards.0.iconAlt")}
                 width={48}
                 height={48}
                 className="mb-4"
               />
               <h3 className="text-2xl font-bold mb-3 text-blue-700 dark:text-blue-300">
-                IT Strategy & Consulting
+                {t("networkSecurity.managed.cards.0.title")}
               </h3>
               <ul className="list-disc ml-4 text-gray-700 dark:text-gray-300 text-left space-y-2">
-                <li>Custom IT roadmaps for secure growth</li>
-                <li>Digital transformation leadership</li>
-                <li>Process automation & workflow optimization</li>
+                <li>{t("networkSecurity.managed.cards.0.items.0")}</li>
+                <li>{t("networkSecurity.managed.cards.0.items.1")}</li>
+                <li>{t("networkSecurity.managed.cards.0.items.2")}</li>
               </ul>
             </div>
             {/* Cloud Services Card */}
@@ -304,18 +307,18 @@ const NetworkSecurity = () => {
               <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-14 h-14 bg-purple-500/20 dark:bg-purple-900/30 rounded-full blur-xl"></div>
               <Image
                 src="/cloud-backup.svg"
-                alt="Cloud Services"
+                alt={t("networkSecurity.managed.cards.1.iconAlt")}
                 width={48}
                 height={48}
                 className="mb-4"
               />
               <h3 className="text-2xl font-bold mb-3 text-purple-700 dark:text-purple-300">
-                Cloud Services
+                {t("networkSecurity.managed.cards.1.title")}
               </h3>
               <ul className="list-disc ml-4 text-gray-700 dark:text-gray-300 text-left space-y-2">
-                <li>Scalable cloud hosting & infrastructure</li>
-                <li>Disaster recovery & backup solutions</li>
-                <li>Hybrid & multi-cloud deployments</li>
+                <li>{t("networkSecurity.managed.cards.1.items.0")}</li>
+                <li>{t("networkSecurity.managed.cards.1.items.1")}</li>
+                <li>{t("networkSecurity.managed.cards.1.items.2")}</li>
               </ul>
             </div>
             {/* Managed Support Card */}
@@ -323,18 +326,18 @@ const NetworkSecurity = () => {
               <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-14 h-14 bg-green-500/20 dark:bg-green-900/30 rounded-full blur-xl"></div>
               <Image
                 src="/shield.svg"
-                alt="Managed Support"
+                alt={t("networkSecurity.managed.cards.2.iconAlt")}
                 width={48}
                 height={48}
                 className="mb-4"
               />
               <h3 className="text-2xl font-bold mb-3 text-green-700 dark:text-green-400">
-                Managed IT Support
+                {t("networkSecurity.managed.cards.2.title")}
               </h3>
               <ul className="list-disc ml-4 text-gray-700 dark:text-gray-300 text-left space-y-2">
-                <li>24/7 monitoring & helpdesk</li>
-                <li>Proactive maintenance & updates</li>
-                <li>Rapid issue resolution</li>
+                <li>{t("networkSecurity.managed.cards.2.items.0")}</li>
+                <li>{t("networkSecurity.managed.cards.2.items.1")}</li>
+                <li>{t("networkSecurity.managed.cards.2.items.2")}</li>
               </ul>
             </div>
           </div>
@@ -347,51 +350,52 @@ const NetworkSecurity = () => {
             <h2 className="text-3xl font-bold mb-14 text-purple-700 dark:text-purple-300 text-center flex items-center justify-center gap-3">
               <Image
                 src="/security-awareness.svg"
-                alt="Awareness"
+                alt={t("networkSecurity.awareness.titleIconAlt")}
                 width={36}
                 height={36}
               />
-              Security Awareness & Compliance
+              {t("networkSecurity.awareness.title")}
             </h2>
             {/* Horizontal Stepper Layout using array and map */}
             {(() => {
+              const { t } = useTranslation();
               const steps = [
                 {
                   icon: "/security-awareness.svg",
-                  alt: "Security Training",
+                  alt: t("networkSecurity.awareness.steps.0.alt"),
                   bg: "bg-blue-100 dark:bg-blue-900",
-                  title: "Security Awareness Training",
+                  title: t("networkSecurity.awareness.steps.0.title"),
                   titleClass: "text-blue-700 dark:text-blue-300",
                   items: [
-                    "Workshops & e-learning",
-                    "Phishing simulations",
-                    "Employee engagement",
+                    t("networkSecurity.awareness.steps.0.items.0"),
+                    t("networkSecurity.awareness.steps.0.items.1"),
+                    t("networkSecurity.awareness.steps.0.items.2"),
                   ],
                   connector: "bg-blue-200 dark:bg-blue-900",
                 },
                 {
                   icon: "/globe.svg",
-                  alt: "Compliance",
+                  alt: t("networkSecurity.awareness.steps.1.alt"),
                   bg: "bg-purple-100 dark:bg-purple-900",
-                  title: "Compliance Management",
+                  title: t("networkSecurity.awareness.steps.1.title"),
                   titleClass: "text-purple-700 dark:text-purple-300",
                   items: [
-                    "GDPR, HIPAA, PCI DSS, ISO 27001",
-                    "Automated reporting",
-                    "Policy & audit support",
+                    t("networkSecurity.awareness.steps.1.items.0"),
+                    t("networkSecurity.awareness.steps.1.items.1"),
+                    t("networkSecurity.awareness.steps.1.items.2"),
                   ],
                   connector: "bg-purple-200 dark:bg-purple-900",
                 },
                 {
                   icon: "/window.svg",
-                  alt: "Security Culture",
+                  alt: t("networkSecurity.awareness.steps.2.alt"),
                   bg: "bg-green-100 dark:bg-green-900",
-                  title: "Security Culture",
+                  title: t("networkSecurity.awareness.steps.2.title"),
                   titleClass: "text-green-700 dark:text-green-400",
                   items: [
-                    "Leadership buy-in",
-                    "Continuous improvement",
-                    "Celebrating wins",
+                    t("networkSecurity.awareness.steps.2.items.0"),
+                    t("networkSecurity.awareness.steps.2.items.1"),
+                    t("networkSecurity.awareness.steps.2.items.2"),
                   ],
                   connector: "bg-green-200 dark:bg-green-900",
                 },
@@ -419,8 +423,8 @@ const NetworkSecurity = () => {
                         {step.title}
                       </h3>
                       <ul className="text-gray-700 dark:text-gray-300 space-y-1 mb-4">
-                        {step.items.map((item) => (
-                          <li key={item}>{item}</li>
+                        {step.items.map((item, i) => (
+                          <li key={i}>{item}</li>
                         ))}
                       </ul>
 
@@ -439,17 +443,16 @@ const NetworkSecurity = () => {
         <section className="py-16 px-4 bg-gradient-to-r from-blue-500 to-purple-600 dark:from-blue-900 dark:to-purple-900 text-center">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-white dark:text-blue-300 tracking-tight">
-              Ready to Secure Your Network?
+              {t("networkSecurity.cta.title")}
             </h2>
             <p className="text-lg text-white/80 dark:text-white/70 mb-8">
-              Contact our cybersecurity experts for a free assessment and
-              discover how we can protect your business.
+              {t("networkSecurity.cta.subtitle")}
             </p>
             <a
               href="/contact-us"
               className="inline-block bg-blue-600 dark:bg-blue-400 hover:bg-blue-700 dark:hover:bg-blue-500 text-white font-bold py-4 px-10 rounded-full shadow-lg transition-all text-lg"
             >
-              Contact Us
+              {t("networkSecurity.cta.button")}
             </a>
           </div>
         </section>
