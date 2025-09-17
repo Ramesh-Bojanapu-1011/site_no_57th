@@ -8,12 +8,12 @@ import { useTranslation } from "react-i18next";
 import { ModeToggle } from "./theme/ModeToggle";
 
 const services = [
-  { name: "home.services.0", link: " /network-security" },
-  { name: "home.services.1", link: " /cloud-backup-and-recovery" },
-  { name: "home.services.2", link: " /it-infrastructure" },
-  { name: "home.services.3", link: " /endpoint-protection" },
-  { name: "home.services.4", link: " /security-awareness-training" },
-  { name: "home.services.5", link: " /vulnerability-assessment" },
+  { name: "hedder.services.0", link: " /network-security" },
+  { name: "hedder.services.1", link: " /cloud-backup-and-recovery" },
+  { name: "hedder.services.2", link: " /it-infrastructure" },
+  { name: "hedder.services.3", link: " /endpoint-protection" },
+  { name: "hedder.services.4", link: " /security-awareness-training" },
+  { name: "hedder.services.5", link: " /vulnerability-assessment" },
 ];
 
 const languages = [
@@ -116,7 +116,7 @@ const SiteHeader = () => {
                 setProfileOpen(false);
               }}
             >
-              {t("home.navbar.Home")} <ChevronDown size={16} />
+              {t("hedder.navbar.Home")} <ChevronDown size={16} />
             </button>
             {homeOpen && (
               <ul className="absolute left-0 mt-2 w-36 bg-white dark:bg-gray-800 shadow-xl rounded-lg py-2 border border-blue-100 dark:border-gray-700">
@@ -125,7 +125,7 @@ const SiteHeader = () => {
                     href="/home1"
                     className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-gray-700"
                   >
-                    {t("home.navbar.Home")}1
+                    {t("hedder.navbar.Home")}1
                   </Link>
                 </li>
                 <li>
@@ -133,7 +133,7 @@ const SiteHeader = () => {
                     href="/home2"
                     className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-gray-700"
                   >
-                    {t("home.navbar.Home")}2
+                    {t("hedder.navbar.Home")}2
                   </Link>
                 </li>
               </ul>
@@ -144,7 +144,7 @@ const SiteHeader = () => {
               href="/about-us"
               className="px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800"
             >
-              {t("home.navbar.About_Us")}
+              {t("hedder.navbar.About_Us")}
             </Link>
           </li>
           {/* Services Dropdown */}
@@ -158,7 +158,7 @@ const SiteHeader = () => {
                 setProfileOpen(false);
               }}
             >
-              {t("home.navbar.Services")} <ChevronDown size={16} />
+              {t("hedder.navbar.Services")} <ChevronDown size={16} />
             </button>
             {servicesOpen && (
               <ul className="absolute left-0 mt-2 w-56 bg-white dark:bg-gray-800 shadow-xl rounded-lg py-2 border border-blue-100 dark:border-gray-700">
@@ -167,7 +167,7 @@ const SiteHeader = () => {
                     href="/services"
                     className="block px-4 border-b py-2 hover:bg-blue-50 dark:hover:bg-gray-700"
                   >
-                    {t("home.navbar.All_Services")}
+                    {t("hedder.navbar.All_Services")}
                   </Link>
                 </li>
                 {services.map((service) => (
@@ -188,7 +188,7 @@ const SiteHeader = () => {
               href="/blog"
               className="px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800"
             >
-              {t("home.navbar.Blog")}
+              {t("hedder.navbar.Blog")}
             </Link>
           </li>
           <li>
@@ -196,7 +196,7 @@ const SiteHeader = () => {
               href="/contact-us"
               className="px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800"
             >
-              {t("home.navbar.Contact_Us")}
+              {t("hedder.navbar.Contact_Us")}
             </Link>
           </li>
           {/* Languages Dropdown */}
@@ -280,18 +280,18 @@ const SiteHeader = () => {
                 className="flex items-center gap-2 w-full px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 "
                 onClick={() => setHomeOpen((prev) => !prev)}
               >
-                {t("home.navbar.Home")} <ChevronDown size={16} />
+                {t("hedder.navbar.Home")} <ChevronDown size={16} />
               </button>
               {homeOpen && (
                 <ul className="ml-6 mt-1">
                   <li>
                     <Link href="/home1" className="block py-1">
-                      {t("home.navbar.Home")}2
+                      {t("hedder.navbar.Home")}2
                     </Link>
                   </li>
                   <li>
                     <Link href="/home2" className="block py-1">
-                      {t("home.navbar.Home")}2
+                      {t("hedder.navbar.Home")}2
                     </Link>
                   </li>
                 </ul>
@@ -302,7 +302,7 @@ const SiteHeader = () => {
                 href="/about-us"
                 className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 "
               >
-                <span>{t("home.navbar.About_Us")}</span>
+                <span>{t("hedder.navbar.About_Us")}</span>
               </Link>
             </li>
             <li>
@@ -310,7 +310,7 @@ const SiteHeader = () => {
                 className="flex items-center gap-2 w-full px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 "
                 onClick={() => setServicesOpen((prev) => !prev)}
               >
-                {t("home.navbar.Services")} <ChevronDown size={16} />
+                {t("hedder.navbar.Services")} <ChevronDown size={16} />
               </button>
               {servicesOpen && (
                 <ul className="ml-6 mt-1">
@@ -319,7 +319,7 @@ const SiteHeader = () => {
                       href="/services"
                       className="block px-4 border-b py-2 hover:bg-blue-50 dark:hover:bg-gray-700"
                     >
-                      {t("home.navbar.All_Services")}
+                      {t("hedder.navbar.All_Services")}
                     </Link>
                   </li>
                   {services.map((service) => (
@@ -340,7 +340,7 @@ const SiteHeader = () => {
                 href="/blog"
                 className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 "
               >
-                {t("home.navbar.Blog")}
+                {t("hedder.navbar.Blog")}
               </Link>
             </li>
             <li>
@@ -348,7 +348,7 @@ const SiteHeader = () => {
                 href="/contact-us"
                 className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 "
               >
-                {t("home.navbar.Contact_Us")}
+                {t("hedder.navbar.Contact_Us")}
               </Link>
             </li>
           </ul>
