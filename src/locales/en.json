@@ -153,5 +153,132 @@
         "name": "John Evans, CIO, RetailNext"
       }
     }
+  },
+  "home2": {
+    "learnMore": "Learn More",
+    "title": "Home 2 - IT Services, Cybersecurity, Cloud",
+    "metaDescription": "IT Services, Cybersecurity, Cloud Solutions",
+    "heroSubtitle": "INNOVATIVE SOFTWARE SOLUTIONS",
+    "heroTitle": "Transform Your Business with Our Expertise",
+    "heroDescription": "Leverage cutting-edge technology and expert insights to drive growth, enhance security, and streamline operations.",
+    "getStarted": "Get Started",
+    "features": {
+      "title": "Awesome Features",
+      "description": "The template is built with all modern and latest technology. Developer can easily handle this.",
+      "card1": {
+        "alt": "Made With Sass",
+        "title": "Made With Sass",
+        "description": "Sass is a preprocessor scripting language for compiling into CSS."
+      },
+      "card2": {
+        "alt": "Google Fonts",
+        "title": "Google Fonts",
+        "description": "Google Fonts is a complete font and font web font service owned by Google."
+      },
+      "card3": {
+        "alt": "W3C Validated Code",
+        "title": "W3C Validated Code",
+        "description": "W3C Validation Service is a validator for the World Wide Web Consortium."
+      },
+      "card4": {
+        "alt": "Easy to Customize",
+        "title": "Easy to Customize",
+        "description": "Our code is always very much customize friendly and standard."
+      },
+      "card5": {
+        "alt": "Fully Responsive",
+        "title": "Fully Responsive",
+        "description": "This template is fully responsive for all kind of devices both big & small."
+      },
+      "card6": {
+        "alt": "Font Awesome 6 Pro",
+        "title": "Font Awesome 6 Pro",
+        "description": "We have used the latest version of Font Awesome 6 Pro in this template."
+      },
+      "card7": {
+        "alt": "Bootstrap 5",
+        "title": "Bootstrap 5",
+        "description": "Bootstrap 5 is the latest version of the popular front-end development framework."
+      },
+      "card8": {
+        "alt": "Latest jQuery",
+        "title": "Latest jQuery",
+        "description": "jQuery is a JS framework designed to simplify HTML DOM tree traversal."
+      },
+      "card9": {
+        "alt": "Material Design",
+        "title": "Material Design",
+        "description": "Material Design is a design language developed by Google in 2014."
+      },
+      "card10": {
+        "alt": "SEO Friendly",
+        "title": "SEO Friendly",
+        "description": "Our code is SEO optimized, it will help to index the page on search engine."
+      },
+      "card11": {
+        "alt": "Dark & Light Mode",
+        "title": "Dark & Light Mode",
+        "description": "This template has both dark & light mode. User can switch between them."
+      },
+      "card12": {
+        "alt": "Tailwind CSS",
+        "title": "Tailwind CSS",
+        "description": "Tailwind CSS is a utility-first CSS framework for rapid UI development."
+      }
+    },
+    "itSolutions": {
+      "title": "Enabling Excellence With Innovative IT Solutions",
+      "description": "Our services are tailored to meet the evolving needs of businesses in a digital-first world. With a focus on reliability, scalability, and performance, we help organizations leverage technology to achieve their goals.",
+      "learnMore": "Learn More",
+      "imageAlt": "IT Solutions",
+      "card1": {
+        "title": "Expert IT Solutions",
+        "description": "IT solutions designed to drive innovation, enhance security, & streamline operations."
+      },
+      "card2": {
+        "title": "Cloud Computing",
+        "description": "Scalable cloud solutions for businesses of all sizes, from startups to enterprises."
+      }
+    },
+    "Expertise": {
+      "title": "Our Expertise",
+      "description": "We offer a comprehensive suite of IT services designed to meet the unique needs of your business. Our team of experts is dedicated to delivering solutions that drive growth, enhance security, and improve operational efficiency.",
+
+      "card1": {
+        "title": "IT Consulting",
+        "description": "Strategic IT consulting to align technology with your business goals."
+      },
+      "card2": {
+        "title": "Cybersecurity",
+        "description": "Comprehensive cybersecurity solutions to protect your digital assets."
+      },
+      "card3": {
+        "title": "Cloud Services",
+        "description": "End-to-end cloud services for seamless migration, management, and optimization."
+      }
+    },
+    "insights": {
+      "title": "Latest Insights & Resources",
+      "card1": {
+        "label": "Popular",
+        "title": "5 Essential Cybersecurity Practices for Small Businesses",
+        "description": "Protect your business from cyber threats with these essential practices."
+      },
+      "card2": {
+        "label": "New",
+        "title": "Cloud Migration Strategies for Growing Enterprises",
+        "description": "Learn effective strategies for a smooth cloud migration process."
+      },
+      "card3": {
+        "label": "Live",
+        "title": "The Future of IT Services: Trends to Watch in 2024",
+        "description": "Explore the emerging trends shaping the future of IT services."
+      }
+    },
+    "cta": {
+      "title": "Ready to Elevate Your IT Infrastructure?",
+      "description": "Contact us today to learn how our expert IT services and solutions can drive your business forward.",
+      "button": "Contact Us"
+    }
   }
 }

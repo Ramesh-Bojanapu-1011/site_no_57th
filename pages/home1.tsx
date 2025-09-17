@@ -11,7 +11,7 @@ import {
 import Head from "next/head";
 import Image from "next/image";
 import React from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "react-i18next";
 
 type Props = {};
 

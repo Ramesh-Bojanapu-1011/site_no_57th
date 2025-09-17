@@ -3,6 +3,7 @@ import SiteHeader from "@/components/SiteHeader";
 import AOS from "aos";
 import Head from "next/head";
 import React from "react";
+import { useTranslation } from "react-i18next";
 type Props = {};
 
 const features = [
@@ -20,10 +21,10 @@ const features = [
         ></path>
       </svg>
     ),
-    alt: "Made With Sass",
+    alt: "home2.features.card1.alt",
     bg: "bg-pink-100 dark:bg-pink-900",
-    title: "Made With Sass",
-    desc: "Sass is a preprocessor scripting language for compiling into CSS.",
+    title: "home2.features.card1.title",
+    desc: "home2.features.card1.description",
   },
   {
     icon: (
@@ -57,10 +58,10 @@ const features = [
         />
       </svg>
     ),
-    alt: "Google Fonts",
+    alt: "home2.features.card2.alt",
     bg: "bg-yellow-100 dark:bg-yellow-900",
-    title: "Google Fonts",
-    desc: "Google Fonts is a complete font and font web font service owned by Google.",
+    title: "home2.features.card2.title",
+    desc: "home2.features.card2.description",
   },
   {
     icon: (
@@ -84,10 +85,10 @@ const features = [
         ></path>
       </svg>
     ),
-    alt: "W3C Validated Code",
+    alt: "home2.features.card3.alt",
     bg: "bg-blue-100 dark:bg-blue-900",
-    title: "W3C Validated Code",
-    desc: "W3C Validation Service is a validator for the World Wide Web Consortium.",
+    title: "home2.features.card3.title",
+    desc: "home2.features.card3.description",
   },
   {
     icon: (
@@ -103,10 +104,10 @@ const features = [
         ></path>
       </svg>
     ),
-    alt: "Easy to Customize",
+    alt: "home2.features.card4.alt",
     bg: "bg-orange-100 dark:bg-orange-900",
-    title: "Easy to Customize",
-    desc: "Our code is always very much customize friendly and standard.",
+    title: "home2.features.card4.title",
+    desc: "home2.features.card4.description",
   },
 
   {
@@ -166,10 +167,10 @@ const features = [
         </g>
       </svg>
     ),
-    alt: "Fully Responsive",
+    alt: "home2.features.card5.alt",
     bg: "bg-blue-100 dark:bg-blue-900",
-    title: "Fully Responsive",
-    desc: "This template is fully responsive for all kind of devices both big & small.",
+    title: "home2.features.card5.title",
+    desc: "home2.features.card5.description",
   },
   {
     icon: (
@@ -185,10 +186,10 @@ const features = [
         ></path>
       </svg>
     ),
-    alt: "Font Awesome 6 Pro",
+    alt: "home2.features.card6.alt",
     bg: "bg-blue-100 dark:bg-blue-900",
-    title: "Font Awesome 6 Pro",
-    desc: "We have used the latest version of Font Awesome 6 Pro in this template.",
+    title: "home2.features.card6.title",
+    desc: "home2.features.card6.description",
   },
   {
     icon: (
@@ -204,10 +205,10 @@ const features = [
         ></path>
       </svg>
     ),
-    alt: "Bootstrap 5",
+    alt: "home2.features.card7.alt",
     bg: "bg-purple-100 dark:bg-purple-900",
-    title: "Bootstrap 5",
-    desc: "Bootstrap 5 is the latest version of the popular front-end development framework.",
+    title: "home2.features.card7.title",
+    desc: "home2.features.card7.description",
   },
 
   {
@@ -228,10 +229,10 @@ const features = [
         ></path>
       </svg>
     ),
-    alt: "Latest jQuery",
+    alt: "home2.features.card8.alt",
     bg: "bg-gray-100 dark:bg-gray-900",
-    title: "Latest jQuery",
-    desc: "jQuery is a JS framework designed to simplify HTML DOM tree traversal.",
+    title: "home2.features.card8.title",
+    desc: "home2.features.card8.description",
   },
 
   {
@@ -248,10 +249,10 @@ const features = [
         ></path>
       </svg>
     ),
-    alt: "Material Design",
+    alt: "home2.features.card9.alt",
     bg: "bg-red-100 dark:bg-red-900",
-    title: "Material Design",
-    desc: "Material Design is a design language developed by Google in 2014.",
+    title: "home2.features.card9.title",
+    desc: "home2.features.card9.description",
   },
   {
     icon: (
@@ -302,10 +303,10 @@ const features = [
         </g>
       </svg>
     ),
-    alt: "SEO Optimized",
+    alt: "home2.features.card10.alt",
     bg: "bg-green-100 dark:bg-green-900",
-    title: "SEO Optimized",
-    desc: "Our code is SEO optimized, it will help to index the page on search engine.",
+    title: "home2.features.card10.title",
+    desc: "home2.features.card10.description",
   },
   {
     icon: (
@@ -321,10 +322,10 @@ const features = [
         ></path>
       </svg>
     ),
-    alt: "Dark & Light Mode",
+    alt: "home2.features.card11.alt",
     bg: "bg-gray-800",
-    title: "Dark & Light Mode",
-    desc: "This template has both dark & light mode. User can switch between them.",
+    title: "home2.features.card11.title",
+    desc: "home2.features.card11.description",
   },
   {
     icon: (
@@ -358,25 +359,23 @@ const features = [
         </g>
       </svg>
     ),
-    alt: "Tailwind CSS",
+    alt: "home2.features.card12.alt",
     bg: "bg-cyan-100 dark:bg-cyan-900",
-    title: "Tailwind CSS",
-    desc: "Tailwind CSS is a utility-first CSS framework for rapid UI development.",
+    title: "home2.features.card12.title",
+    desc: "home2.features.card12.description",
   },
 ];
 
 const home2 = (props: Props) => {
+  const { t } = useTranslation();
   React.useEffect(() => {
     AOS.init({});
   }, []);
   return (
     <>
       <Head>
-        <title>Home 2 - IT Services, Cybersecurity, Cloud</title>
-        <meta
-          name="description"
-          content="Discover our comprehensive IT services, including cybersecurity solutions, cloud computing, and IT consulting. Partner with us for innovative technology solutions."
-        />
+        <title>{t("home2.title")}</title>
+        <meta name="description" content={t("home2.metaDescription")} />
       </Head>
       <main className="caret-transparent">
         <SiteHeader />
@@ -396,21 +395,16 @@ const home2 = (props: Props) => {
           {/* Left: Headline, Description, CTA */}
           <div className="flex-1 z-10 max-w-xl relative">
             <span className="text-orange-400 dark:text-orange-300 font-semibold tracking-wide mb-4 block text-sm">
-              INNOVATIVE SOFTWARE SOLUTIONS
+              {t("home2.heroSubtitle")}
             </span>
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6 text-white dark:text-white">
-              Your Trusted Partner In{" "}
-              <span className="text-orange-400 dark:text-orange-300">
-                Software
-              </span>{" "}
-              Innovation & Development
+              {t("home2.heroTitle")}
             </h1>
             <p className="mb-8 text-base text-white/80 dark:text-white/70">
-              NETOVA Software Company, we specialize in delivering cutting-edge
-              software solutions to meet the evolving needs of businesses.
+              {t("home2.heroDescription")}
             </p>
             <button className="bg-orange-400 dark:bg-orange-500 hover:bg-orange-500 dark:hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all text-base">
-              Get Started
+              {t("home2.getStarted")}
             </button>
           </div>
           {/* Right: Image & Accents */}
@@ -432,11 +426,10 @@ const home2 = (props: Props) => {
         <section className="py-20 px-4 bg-[#f7fafd] dark:bg-[#101624]">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-extrabold text-center mb-4 text-gray-900 dark:text-white">
-              Awesome Features
+              {t("home2.features.title")}
             </h2>
             <p className="text-center text-gray-500 dark:text-gray-300 mb-10 text-base">
-              The template is built with all modern and latest technology.
-              Developer can easily handle this.
+              {t("home2.features.description")}
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -453,10 +446,10 @@ const home2 = (props: Props) => {
                     {feature.icon}
                   </span>
                   <h3 className="font-extrabold text-xl text-gray-900 dark:text-white mb-2 tracking-tight">
-                    {feature.title}
+                    {t(feature.title)}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
-                    {feature.desc}
+                    {t(feature.desc)}
                   </p>
                 </div>
               ))}
@@ -469,13 +462,10 @@ const home2 = (props: Props) => {
           {/* Left: Headline, Description, Feature Cards, CTA */}
           <div className="flex-1 z-10 max-w-xl w-full">
             <h2 className="text-3xl md:text-4xl font-extrabold leading-tight mb-4 text-gray-900 dark:text-white">
-              Enabling Excellence With Innovative IT Solutions
+              {t("home2.itSolutions.title")}
             </h2>
             <p className="mb-8 text-base text-gray-700 dark:text-gray-300">
-              Our services are tailored to meet the evolving needs of businesses
-              in a digital-first world. With a focus on reliability,
-              scalability, and performance, we help organizations leverage
-              technology to achieve.
+              {t("home2.itSolutions.description")}
             </p>
             {/* Feature Cards */}
             <div className="space-y-6 mb-8">
@@ -505,11 +495,10 @@ const home2 = (props: Props) => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
-                    Expert IT Solutions
+                    {t("home2.itSolutions.card1.title")}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300 text-sm">
-                    IT solutions designed to drive innovation, enhance security,
-                    & streamline operations.
+                    {t("home2.itSolutions.card1.description")}
                   </p>
                 </div>
               </div>
@@ -533,11 +522,10 @@ const home2 = (props: Props) => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
-                    Cutting-Edge Technology
+                    {t("home2.itSolutions.card2.title")}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300 text-sm">
-                    IT solutions designed to drive innovation, enhance security,
-                    & streamline operations.
+                    {t("home2.itSolutions.card2.description")}
                   </p>
                 </div>
               </div>
@@ -547,7 +535,7 @@ const home2 = (props: Props) => {
               href="/services"
               className="bg-orange-400 dark:bg-orange-500 hover:bg-orange-500 dark:hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all text-base"
             >
-              Discover More
+              {t("home2.getStarted")}
             </a>
           </div>
           {/* Right: Themed Image & Abstract Accents */}
@@ -569,7 +557,7 @@ const home2 = (props: Props) => {
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-purple-100 dark:from-blue-950 dark:to-purple-900">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-extrabold mb-10 text-center text-blue-700 dark:text-blue-300 tracking-tight">
-              Our Expertise
+              {t("home2.Expertise.title")}
             </h2>
             <div className="grid md:grid-cols-3 gap-10">
               {[
@@ -593,9 +581,9 @@ const home2 = (props: Props) => {
                     </svg>
                   ),
                   bg: "bg-blue-100 dark:bg-blue-900",
-                  title: "Custom Software Development",
+                  title: "home2.Expertise.card1.title",
                   titleClass: "text-blue-700 dark:text-blue-300",
-                  desc: "Tailored solutions for unique business needs, from web apps to enterprise platforms.",
+                  desc: "home2.Expertise.card1.description",
                   btnClass:
                     "bg-blue-600 dark:bg-blue-400 group-hover:bg-blue-700 dark:group-hover:bg-blue-500",
                 },
@@ -623,9 +611,9 @@ const home2 = (props: Props) => {
                     </svg>
                   ),
                   bg: "bg-purple-100 dark:bg-purple-900",
-                  title: "Cloud Integration",
+                  title: "home2.Expertise.card2.title",
                   titleClass: "text-purple-700 dark:text-purple-300",
-                  desc: "Seamless migration and integration with leading cloud platforms for scalability and security.",
+                  desc: "home2.Expertise.card2.description",
                   btnClass:
                     "bg-purple-600 dark:bg-purple-400 group-hover:bg-purple-700 dark:group-hover:bg-purple-500",
                 },
@@ -655,9 +643,9 @@ const home2 = (props: Props) => {
                     </svg>
                   ),
                   bg: "bg-blue-100 dark:bg-blue-900",
-                  title: "Cybersecurity Solutions",
+                  title: "home2.Expertise.card3.title",
                   titleClass: "text-blue-700 dark:text-blue-300",
-                  desc: "Protect your data and operations with advanced security strategies and monitoring.",
+                  desc: "home2.Expertise.card3.description",
                   btnClass:
                     "bg-blue-600 dark:bg-blue-400 group-hover:bg-blue-700 dark:group-hover:bg-blue-500",
                 },
@@ -681,16 +669,16 @@ const home2 = (props: Props) => {
                     <h3
                       className={`font-extrabold text-xl mb-2 tracking-tight ${card.titleClass}`}
                     >
-                      {card.title}
+                      {t(card.title)}
                     </h3>
                     <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed mb-4">
-                      {card.desc}
+                      {t(card.desc)}
                     </p>
                     <a
                       href="/services"
                       className={`inline-block ${card.btnClass} text-white px-5 py-2 rounded-full font-semibold transition`}
                     >
-                      Learn More
+                      {t("home2.learnMore")}
                     </a>
                   </div>
                 </>
@@ -703,13 +691,13 @@ const home2 = (props: Props) => {
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-purple-100 dark:from-blue-950 dark:to-purple-900">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-extrabold mb-10 text-center text-blue-700 dark:text-blue-300 tracking-tight">
-              Latest Insights & Resources
+              {t("home2.insights.title")}
             </h2>
             <div className="grid md:grid-cols-3 gap-10">
               {/* Card 1 */}
               <div className="relative bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl hover:scale-105 transition group flex flex-col items-start border border-blue-100 dark:border-blue-800">
                 <span className="absolute top-6 right-6 bg-blue-100 dark:bg-blue-800 text-blue-600 dark:text-blue-300 px-3 py-1 rounded-full text-xs font-bold">
-                  New
+                  {t("home2.insights.card1.label")}
                 </span>
                 <div className="mb-4">
                   <svg width="40" height="40" fill="none" viewBox="0 0 24 24">
@@ -721,17 +709,16 @@ const home2 = (props: Props) => {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-blue-700 dark:text-blue-300">
-                  AI in Software Development
+                  {t("home2.insights.card1.title")}
                 </h3>
                 <p className="mb-4 text-gray-700 dark:text-gray-300">
-                  How artificial intelligence is transforming the way businesses
-                  build and deploy applications.
+                  {t("home2.insights.card1.description")}
                 </p>
               </div>
               {/* Card 2 */}
               <div className="relative bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl hover:scale-105 transition group flex flex-col items-start border border-purple-100 dark:border-purple-800">
                 <span className="absolute top-6 right-6 bg-purple-100 dark:bg-purple-800 text-purple-600 dark:text-purple-300 px-3 py-1 rounded-full text-xs font-bold">
-                  Featured
+                  {t("home2.insights.card2.label")}
                 </span>
                 <div className="mb-4">
                   <svg width="40" height="40" fill="none" viewBox="0 0 24 24">
@@ -745,17 +732,16 @@ const home2 = (props: Props) => {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-purple-700 dark:text-purple-300">
-                  Cloud Security Best Practices
+                  {t("home2.insights.card2.title")}
                 </h3>
                 <p className="mb-4 text-gray-700 dark:text-gray-300">
-                  Essential strategies for keeping your cloud infrastructure
-                  secure and compliant.
+                  {t("home2.insights.card2.description")}
                 </p>
               </div>
               {/* Card 3 */}
               <div className="relative bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl hover:scale-105 transition group flex flex-col items-start border border-green-100 dark:border-green-800">
                 <span className="absolute top-6 right-6 bg-green-100 dark:bg-green-800 text-green-600 dark:text-green-300 px-3 py-1 rounded-full text-xs font-bold">
-                  Live
+                  {t("home2.insights.card3.label")}
                 </span>
                 <div className="mb-4">
                   <svg width="40" height="40" fill="none" viewBox="0 0 24 24">
@@ -770,11 +756,10 @@ const home2 = (props: Props) => {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-green-700 dark:text-green-300">
-                  Upcoming Webinar: Digital Transformation
+                  {t("home2.insights.card3.title")}
                 </h3>
                 <p className="mb-4 text-gray-700 dark:text-gray-300">
-                  Join our experts to learn how to future-proof your business
-                  with the latest IT trends.
+                  {t("home2.insights.card3.description")}
                 </p>
               </div>
             </div>
@@ -785,18 +770,16 @@ const home2 = (props: Props) => {
         <section className="py-16 px-4 bg-gradient-to-r from-blue-500 to-purple-600 dark:from-blue-900 dark:to-purple-900 flex flex-col items-center justify-center">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-white dark:text-blue-300 tracking-tight">
-              Ready to Transform Your Business?
+              {t("home2.cta.title")}
             </h2>
             <p className="text-lg text-white/80 dark:text-white/70 mb-8">
-              Book a free consultation with our IT and software experts.
-              Discover how our solutions can drive innovation, security, and
-              growth for your company.
+              {t("home2.cta.description")}
             </p>
             <a
               href="/contact-us"
               className="inline-block bg-blue-600 dark:bg-blue-400 hover:bg-blue-700 dark:hover:bg-blue-500 text-white font-bold py-4 px-10 rounded-full shadow-lg transition-all text-lg"
             >
-              Book Free Consultation
+              {t("home2.cta.button")}
             </a>
           </div>
         </section>
