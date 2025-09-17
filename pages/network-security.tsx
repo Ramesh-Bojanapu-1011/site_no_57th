@@ -1,7 +1,7 @@
-import SiteFooter from '@/components/SiteFooter';
-import SiteHeader from '@/components/SiteHeader';
-import Head from 'next/head';
-import Image from 'next/image';
+import SiteFooter from "@/components/SiteFooter";
+import SiteHeader from "@/components/SiteHeader";
+import Head from "next/head";
+import Image from "next/image";
 
 const NetworkSecurity = () => {
   return (
@@ -139,42 +139,42 @@ const NetworkSecurity = () => {
             {(() => {
               const solutions = [
                 {
-                  icon: '/shield.svg',
-                  alt: 'Threat Protection',
-                  bg: 'bg-blue-100 dark:bg-blue-900',
-                  border: 'border-blue-200 dark:border-blue-800',
-                  title: 'Threat Protection',
-                  titleClass: 'text-blue-700 dark:text-blue-300',
+                  icon: "/shield.svg",
+                  alt: "Threat Protection",
+                  bg: "bg-blue-100 dark:bg-blue-900",
+                  border: "border-blue-200 dark:border-blue-800",
+                  title: "Threat Protection",
+                  titleClass: "text-blue-700 dark:text-blue-300",
                   items: [
-                    '24/7 monitoring & rapid response',
-                    'Advanced firewalls & intrusion detection',
-                    'Proactive threat intelligence',
+                    "24/7 monitoring & rapid response",
+                    "Advanced firewalls & intrusion detection",
+                    "Proactive threat intelligence",
                   ],
                 },
                 {
-                  icon: '/window.svg',
-                  alt: 'Endpoint Security',
-                  bg: 'bg-purple-100 dark:bg-purple-900',
-                  border: 'border-purple-200 dark:border-purple-800',
-                  title: 'Endpoint Security',
-                  titleClass: 'text-purple-700 dark:text-purple-300',
+                  icon: "/window.svg",
+                  alt: "Endpoint Security",
+                  bg: "bg-purple-100 dark:bg-purple-900",
+                  border: "border-purple-200 dark:border-purple-800",
+                  title: "Endpoint Security",
+                  titleClass: "text-purple-700 dark:text-purple-300",
                   items: [
-                    'Multi-layered device protection',
-                    'Zero-trust access controls',
-                    'Automated patch management',
+                    "Multi-layered device protection",
+                    "Zero-trust access controls",
+                    "Automated patch management",
                   ],
                 },
                 {
-                  icon: '/cloud-backup.svg',
-                  alt: 'Cloud Security',
-                  bg: 'bg-blue-100 dark:bg-blue-900',
-                  border: 'border-blue-200 dark:border-blue-800',
-                  title: 'Cloud Security',
-                  titleClass: 'text-blue-700 dark:text-blue-300',
+                  icon: "/cloud-backup.svg",
+                  alt: "Cloud Security",
+                  bg: "bg-blue-100 dark:bg-blue-900",
+                  border: "border-blue-200 dark:border-blue-800",
+                  title: "Cloud Security",
+                  titleClass: "text-blue-700 dark:text-blue-300",
                   items: [
-                    'Secure cloud infrastructure',
-                    'Automated backup & disaster recovery',
-                    'Hybrid & multi-cloud protection',
+                    "Secure cloud infrastructure",
+                    "Automated backup & disaster recovery",
+                    "Hybrid & multi-cloud protection",
                   ],
                 },
               ];
@@ -187,7 +187,7 @@ const NetworkSecurity = () => {
                       <div
                         key={sol.title}
                         className={`flex flex-col ${
-                          !isLeft ? 'md:flex-row-reverse' : 'md:flex-row'
+                          !isLeft ? "md:flex-row-reverse" : "md:flex-row"
                         } items-center   gap-10`}
                       >
                         <div
@@ -202,9 +202,9 @@ const NetworkSecurity = () => {
                         </div>
                         <div
                           className={`md:${
-                            isLeft ? 'ml-0 order-2' : 'mr-0 order-2'
+                            isLeft ? "ml-0 order-2" : "mr-0 order-2"
                           } order-1 ${
-                            isLeft ? 'text-left' : 'text-right'
+                            isLeft ? "text-left" : "text-right"
                           } flex-1 not-md:text-center`}
                         >
                           <h3
@@ -316,43 +316,43 @@ const NetworkSecurity = () => {
             {(() => {
               const steps = [
                 {
-                  icon: '/security-awareness.svg',
-                  alt: 'Security Training',
-                  bg: 'bg-blue-100 dark:bg-blue-900',
-                  title: 'Security Awareness Training',
-                  titleClass: 'text-blue-700 dark:text-blue-300',
+                  icon: "/security-awareness.svg",
+                  alt: "Security Training",
+                  bg: "bg-blue-100 dark:bg-blue-900",
+                  title: "Security Awareness Training",
+                  titleClass: "text-blue-700 dark:text-blue-300",
                   items: [
-                    'Workshops & e-learning',
-                    'Phishing simulations',
-                    'Employee engagement',
+                    "Workshops & e-learning",
+                    "Phishing simulations",
+                    "Employee engagement",
                   ],
-                  connector: 'bg-blue-200 dark:bg-blue-900',
+                  connector: "bg-blue-200 dark:bg-blue-900",
                 },
                 {
-                  icon: '/globe.svg',
-                  alt: 'Compliance',
-                  bg: 'bg-purple-100 dark:bg-purple-900',
-                  title: 'Compliance Management',
-                  titleClass: 'text-purple-700 dark:text-purple-300',
+                  icon: "/globe.svg",
+                  alt: "Compliance",
+                  bg: "bg-purple-100 dark:bg-purple-900",
+                  title: "Compliance Management",
+                  titleClass: "text-purple-700 dark:text-purple-300",
                   items: [
-                    'GDPR, HIPAA, PCI DSS, ISO 27001',
-                    'Automated reporting',
-                    'Policy & audit support',
+                    "GDPR, HIPAA, PCI DSS, ISO 27001",
+                    "Automated reporting",
+                    "Policy & audit support",
                   ],
-                  connector: 'bg-purple-200 dark:bg-purple-900',
+                  connector: "bg-purple-200 dark:bg-purple-900",
                 },
                 {
-                  icon: '/window.svg',
-                  alt: 'Security Culture',
-                  bg: 'bg-green-100 dark:bg-green-900',
-                  title: 'Security Culture',
-                  titleClass: 'text-green-700 dark:text-green-400',
+                  icon: "/window.svg",
+                  alt: "Security Culture",
+                  bg: "bg-green-100 dark:bg-green-900",
+                  title: "Security Culture",
+                  titleClass: "text-green-700 dark:text-green-400",
                   items: [
-                    'Leadership buy-in',
-                    'Continuous improvement',
-                    'Celebrating wins',
+                    "Leadership buy-in",
+                    "Continuous improvement",
+                    "Celebrating wins",
                   ],
-                  connector: 'bg-green-200 dark:bg-green-900',
+                  connector: "bg-green-200 dark:bg-green-900",
                 },
               ];
               return (

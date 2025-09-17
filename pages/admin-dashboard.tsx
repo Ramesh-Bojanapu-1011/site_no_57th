@@ -1,5 +1,5 @@
-import SiteHeader from '@/components/SiteHeader';
-import { useState } from 'react';
+import SiteHeader from "@/components/SiteHeader";
+import { useState } from "react";
 import {
   Bar,
   BarChart,
@@ -12,26 +12,26 @@ import {
   Tooltip,
   XAxis,
   YAxis,
-} from 'recharts';
+} from "recharts";
 
 const staticStats = [
-  { label: 'Total IT Services', value: 42 },
-  { label: 'Cybersecurity Projects', value: 18 },
-  { label: 'Cloud Deployments', value: 27 },
-  { label: 'Active Users', value: 134 },
-  { label: 'Incidents Resolved', value: 56 },
+  { label: "Total IT Services", value: 42 },
+  { label: "Cybersecurity Projects", value: 18 },
+  { label: "Cloud Deployments", value: 27 },
+  { label: "Active Users", value: 134 },
+  { label: "Incidents Resolved", value: 56 },
 ];
 
 const getAllUsers = () => {
-  if (typeof window !== 'undefined') {
-    return JSON.parse(localStorage.getItem('All_Users') || '[]');
+  if (typeof window !== "undefined") {
+    return JSON.parse(localStorage.getItem("All_Users") || "[]");
   }
   return [];
 };
 
 const getLoginData = () => {
-  if (typeof window === 'undefined') return [];
-  const users = JSON.parse(localStorage.getItem('All_Users') || '[]');
+  if (typeof window === "undefined") return [];
+  const users = JSON.parse(localStorage.getItem("All_Users") || "[]");
   // Aggregate logins by date
   const loginCounts: Record<string, number> = {};
   users.forEach((user: any) => {
@@ -47,15 +47,15 @@ const getLoginData = () => {
 };
 
 const AdminDashboard = () => {
-  const [activeTab, setActiveTab] = useState('stats');
-  const users = typeof window !== 'undefined' ? getAllUsers() : [];
+  const [activeTab, setActiveTab] = useState("stats");
+  const users = typeof window !== "undefined" ? getAllUsers() : [];
   const loginData = getLoginData();
   // Pie chart data
   const totalUsers = users.length;
   const loginUsers = users.filter((u: any) => !!u.loginTime).length;
   const pieData = [
-    { name: 'Login Users', value: loginUsers },
-    { name: 'Other Users', value: totalUsers - loginUsers },
+    { name: "Login Users", value: loginUsers },
+    { name: "Other Users", value: totalUsers - loginUsers },
   ];
 
   return (
@@ -72,37 +72,34 @@ const AdminDashboard = () => {
           <div className="flex gap-4 md:gap-6 mb-6">
             {[
               {
-                key: 'stats',
-                label: 'Static Data',
-                icon: '📊',
-                activeClass:
-                  'bg-blue-600 text-white scale-105',
+                key: "stats",
+                label: "Static Data",
+                icon: "📊",
+                activeClass: "bg-blue-600 text-white scale-105",
                 inactiveClass:
-                  'bg-blue-100 dark:bg-gray-800 text-blue-700 dark:text-blue-300',
-                border: 'border-blue-300 dark:border-blue-700',
-                hover: 'hover:bg-blue-500 hover:text-white',
+                  "bg-blue-100 dark:bg-gray-800 text-blue-700 dark:text-blue-300",
+                border: "border-blue-300 dark:border-blue-700",
+                hover: "hover:bg-blue-500 hover:text-white",
               },
               {
-                key: 'graph',
-                label: 'User Activity',
-                icon: '📈',
-                activeClass:
-                  'bg-purple-600 text-white scale-105',
+                key: "graph",
+                label: "User Activity",
+                icon: "📈",
+                activeClass: "bg-purple-600 text-white scale-105",
                 inactiveClass:
-                  'bg-purple-100 dark:bg-gray-800 text-purple-700 dark:text-purple-300',
-                border: 'border-purple-300 dark:border-purple-700',
-                hover: 'hover:bg-purple-500 hover:text-white',
+                  "bg-purple-100 dark:bg-gray-800 text-purple-700 dark:text-purple-300",
+                border: "border-purple-300 dark:border-purple-700",
+                hover: "hover:bg-purple-500 hover:text-white",
               },
               {
-                key: 'users',
-                label: 'All Users',
-                icon: '👥',
-                activeClass:
-                  'bg-green-600 text-white scale-105',
+                key: "users",
+                label: "All Users",
+                icon: "👥",
+                activeClass: "bg-green-600 text-white scale-105",
                 inactiveClass:
-                  'bg-green-100 dark:bg-gray-800 text-green-700 dark:text-green-400',
-                border: 'border-green-300 dark:border-green-700',
-                hover: 'hover:bg-green-500 hover:text-white',
+                  "bg-green-100 dark:bg-gray-800 text-green-700 dark:text-green-400",
+                border: "border-green-300 dark:border-green-700",
+                hover: "hover:bg-green-500 hover:text-white",
               },
             ].map((tab) => (
               <button
@@ -112,13 +109,15 @@ const AdminDashboard = () => {
                 }`}
                 onClick={() => setActiveTab(tab.key)}
               >
-                <span className="inline-block align-middle mr-2">{tab.icon}</span>
+                <span className="inline-block align-middle mr-2">
+                  {tab.icon}
+                </span>
                 {tab.label}
               </button>
             ))}
           </div>
 
-          {activeTab === 'stats' && (
+          {activeTab === "stats" && (
             <section className="w-full">
               <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-8 text-purple-700 dark:text-purple-300 tracking-wide drop-shadow-lg">
                 IT Services / Cybersecurity / Cloud Services Stats
@@ -141,7 +140,7 @@ const AdminDashboard = () => {
             </section>
           )}
 
-          {activeTab === 'graph' && (
+          {activeTab === "graph" && (
             <section className="flex gap-6 md:gap-10 w-full">
               <div className="bg-white/60 dark:bg-gray-900/60 rounded-2xl md:rounded-3xl shadow-2xl p-6 md:p-10 border border-purple-100 dark:border-purple-900 backdrop-blur-lg flex flex-col items-center w-full">
                 <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-8 text-purple-700 dark:text-purple-300 tracking-wide drop-shadow-lg">
@@ -179,7 +178,7 @@ const AdminDashboard = () => {
                       {pieData.map((entry, index) => (
                         <Cell
                           key={`cell-${index}`}
-                          fill={index === 0 ? '#6366f1' : '#f472b6'}
+                          fill={index === 0 ? "#6366f1" : "#f472b6"}
                         />
                       ))}
                     </Pie>
@@ -188,19 +187,19 @@ const AdminDashboard = () => {
                   </PieChart>
                 </ResponsiveContainer>
                 <div className="mt-4 md:mt-8 text-base md:text-xl font-semibold text-gray-700 dark:text-gray-300">
-                  <span className="font-bold text-blue-700">Total Users:</span>{' '}
+                  <span className="font-bold text-blue-700">Total Users:</span>{" "}
                   {totalUsers}
                   <br />
                   <span className="font-bold text-purple-700">
                     Login Users:
-                  </span>{' '}
+                  </span>{" "}
                   {loginUsers}
                 </div>
               </div>
             </section>
           )}
 
-          {activeTab === 'users' && (
+          {activeTab === "users" && (
             <section className="w-full">
               <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-8 text-green-700 dark:text-green-400 tracking-wide drop-shadow-lg">
                 All Users
@@ -246,26 +245,26 @@ const AdminDashboard = () => {
                           className="border-b border-gray-200 dark:border-gray-800 hover:bg-blue-50 dark:hover:bg-blue-900 transition-colors duration-150 dark:text-white"
                         >
                           <td className="py-2 md:py-4 px-2 md:px-6 text-xs md:text-lg">
-                            {user.firstName || '-'}
+                            {user.firstName || "-"}
                           </td>
                           <td className="py-2 md:py-4 px-2 md:px-6 text-xs md:text-lg">
-                            {user.lastName || '-'}
+                            {user.lastName || "-"}
                           </td>
                           <td className="py-2 md:py-4 px-2 md:px-6 text-xs md:text-lg">
                             {user.email}
                           </td>
                           <td className="py-2 md:py-4 px-2 md:px-6 text-xs md:text-lg">
-                            {user.role || '-'}
+                            {user.role || "-"}
                           </td>
                           <td className="py-2 md:py-4 px-2 md:px-6 text-xs md:text-lg">
                             {user.registerTime
                               ? new Date(user.registerTime).toLocaleString()
-                              : '-'}
+                              : "-"}
                           </td>
                           <td className="py-2 md:py-4 px-2 md:px-6 text-xs md:text-lg">
                             {user.loginTime
                               ? new Date(user.loginTime).toLocaleString()
-                              : '-'}
+                              : "-"}
                           </td>
                         </tr>
                       ))

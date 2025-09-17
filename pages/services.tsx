@@ -1,17 +1,17 @@
-import SiteFooter from '@/components/SiteFooter';
-import SiteHeader from '@/components/SiteHeader';
-import { Facebook, Mail, Twitch, Twitter } from 'lucide-react';
-import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
+import SiteFooter from "@/components/SiteFooter";
+import SiteHeader from "@/components/SiteHeader";
+import { Facebook, Mail, Twitch, Twitter } from "lucide-react";
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
 
 type Props = {};
 
 const services = (props: Props) => {
   const serviceList = [
     {
-      name: 'Network Security',
-      desc: 'Protect your business from cyber threats with advanced firewall, intrusion detection, and monitoring solutions.',
+      name: "Network Security",
+      desc: "Protect your business from cyber threats with advanced firewall, intrusion detection, and monitoring solutions.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -25,11 +25,11 @@ const services = (props: Props) => {
           ></path>
         </svg>
       ),
-      color: 'from-blue-200 to-blue-100 dark:from-blue-900 dark:to-blue-800',
+      color: "from-blue-200 to-blue-100 dark:from-blue-900 dark:to-blue-800",
     },
     {
-      name: 'Cloud Backup and Recovery',
-      desc: 'Ensure your data is safe and recoverable with automated cloud backups and disaster recovery planning.',
+      name: "Cloud Backup and Recovery",
+      desc: "Ensure your data is safe and recoverable with automated cloud backups and disaster recovery planning.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -44,11 +44,11 @@ const services = (props: Props) => {
         </svg>
       ),
       color:
-        'from-purple-200 to-purple-100 dark:from-purple-900 dark:to-purple-800',
+        "from-purple-200 to-purple-100 dark:from-purple-900 dark:to-purple-800",
     },
     {
-      name: 'IT Infrastructure',
-      desc: 'Build a robust IT foundation with scalable servers, networking, and virtualization tailored to your needs.',
+      name: "IT Infrastructure",
+      desc: "Build a robust IT foundation with scalable servers, networking, and virtualization tailored to your needs.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -92,11 +92,11 @@ const services = (props: Props) => {
         </svg>
       ),
       color:
-        'from-orange-200 to-orange-100 dark:from-orange-900 dark:to-orange-800',
+        "from-orange-200 to-orange-100 dark:from-orange-900 dark:to-orange-800",
     },
     {
-      name: 'Endpoint Protection',
-      desc: 'Safeguard devices with antivirus, anti-malware, and device management for secure remote work.',
+      name: "Endpoint Protection",
+      desc: "Safeguard devices with antivirus, anti-malware, and device management for secure remote work.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -153,11 +153,11 @@ const services = (props: Props) => {
         </svg>
       ),
       color:
-        'from-green-200 to-green-100 dark:from-green-900 dark:to-green-800',
+        "from-green-200 to-green-100 dark:from-green-900 dark:to-green-800",
     },
     {
-      name: 'Security Awareness Training',
-      desc: 'Empower your team with training to recognize and avoid phishing, social engineering, and cyber risks.',
+      name: "Security Awareness Training",
+      desc: "Empower your team with training to recognize and avoid phishing, social engineering, and cyber risks.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -177,11 +177,11 @@ const services = (props: Props) => {
         </svg>
       ),
       color:
-        'from-yellow-200 to-yellow-100 dark:from-yellow-900 dark:to-yellow-800',
+        "from-yellow-200 to-yellow-100 dark:from-yellow-900 dark:to-yellow-800",
     },
     {
-      name: 'Vulnerability Assessment',
-      desc: 'Identify and remediate security gaps with expert vulnerability scanning and risk analysis.',
+      name: "Vulnerability Assessment",
+      desc: "Identify and remediate security gaps with expert vulnerability scanning and risk analysis.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -197,7 +197,7 @@ const services = (props: Props) => {
           ></path>
         </svg>
       ),
-      color: 'from-red-200 to-red-100 dark:from-red-900 dark:to-red-800',
+      color: "from-red-200 to-red-100 dark:from-red-900 dark:to-red-800",
     },
   ];
   return (
@@ -258,7 +258,7 @@ const services = (props: Props) => {
                     </p>
                     <Link
                       href={`/${service.name
-                        .replace(/\s+/g, '-')
+                        .replace(/\s+/g, "-")
                         .toLowerCase()}`}
                       className="inline-block mt-2 text-sm text-purple-600 dark:text-purple-300 font-semibold hover:underline"
                     >
@@ -280,9 +280,9 @@ const services = (props: Props) => {
             <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-8 relative">
               {[
                 {
-                  year: '2015',
-                  title: 'Founded',
-                  desc: 'Started as a small startup with a vision for innovative IT solutions.',
+                  year: "2015",
+                  title: "Founded",
+                  desc: "Started as a small startup with a vision for innovative IT solutions.",
                   icon: (
                     <svg width="32" height="32" fill="none" viewBox="0 0 24 24">
                       <circle
@@ -294,13 +294,13 @@ const services = (props: Props) => {
                       />
                     </svg>
                   ),
-                  color: 'bg-blue-100/70 dark:bg-blue-900/70',
-                  highlight: 'border-blue-400',
+                  color: "bg-blue-100/70 dark:bg-blue-900/70",
+                  highlight: "border-blue-400",
                 },
                 {
-                  year: '2018',
-                  title: 'First Major Award',
-                  desc: 'Recognized for excellence in software development and client service.',
+                  year: "2018",
+                  title: "First Major Award",
+                  desc: "Recognized for excellence in software development and client service.",
                   icon: (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -339,13 +339,13 @@ const services = (props: Props) => {
                       </g>
                     </svg>
                   ),
-                  color: 'bg-purple-100/70 dark:bg-purple-900/70',
-                  highlight: 'border-purple-400',
+                  color: "bg-purple-100/70 dark:bg-purple-900/70",
+                  highlight: "border-purple-400",
                 },
                 {
-                  year: '2021',
-                  title: '100+ Projects',
-                  desc: 'Delivered over 100 successful projects for clients worldwide.',
+                  year: "2021",
+                  title: "100+ Projects",
+                  desc: "Delivered over 100 successful projects for clients worldwide.",
                   icon: (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -361,13 +361,13 @@ const services = (props: Props) => {
                       ></path>
                     </svg>
                   ),
-                  color: 'bg-orange-100/70 dark:bg-orange-900/70',
-                  highlight: 'border-orange-400',
+                  color: "bg-orange-100/70 dark:bg-orange-900/70",
+                  highlight: "border-orange-400",
                 },
                 {
-                  year: '2025',
-                  title: 'Global Expansion',
-                  desc: 'Expanded our reach to serve clients in 15+ countries.',
+                  year: "2025",
+                  title: "Global Expansion",
+                  desc: "Expanded our reach to serve clients in 15+ countries.",
                   icon: (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -386,8 +386,8 @@ const services = (props: Props) => {
                       <path fill="#c5cae9" d="M26 17h2v1h-2z"></path>
                     </svg>
                   ),
-                  color: 'bg-green-100/70 dark:bg-green-900/70',
-                  highlight: 'border-green-400',
+                  color: "bg-green-100/70 dark:bg-green-900/70",
+                  highlight: "border-green-400",
                 },
               ].map((milestone, idx, arr) => (
                 <div
@@ -397,7 +397,7 @@ const services = (props: Props) => {
                   {idx !== arr.length - 1 && (
                     <span
                       className={`md:hidden absolute left-1/2 bottom-0 w-2 h-8 bg-gradient-to-b from-blue-300 via-purple-300 to-orange-300 dark:from-blue-900 dark:via-purple-900 dark:to-orange-900 rounded-full animate-pulse`}
-                      style={{ zIndex: 1, transform: 'translateX(-50%)' }}
+                      style={{ zIndex: 1, transform: "translateX(-50%)" }}
                     ></span>
                   )}
                   <div
@@ -450,48 +450,48 @@ const services = (props: Props) => {
             <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
                 {
-                  name: 'Justin Kingdony',
-                  role: 'UI/UX Designer',
-                  photo: '/logo-stackly.png',
+                  name: "Justin Kingdony",
+                  role: "UI/UX Designer",
+                  photo: "/logo-stackly.png",
                   socials: [
                     {
                       icon: <Twitch color="#fff" />,
-                      link: 'https://www.twitch.tv/',
+                      link: "https://www.twitch.tv/",
                     },
                     {
                       icon: <Twitter color="#fff" />,
-                      link: 'https://twitter.com/',
+                      link: "https://twitter.com/",
                     },
                     {
                       icon: <Mail color="#fff" />,
-                      link: 'mailto:example@example.com',
+                      link: "mailto:example@example.com",
                     },
                     {
                       icon: <Facebook color="#fff" />,
-                      link: 'https://www.facebook.com/',
+                      link: "https://www.facebook.com/",
                     },
                   ],
                 },
                 {
-                  name: 'Michael Johnson',
-                  role: 'UI/UX Designer',
-                  photo: '/globe.svg',
+                  name: "Michael Johnson",
+                  role: "UI/UX Designer",
+                  photo: "/globe.svg",
                   socials: [
                     {
                       icon: <Twitch color="#fff" />,
-                      link: 'https://www.twitch.tv/',
+                      link: "https://www.twitch.tv/",
                     },
                     {
                       icon: <Twitter color="#fff" />,
-                      link: 'https://twitter.com/',
+                      link: "https://twitter.com/",
                     },
                     {
                       icon: <Mail color="#fff" />,
-                      link: 'mailto:example@example.com',
+                      link: "mailto:example@example.com",
                     },
                     {
                       icon: <Facebook color="#fff" />,
-                      link: 'https://www.facebook.com/',
+                      link: "https://www.facebook.com/",
                     },
                   ],
                 },
@@ -504,7 +504,7 @@ const services = (props: Props) => {
                     src={member.photo}
                     width={320}
                     height={320}
-                    alt={member.name + ' photo'}
+                    alt={member.name + " photo"}
                     className="w-full h-[320px] object-cover object-center mb-0"
                   />
                   <div className="absolute bottom-0 left-0 w-full px-6 py-6 bg-gradient-to-t from-[#0d1b2a]/90 to-transparent flex flex-col items-center">
@@ -543,33 +543,33 @@ const services = (props: Props) => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
-                  name: 'Sarah Lee',
-                  company: 'TechNova Inc.',
-                  logo: '/logo-stackly.png',
+                  name: "Sarah Lee",
+                  company: "TechNova Inc.",
+                  logo: "/logo-stackly.png",
                   feedback:
-                    'Enkonix delivered a robust IT infrastructure for us. Their team was responsive, knowledgeable, and truly cared about our business goals.',
+                    "Enkonix delivered a robust IT infrastructure for us. Their team was responsive, knowledgeable, and truly cared about our business goals.",
                 },
                 {
-                  name: 'Michael Chen',
-                  company: 'Cloudify Solutions',
-                  logo: '/globe.svg',
+                  name: "Michael Chen",
+                  company: "Cloudify Solutions",
+                  logo: "/globe.svg",
                   feedback:
                     "The security awareness training transformed our team's approach to cyber threats. Highly recommended for any growing company!",
                 },
                 {
-                  name: 'Priya Patel',
-                  company: 'SafeNet Corp.',
-                  logo: '/window.svg',
+                  name: "Priya Patel",
+                  company: "SafeNet Corp.",
+                  logo: "/window.svg",
                   feedback:
-                    'Their vulnerability assessment was thorough and actionable. We now feel confident in our security posture thanks to Enkonix.',
+                    "Their vulnerability assessment was thorough and actionable. We now feel confident in our security posture thanks to Enkonix.",
                 },
               ].map((client, idx) => (
                 <div
                   key={idx}
                   className={`relative bg-white/60 dark:bg-gray-900/60 rounded-3xl shadow-2xl p-8 border-2 border-transparent bg-clip-padding backdrop-blur-xl flex flex-col items-center justify-between min-h-[260px] transition-all duration-300 hover:scale-105 hover:shadow-purple-400 dark:hover:shadow-purple-900 ${
                     idx % 2 === 0
-                      ? 'hover:-translate-y-2'
-                      : 'hover:translate-y-2'
+                      ? "hover:-translate-y-2"
+                      : "hover:translate-y-2"
                   }`}
                 >
                   {/* Floating quote icon */}
@@ -581,7 +581,7 @@ const services = (props: Props) => {
                       src={client.logo}
                       width={56}
                       height={56}
-                      alt={client.company + ' logo'}
+                      alt={client.company + " logo"}
                       className="w-14 h-14 mb-4 rounded-full object-contain shadow-lg border-2 border-purple-200 dark:border-purple-700 bg-white dark:bg-gray-800"
                     />
                     <p className="text-gray-800 dark:text-gray-200 text-base mb-4 text-center italic font-medium px-2">

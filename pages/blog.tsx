@@ -1,5 +1,5 @@
-import SiteFooter from '@/components/SiteFooter';
-import SiteHeader from '@/components/SiteHeader';
+import SiteFooter from "@/components/SiteFooter";
+import SiteHeader from "@/components/SiteHeader";
 import {
   BoltIcon,
   CloudAlert,
@@ -7,10 +7,10 @@ import {
   ServerIcon,
   ShieldAlertIcon,
   Timer,
-} from 'lucide-react';
-import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
+} from "lucide-react";
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
 
 type Props = {};
 
@@ -46,22 +46,22 @@ const blog = (props: Props) => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
-                  title: '5 Ways to Secure Your Business Network',
-                  desc: 'Practical strategies to protect your company from cyber threats.',
-                  image: '/globe.svg',
-                  link: '/secure-your-business-network',
+                  title: "5 Ways to Secure Your Business Network",
+                  desc: "Practical strategies to protect your company from cyber threats.",
+                  image: "/globe.svg",
+                  link: "/secure-your-business-network",
                 },
                 {
-                  title: 'Cloud Backup: Why It Matters',
-                  desc: 'Discover the benefits of cloud backup and disaster recovery.',
-                  image: '/window.svg',
-                  link: '/cloud-backup',
+                  title: "Cloud Backup: Why It Matters",
+                  desc: "Discover the benefits of cloud backup and disaster recovery.",
+                  image: "/window.svg",
+                  link: "/cloud-backup",
                 },
                 {
-                  title: 'Building a Culture of Security Awareness',
-                  desc: 'How to empower your team to recognize and avoid cyber risks.',
-                  image: '/logo-stackly.png',
-                  link: '/security-awareness',
+                  title: "Building a Culture of Security Awareness",
+                  desc: "How to empower your team to recognize and avoid cyber risks.",
+                  image: "/logo-stackly.png",
+                  link: "/security-awareness",
                 },
               ].map((blog, idx) => (
                 <div
@@ -111,11 +111,11 @@ const blog = (props: Props) => {
                 About Our Blog
               </h2>
               <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-2">
-                Our blog is dedicated to sharing{' '}
+                Our blog is dedicated to sharing{" "}
                 <span className="font-semibold text-purple-600 dark:text-purple-300">
                   expert advice
                 </span>
-                ,{' '}
+                ,{" "}
                 <span className="font-semibold text-blue-600 dark:text-blue-300">
                   industry news
                 </span>
@@ -161,27 +161,27 @@ const blog = (props: Props) => {
               <div className="flex  gap-8 flex-wrap justify-center px-2">
                 {[
                   {
-                    name: 'Network Security',
+                    name: "Network Security",
                     icon: <ShieldAlertIcon color="blue" />,
                   },
                   {
-                    name: 'Cloud Solutions',
+                    name: "Cloud Solutions",
                     icon: <CloudAlert color="blue" />,
                   },
                   {
-                    name: 'IT Infrastructure',
+                    name: "IT Infrastructure",
                     icon: <ServerIcon color="blue" />,
                   },
                   {
-                    name: 'Security Awareness',
+                    name: "Security Awareness",
                     icon: <EyeIcon color="blue" />,
                   },
                   {
-                    name: 'Vulnerability Assessment',
+                    name: "Vulnerability Assessment",
                     icon: <Timer color="blue" />,
                   },
                   {
-                    name: 'Digital Transformation',
+                    name: "Digital Transformation",
                     icon: <BoltIcon color="blue" />,
                   },
                 ].map((cat, idx) => (
@@ -209,31 +209,31 @@ const blog = (props: Props) => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
               {[
                 {
-                  name: 'Priya Patel',
+                  name: "Priya Patel",
                   comment:
-                    'Loved the article on cloud backup! Very informative.',
+                    "Loved the article on cloud backup! Very informative.",
                 },
                 {
-                  name: 'Sarah Lee',
+                  name: "Sarah Lee",
                   comment:
-                    'The security tips are practical and easy to implement.',
+                    "The security tips are practical and easy to implement.",
                 },
                 {
-                  name: 'Michael Chen',
+                  name: "Michael Chen",
                   comment:
-                    'Great insights on building a security-aware culture.',
+                    "Great insights on building a security-aware culture.",
                 },
                 {
-                  name: 'David Kim',
+                  name: "David Kim",
                   comment:
-                    'Looking forward to more posts on IT infrastructure.',
+                    "Looking forward to more posts on IT infrastructure.",
                 },
               ].map((cmt, idx) => {
                 // Get initials from name
                 const initials = cmt.name
-                  .split(' ')
+                  .split(" ")
                   .map((n) => n[0])
-                  .join('')
+                  .join("")
                   .toUpperCase();
                 return (
                   <div

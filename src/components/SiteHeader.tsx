@@ -1,25 +1,25 @@
-import i18n from '@/i18n';
-import { ChevronDown, Globe, LogOut, Menu, User, X } from 'lucide-react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { ModeToggle } from './theme/ModeToggle';
+import i18n from "@/i18n";
+import { ChevronDown, Globe, LogOut, Menu, User, X } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { ModeToggle } from "./theme/ModeToggle";
 
 const services = [
-  { name: 'Network Security' },
-  { name: 'Cloud Backup and Recovery' },
-  { name: 'IT Infrastructure' },
-  { name: 'Endpoint Protection' },
-  { name: 'Security Awareness Training' },
-  { name: 'Vulnerability Assessment' },
+  { name: "Network Security" },
+  { name: "Cloud Backup and Recovery" },
+  { name: "IT Infrastructure" },
+  { name: "Endpoint Protection" },
+  { name: "Security Awareness Training" },
+  { name: "Vulnerability Assessment" },
 ];
 
 const languages = [
-  { code: 'en', label: 'English' },
-  { code: 'ar', label: 'Arabic' },
-  { code: 'he', label: 'Hebrew' },
+  { code: "en", label: "English" },
+  { code: "ar", label: "Arabic" },
+  { code: "he", label: "Hebrew" },
 ];
 
 const SiteHeader = () => {
@@ -34,22 +34,22 @@ const SiteHeader = () => {
 
   // Restore language from localStorage on mount and on route change
   React.useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       const setLangFromStorage = () => {
-        const savedLang = localStorage.getItem('selectedLanguage');
+        const savedLang = localStorage.getItem("selectedLanguage");
         if (savedLang) {
           //   setSelectedLanguage(savedLang);
-          if (savedLang === 'English' && i18n.language !== 'en')
-            i18n.changeLanguage('en');
-          else if (savedLang === 'Arabic' && i18n.language !== 'ar')
-            i18n.changeLanguage('ar');
-          else if (savedLang === 'Hebrew' && i18n.language !== 'he')
-            i18n.changeLanguage('he');
+          if (savedLang === "English" && i18n.language !== "en")
+            i18n.changeLanguage("en");
+          else if (savedLang === "Arabic" && i18n.language !== "ar")
+            i18n.changeLanguage("ar");
+          else if (savedLang === "Hebrew" && i18n.language !== "he")
+            i18n.changeLanguage("he");
           // Set document direction
-          if (savedLang === 'Arabic' || savedLang === 'Hebrew') {
-            document.documentElement.dir = 'rtl';
+          if (savedLang === "Arabic" || savedLang === "Hebrew") {
+            document.documentElement.dir = "rtl";
           } else {
-            document.documentElement.dir = 'ltr';
+            document.documentElement.dir = "ltr";
           }
         }
       };
@@ -59,9 +59,9 @@ const SiteHeader = () => {
       const handleRouteChange = () => {
         setLangFromStorage();
       };
-      router.events.on('routeChangeComplete', handleRouteChange);
+      router.events.on("routeChangeComplete", handleRouteChange);
       return () => {
-        router.events.off('routeChangeComplete', handleRouteChange);
+        router.events.off("routeChangeComplete", handleRouteChange);
       };
     }
   }, [router.events, i18n.language]);
@@ -71,12 +71,12 @@ const SiteHeader = () => {
     const langObj = languages.find((l) => l.label === langLabel);
     if (langObj) {
       i18n.changeLanguage(langObj.code);
-      if (typeof window !== 'undefined') {
-        localStorage.setItem('selectedLanguage', langLabel);
-        if (langObj.code === 'ar' || langObj.code === 'he') {
-          document.documentElement.dir = 'rtl';
+      if (typeof window !== "undefined") {
+        localStorage.setItem("selectedLanguage", langLabel);
+        if (langObj.code === "ar" || langObj.code === "he") {
+          document.documentElement.dir = "rtl";
         } else {
-          document.documentElement.dir = 'ltr';
+          document.documentElement.dir = "ltr";
         }
       }
     }
@@ -84,12 +84,12 @@ const SiteHeader = () => {
 
   // Responsive mobile menu toggle
   const toggleMenu = () => setMenuOpen((prev) => !prev);
-  console.log('Current route:', window.location.pathname);
+  console.log("Current route:", window.location.pathname);
 
   return (
     <header
       className={`w-full sticky top-0 left-0 z-50 -colors duration-300 max-w-screen bg-gradient-to-r from-blue-50 via-white to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-gray-900 dark:text-white shadow-2xl  border-blue-100 dark:border-gray-800`}
-      style={{ fontFamily: 'Segoe UI, Roboto, Arial, sans-serif' }}
+      style={{ fontFamily: "Segoe UI, Roboto, Arial, sans-serif" }}
     >
       <nav className="mx-auto flex items-center justify-between px-6 py-3">
         {/* Logo */}
@@ -174,7 +174,7 @@ const SiteHeader = () => {
                   <li key={service.name} className="flex ">
                     <Link
                       href={`/${service.name
-                        .replace(/\s+/g, '-')
+                        .replace(/\s+/g, "-")
                         .toLowerCase()}`}
                       className="flex items-center w-full gap-2 px-4 py-2 rounded hover:bg-blue-50 dark:hover:bg-gray-700 "
                     >
@@ -328,7 +328,7 @@ const SiteHeader = () => {
                     <li key={service.name}>
                       <Link
                         href={`/${service.name
-                          .replace(/\s+/g, '-')
+                          .replace(/\s+/g, "-")
                           .toLowerCase()}`}
                         className="flex items-center gap-2 py-1 rounded hover:bg-blue-50 dark:hover:bg-gray-700 "
                       >

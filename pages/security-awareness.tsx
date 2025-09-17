@@ -1,6 +1,6 @@
-import SiteFooter from '@/components/SiteFooter';
-import SiteHeader from '@/components/SiteHeader';
-import React from 'react';
+import SiteFooter from "@/components/SiteFooter";
+import SiteHeader from "@/components/SiteHeader";
+import React from "react";
 
 const SecurityAwareness = () => {
   return (

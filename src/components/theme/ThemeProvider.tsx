@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import * as React from 'react';
+import * as React from "react";
 // Custom ThemeProvider for per-tab theme (no localStorage/global sync)
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState } from "react";
 
-type Theme = 'light' | 'dark';
+type Theme = "light" | "dark";
 interface ThemeContextType {
   theme: Theme;
   setTheme: (theme: Theme) => void;
@@ -14,19 +14,19 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setThemeState] = useState<Theme>(() => {
-    if (typeof window !== 'undefined') {
-      const stored = sessionStorage.getItem('theme');
-      if (stored === 'dark' || stored === 'light') return stored as Theme;
+    if (typeof window !== "undefined") {
+      const stored = sessionStorage.getItem("theme");
+      if (stored === "dark" || stored === "light") return stored as Theme;
     }
-    return 'light';
+    return "light";
   });
 
   // Set theme class on html element
   React.useEffect(() => {
-    document.documentElement.classList.remove('light', 'dark');
+    document.documentElement.classList.remove("light", "dark");
     document.documentElement.classList.add(theme);
-    if (typeof window !== 'undefined') {
-      sessionStorage.setItem('theme', theme);
+    if (typeof window !== "undefined") {
+      sessionStorage.setItem("theme", theme);
     }
   }, [theme]);
 
@@ -44,6 +44,6 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
 export function useTheme() {
   const context = useContext(ThemeContext);
-  if (!context) throw new Error('useTheme must be used within ThemeProvider');
+  if (!context) throw new Error("useTheme must be used within ThemeProvider");
   return context;
 }

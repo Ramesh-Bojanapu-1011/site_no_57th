@@ -1,7 +1,7 @@
-import SiteFooter from '@/components/SiteFooter';
-import SiteHeader from '@/components/SiteHeader';
-import Head from 'next/head';
-import Image from 'next/image';
+import SiteFooter from "@/components/SiteFooter";
+import SiteHeader from "@/components/SiteHeader";
+import Head from "next/head";
+import Image from "next/image";
 
 const EndpointProtection = () => {
   return (
@@ -146,42 +146,42 @@ const EndpointProtection = () => {
             {(() => {
               const solutions = [
                 {
-                  icon: '/window.svg',
-                  alt: 'Advanced Threat Defense',
-                  bg: 'bg-blue-100 dark:bg-blue-900',
-                  border: 'border-blue-200 dark:border-blue-800',
-                  title: 'Advanced Threat Defense',
-                  titleClass: 'text-blue-700 dark:text-blue-300',
+                  icon: "/window.svg",
+                  alt: "Advanced Threat Defense",
+                  bg: "bg-blue-100 dark:bg-blue-900",
+                  border: "border-blue-200 dark:border-blue-800",
+                  title: "Advanced Threat Defense",
+                  titleClass: "text-blue-700 dark:text-blue-300",
                   items: [
-                    'AI-powered malware detection',
-                    'Real-time threat intelligence',
-                    'Ransomware protection',
+                    "AI-powered malware detection",
+                    "Real-time threat intelligence",
+                    "Ransomware protection",
                   ],
                 },
                 {
-                  icon: '/cloud-backup.svg',
-                  alt: 'Zero-Trust Security',
-                  bg: 'bg-purple-100 dark:bg-purple-900',
-                  border: 'border-purple-200 dark:border-purple-800',
-                  title: 'Zero-Trust Security',
-                  titleClass: 'text-purple-700 dark:text-purple-300',
+                  icon: "/cloud-backup.svg",
+                  alt: "Zero-Trust Security",
+                  bg: "bg-purple-100 dark:bg-purple-900",
+                  border: "border-purple-200 dark:border-purple-800",
+                  title: "Zero-Trust Security",
+                  titleClass: "text-purple-700 dark:text-purple-300",
                   items: [
-                    'Strict identity verification',
-                    'Micro-segmentation of devices',
-                    'Adaptive access controls',
+                    "Strict identity verification",
+                    "Micro-segmentation of devices",
+                    "Adaptive access controls",
                   ],
                 },
                 {
-                  icon: '/globe.svg',
-                  alt: 'Automated Compliance',
-                  bg: 'bg-blue-100 dark:bg-blue-900',
-                  border: 'border-blue-200 dark:border-blue-800',
-                  title: 'Automated Compliance & Monitoring',
-                  titleClass: 'text-blue-700 dark:text-blue-300',
+                  icon: "/globe.svg",
+                  alt: "Automated Compliance",
+                  bg: "bg-blue-100 dark:bg-blue-900",
+                  border: "border-blue-200 dark:border-blue-800",
+                  title: "Automated Compliance & Monitoring",
+                  titleClass: "text-blue-700 dark:text-blue-300",
                   items: [
-                    'Continuous compliance checks',
-                    'Automated reporting & alerts',
-                    '24/7 device monitoring',
+                    "Continuous compliance checks",
+                    "Automated reporting & alerts",
+                    "24/7 device monitoring",
                   ],
                 },
               ];
@@ -194,7 +194,7 @@ const EndpointProtection = () => {
                       <div
                         key={sol.title}
                         className={`flex flex-col ${
-                          !isLeft ? 'md:flex-row-reverse' : 'md:flex-row'
+                          !isLeft ? "md:flex-row-reverse" : "md:flex-row"
                         } items-center   gap-10`}
                       >
                         <div
@@ -209,9 +209,9 @@ const EndpointProtection = () => {
                         </div>
                         <div
                           className={`md:${
-                            isLeft ? 'ml-0 order-2' : 'mr-0 order-2'
+                            isLeft ? "ml-0 order-2" : "mr-0 order-2"
                           } order-1 ${
-                            isLeft ? 'text-left' : 'text-right'
+                            isLeft ? "text-left" : "text-right"
                           } flex-1 not-md:text-center`}
                         >
                           <h3
@@ -322,43 +322,43 @@ const EndpointProtection = () => {
             {(() => {
               const steps = [
                 {
-                  icon: '/security-awareness.svg',
-                  alt: 'Training',
-                  bg: 'bg-blue-100 dark:bg-blue-900',
-                  title: 'Endpoint Training & Awareness',
-                  titleClass: 'text-blue-700 dark:text-blue-300',
+                  icon: "/security-awareness.svg",
+                  alt: "Training",
+                  bg: "bg-blue-100 dark:bg-blue-900",
+                  title: "Endpoint Training & Awareness",
+                  titleClass: "text-blue-700 dark:text-blue-300",
                   items: [
-                    'Workshops & e-learning',
-                    'Simulated threat drills',
-                    'Employee engagement',
+                    "Workshops & e-learning",
+                    "Simulated threat drills",
+                    "Employee engagement",
                   ],
-                  connector: 'bg-blue-200 dark:bg-blue-900',
+                  connector: "bg-blue-200 dark:bg-blue-900",
                 },
                 {
-                  icon: '/globe.svg',
-                  alt: 'Compliance',
-                  bg: 'bg-purple-100 dark:bg-purple-900',
-                  title: 'Compliance Management',
-                  titleClass: 'text-purple-700 dark:text-purple-300',
+                  icon: "/globe.svg",
+                  alt: "Compliance",
+                  bg: "bg-purple-100 dark:bg-purple-900",
+                  title: "Compliance Management",
+                  titleClass: "text-purple-700 dark:text-purple-300",
                   items: [
-                    'GDPR, HIPAA, PCI DSS, ISO 27001',
-                    'Automated reporting',
-                    'Policy & audit support',
+                    "GDPR, HIPAA, PCI DSS, ISO 27001",
+                    "Automated reporting",
+                    "Policy & audit support",
                   ],
-                  connector: 'bg-purple-200 dark:bg-purple-900',
+                  connector: "bg-purple-200 dark:bg-purple-900",
                 },
                 {
-                  icon: '/window.svg',
-                  alt: 'Culture',
-                  bg: 'bg-green-100 dark:bg-green-900',
-                  title: 'Resilient Culture',
-                  titleClass: 'text-green-700 dark:text-green-400',
+                  icon: "/window.svg",
+                  alt: "Culture",
+                  bg: "bg-green-100 dark:bg-green-900",
+                  title: "Resilient Culture",
+                  titleClass: "text-green-700 dark:text-green-400",
                   items: [
-                    'Leadership buy-in',
-                    'Continuous improvement',
-                    'Celebrating successful threat prevention',
+                    "Leadership buy-in",
+                    "Continuous improvement",
+                    "Celebrating successful threat prevention",
                   ],
-                  connector: 'bg-green-200 dark:bg-green-900',
+                  connector: "bg-green-200 dark:bg-green-900",
                 },
               ];
               return (

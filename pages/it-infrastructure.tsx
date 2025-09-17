@@ -1,7 +1,7 @@
-import SiteFooter from '@/components/SiteFooter';
-import SiteHeader from '@/components/SiteHeader';
-import Head from 'next/head';
-import Image from 'next/image';
+import SiteFooter from "@/components/SiteFooter";
+import SiteHeader from "@/components/SiteHeader";
+import Head from "next/head";
+import Image from "next/image";
 
 const ITInfrastructure = () => {
   return (
@@ -138,42 +138,42 @@ const ITInfrastructure = () => {
             {(() => {
               const solutions = [
                 {
-                  icon: '/window.svg',
-                  alt: 'Network Design',
-                  bg: 'bg-blue-100 dark:bg-blue-900',
-                  border: 'border-blue-200 dark:border-blue-800',
-                  title: 'Network Design & Implementation',
-                  titleClass: 'text-blue-700 dark:text-blue-300',
+                  icon: "/window.svg",
+                  alt: "Network Design",
+                  bg: "bg-blue-100 dark:bg-blue-900",
+                  border: "border-blue-200 dark:border-blue-800",
+                  title: "Network Design & Implementation",
+                  titleClass: "text-blue-700 dark:text-blue-300",
                   items: [
-                    'Custom network architecture',
-                    'Secure LAN/WAN solutions',
-                    'Performance optimization',
+                    "Custom network architecture",
+                    "Secure LAN/WAN solutions",
+                    "Performance optimization",
                   ],
                 },
                 {
-                  icon: '/cloud-backup.svg',
-                  alt: 'Cloud Integration',
-                  bg: 'bg-purple-100 dark:bg-purple-900',
-                  border: 'border-purple-200 dark:border-purple-800',
-                  title: 'Cloud Integration',
-                  titleClass: 'text-purple-700 dark:text-purple-300',
+                  icon: "/cloud-backup.svg",
+                  alt: "Cloud Integration",
+                  bg: "bg-purple-100 dark:bg-purple-900",
+                  border: "border-purple-200 dark:border-purple-800",
+                  title: "Cloud Integration",
+                  titleClass: "text-purple-700 dark:text-purple-300",
                   items: [
-                    'Hybrid & multi-cloud deployments',
-                    'Migration & onboarding',
-                    'Scalable infrastructure',
+                    "Hybrid & multi-cloud deployments",
+                    "Migration & onboarding",
+                    "Scalable infrastructure",
                   ],
                 },
                 {
-                  icon: '/globe.svg',
-                  alt: 'Security',
-                  bg: 'bg-blue-100 dark:bg-blue-900',
-                  border: 'border-blue-200 dark:border-blue-800',
-                  title: 'Security & Compliance',
-                  titleClass: 'text-blue-700 dark:text-blue-300',
+                  icon: "/globe.svg",
+                  alt: "Security",
+                  bg: "bg-blue-100 dark:bg-blue-900",
+                  border: "border-blue-200 dark:border-blue-800",
+                  title: "Security & Compliance",
+                  titleClass: "text-blue-700 dark:text-blue-300",
                   items: [
-                    'GDPR, HIPAA, PCI DSS, ISO 27001',
-                    'Automated reporting & monitoring',
-                    'Policy & audit support',
+                    "GDPR, HIPAA, PCI DSS, ISO 27001",
+                    "Automated reporting & monitoring",
+                    "Policy & audit support",
                   ],
                 },
               ];
@@ -186,7 +186,7 @@ const ITInfrastructure = () => {
                       <div
                         key={sol.title}
                         className={`flex flex-col ${
-                          !isLeft ? 'md:flex-row-reverse' : 'md:flex-row'
+                          !isLeft ? "md:flex-row-reverse" : "md:flex-row"
                         } items-center   gap-10`}
                       >
                         <div
@@ -201,9 +201,9 @@ const ITInfrastructure = () => {
                         </div>
                         <div
                           className={`md:${
-                            isLeft ? 'ml-0 order-2' : 'mr-0 order-2'
+                            isLeft ? "ml-0 order-2" : "mr-0 order-2"
                           } order-1 ${
-                            isLeft ? 'text-left' : 'text-right'
+                            isLeft ? "text-left" : "text-right"
                           } flex-1 not-md:text-center`}
                         >
                           <h3
@@ -314,43 +314,43 @@ const ITInfrastructure = () => {
             {(() => {
               const steps = [
                 {
-                  icon: '/security-awareness.svg',
-                  alt: 'Training',
-                  bg: 'bg-blue-100 dark:bg-blue-900',
-                  title: 'Infrastructure Training & Awareness',
-                  titleClass: 'text-blue-700 dark:text-blue-300',
+                  icon: "/security-awareness.svg",
+                  alt: "Training",
+                  bg: "bg-blue-100 dark:bg-blue-900",
+                  title: "Infrastructure Training & Awareness",
+                  titleClass: "text-blue-700 dark:text-blue-300",
                   items: [
-                    'Workshops & e-learning',
-                    'Simulated network drills',
-                    'Employee engagement',
+                    "Workshops & e-learning",
+                    "Simulated network drills",
+                    "Employee engagement",
                   ],
-                  connector: 'bg-blue-200 dark:bg-blue-900',
+                  connector: "bg-blue-200 dark:bg-blue-900",
                 },
                 {
-                  icon: '/globe.svg',
-                  alt: 'Compliance',
-                  bg: 'bg-purple-100 dark:bg-purple-900',
-                  title: 'Compliance Management',
-                  titleClass: 'text-purple-700 dark:text-purple-300',
+                  icon: "/globe.svg",
+                  alt: "Compliance",
+                  bg: "bg-purple-100 dark:bg-purple-900",
+                  title: "Compliance Management",
+                  titleClass: "text-purple-700 dark:text-purple-300",
                   items: [
-                    'GDPR, HIPAA, PCI DSS, ISO 27001',
-                    'Automated reporting',
-                    'Policy & audit support',
+                    "GDPR, HIPAA, PCI DSS, ISO 27001",
+                    "Automated reporting",
+                    "Policy & audit support",
                   ],
-                  connector: 'bg-purple-200 dark:bg-purple-900',
+                  connector: "bg-purple-200 dark:bg-purple-900",
                 },
                 {
-                  icon: '/window.svg',
-                  alt: 'Culture',
-                  bg: 'bg-green-100 dark:bg-green-900',
-                  title: 'Resilient Culture',
-                  titleClass: 'text-green-700 dark:text-green-400',
+                  icon: "/window.svg",
+                  alt: "Culture",
+                  bg: "bg-green-100 dark:bg-green-900",
+                  title: "Resilient Culture",
+                  titleClass: "text-green-700 dark:text-green-400",
                   items: [
-                    'Leadership buy-in',
-                    'Continuous improvement',
-                    'Celebrating successful projects',
+                    "Leadership buy-in",
+                    "Continuous improvement",
+                    "Celebrating successful projects",
                   ],
-                  connector: 'bg-green-200 dark:bg-green-900',
+                  connector: "bg-green-200 dark:bg-green-900",
                 },
               ];
               return (

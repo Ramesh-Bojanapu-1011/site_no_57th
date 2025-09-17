@@ -1,8 +1,8 @@
-import SiteFooter from '@/components/SiteFooter';
-import SiteHeader from '@/components/SiteHeader';
-import AOS from 'aos';
-import Head from 'next/head';
-import React from 'react';
+import SiteFooter from "@/components/SiteFooter";
+import SiteHeader from "@/components/SiteHeader";
+import AOS from "aos";
+import Head from "next/head";
+import React from "react";
 type Props = {};
 
 const features = [
@@ -20,10 +20,10 @@ const features = [
         ></path>
       </svg>
     ),
-    alt: 'Made With Sass',
-    bg: 'bg-pink-100 dark:bg-pink-900',
-    title: 'Made With Sass',
-    desc: 'Sass is a preprocessor scripting language for compiling into CSS.',
+    alt: "Made With Sass",
+    bg: "bg-pink-100 dark:bg-pink-900",
+    title: "Made With Sass",
+    desc: "Sass is a preprocessor scripting language for compiling into CSS.",
   },
   {
     icon: (
@@ -57,10 +57,10 @@ const features = [
         />
       </svg>
     ),
-    alt: 'Google Fonts',
-    bg: 'bg-yellow-100 dark:bg-yellow-900',
-    title: 'Google Fonts',
-    desc: 'Google Fonts is a complete font and font web font service owned by Google.',
+    alt: "Google Fonts",
+    bg: "bg-yellow-100 dark:bg-yellow-900",
+    title: "Google Fonts",
+    desc: "Google Fonts is a complete font and font web font service owned by Google.",
   },
   {
     icon: (
@@ -84,10 +84,10 @@ const features = [
         ></path>
       </svg>
     ),
-    alt: 'W3C Validated Code',
-    bg: 'bg-blue-100 dark:bg-blue-900',
-    title: 'W3C Validated Code',
-    desc: 'W3C Validation Service is a validator for the World Wide Web Consortium.',
+    alt: "W3C Validated Code",
+    bg: "bg-blue-100 dark:bg-blue-900",
+    title: "W3C Validated Code",
+    desc: "W3C Validation Service is a validator for the World Wide Web Consortium.",
   },
   {
     icon: (
@@ -103,10 +103,10 @@ const features = [
         ></path>
       </svg>
     ),
-    alt: 'Easy to Customize',
-    bg: 'bg-orange-100 dark:bg-orange-900',
-    title: 'Easy to Customize',
-    desc: 'Our code is always very much customize friendly and standard.',
+    alt: "Easy to Customize",
+    bg: "bg-orange-100 dark:bg-orange-900",
+    title: "Easy to Customize",
+    desc: "Our code is always very much customize friendly and standard.",
   },
 
   {
@@ -166,10 +166,10 @@ const features = [
         </g>
       </svg>
     ),
-    alt: 'Fully Responsive',
-    bg: 'bg-blue-100 dark:bg-blue-900',
-    title: 'Fully Responsive',
-    desc: 'This template is fully responsive for all kind of devices both big & small.',
+    alt: "Fully Responsive",
+    bg: "bg-blue-100 dark:bg-blue-900",
+    title: "Fully Responsive",
+    desc: "This template is fully responsive for all kind of devices both big & small.",
   },
   {
     icon: (
@@ -185,10 +185,10 @@ const features = [
         ></path>
       </svg>
     ),
-    alt: 'Font Awesome 6 Pro',
-    bg: 'bg-blue-100 dark:bg-blue-900',
-    title: 'Font Awesome 6 Pro',
-    desc: 'We have used the latest version of Font Awesome 6 Pro in this template.',
+    alt: "Font Awesome 6 Pro",
+    bg: "bg-blue-100 dark:bg-blue-900",
+    title: "Font Awesome 6 Pro",
+    desc: "We have used the latest version of Font Awesome 6 Pro in this template.",
   },
   {
     icon: (
@@ -204,10 +204,10 @@ const features = [
         ></path>
       </svg>
     ),
-    alt: 'Bootstrap 5',
-    bg: 'bg-purple-100 dark:bg-purple-900',
-    title: 'Bootstrap 5',
-    desc: 'Bootstrap 5 is the latest version of the popular front-end development framework.',
+    alt: "Bootstrap 5",
+    bg: "bg-purple-100 dark:bg-purple-900",
+    title: "Bootstrap 5",
+    desc: "Bootstrap 5 is the latest version of the popular front-end development framework.",
   },
 
   {
@@ -228,10 +228,10 @@ const features = [
         ></path>
       </svg>
     ),
-    alt: 'Latest jQuery',
-    bg: 'bg-gray-100 dark:bg-gray-900',
-    title: 'Latest jQuery',
-    desc: 'jQuery is a JS framework designed to simplify HTML DOM tree traversal.',
+    alt: "Latest jQuery",
+    bg: "bg-gray-100 dark:bg-gray-900",
+    title: "Latest jQuery",
+    desc: "jQuery is a JS framework designed to simplify HTML DOM tree traversal.",
   },
 
   {
@@ -248,10 +248,10 @@ const features = [
         ></path>
       </svg>
     ),
-    alt: 'Material Design',
-    bg: 'bg-red-100 dark:bg-red-900',
-    title: 'Material Design',
-    desc: 'Material Design is a design language developed by Google in 2014.',
+    alt: "Material Design",
+    bg: "bg-red-100 dark:bg-red-900",
+    title: "Material Design",
+    desc: "Material Design is a design language developed by Google in 2014.",
   },
   {
     icon: (
@@ -302,10 +302,10 @@ const features = [
         </g>
       </svg>
     ),
-    alt: 'SEO Optimized',
-    bg: 'bg-green-100 dark:bg-green-900',
-    title: 'SEO Optimized',
-    desc: 'Our code is SEO optimized, it will help to index the page on search engine.',
+    alt: "SEO Optimized",
+    bg: "bg-green-100 dark:bg-green-900",
+    title: "SEO Optimized",
+    desc: "Our code is SEO optimized, it will help to index the page on search engine.",
   },
   {
     icon: (
@@ -321,10 +321,10 @@ const features = [
         ></path>
       </svg>
     ),
-    alt: 'Dark & Light Mode',
-    bg: 'bg-gray-800',
-    title: 'Dark & Light Mode',
-    desc: 'This template has both dark & light mode. User can switch between them.',
+    alt: "Dark & Light Mode",
+    bg: "bg-gray-800",
+    title: "Dark & Light Mode",
+    desc: "This template has both dark & light mode. User can switch between them.",
   },
   {
     icon: (
@@ -358,10 +358,10 @@ const features = [
         </g>
       </svg>
     ),
-    alt: 'Tailwind CSS',
-    bg: 'bg-cyan-100 dark:bg-cyan-900',
-    title: 'Tailwind CSS',
-    desc: 'Tailwind CSS is a utility-first CSS framework for rapid UI development.',
+    alt: "Tailwind CSS",
+    bg: "bg-cyan-100 dark:bg-cyan-900",
+    title: "Tailwind CSS",
+    desc: "Tailwind CSS is a utility-first CSS framework for rapid UI development.",
   },
 ];
 
@@ -399,10 +399,10 @@ const home2 = (props: Props) => {
               INNOVATIVE SOFTWARE SOLUTIONS
             </span>
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6 text-white dark:text-white">
-              Your Trusted Partner In{' '}
+              Your Trusted Partner In{" "}
               <span className="text-orange-400 dark:text-orange-300">
                 Software
-              </span>{' '}
+              </span>{" "}
               Innovation & Development
             </h1>
             <p className="mb-8 text-base text-white/80 dark:text-white/70">
@@ -445,7 +445,7 @@ const home2 = (props: Props) => {
                   data-aos="zoom-in"
                   data-aos-once="false"
                   className="relative rounded-3xl p-8 flex flex-col items-center text-center border border-gray-200 dark:border-gray-700 shadow-xl bg-gradient-to-br from-white/80 to-blue-50/80 dark:from-gray-900/80 dark:to-blue-950/60 backdrop-blur-md hover:scale-105 transition-transform duration-300"
-                  style={{ boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.15)' }}
+                  style={{ boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.15)" }}
                 >
                   <span
                     className={`mb-6 inline-flex items-center justify-center w-20 h-20 rounded-full ${feature.bg} shadow-lg`}
@@ -592,12 +592,12 @@ const home2 = (props: Props) => {
                       />
                     </svg>
                   ),
-                  bg: 'bg-blue-100 dark:bg-blue-900',
-                  title: 'Custom Software Development',
-                  titleClass: 'text-blue-700 dark:text-blue-300',
-                  desc: 'Tailored solutions for unique business needs, from web apps to enterprise platforms.',
+                  bg: "bg-blue-100 dark:bg-blue-900",
+                  title: "Custom Software Development",
+                  titleClass: "text-blue-700 dark:text-blue-300",
+                  desc: "Tailored solutions for unique business needs, from web apps to enterprise platforms.",
                   btnClass:
-                    'bg-blue-600 dark:bg-blue-400 group-hover:bg-blue-700 dark:group-hover:bg-blue-500',
+                    "bg-blue-600 dark:bg-blue-400 group-hover:bg-blue-700 dark:group-hover:bg-blue-500",
                 },
                 {
                   accent: (
@@ -622,12 +622,12 @@ const home2 = (props: Props) => {
                       />
                     </svg>
                   ),
-                  bg: 'bg-purple-100 dark:bg-purple-900',
-                  title: 'Cloud Integration',
-                  titleClass: 'text-purple-700 dark:text-purple-300',
-                  desc: 'Seamless migration and integration with leading cloud platforms for scalability and security.',
+                  bg: "bg-purple-100 dark:bg-purple-900",
+                  title: "Cloud Integration",
+                  titleClass: "text-purple-700 dark:text-purple-300",
+                  desc: "Seamless migration and integration with leading cloud platforms for scalability and security.",
                   btnClass:
-                    'bg-purple-600 dark:bg-purple-400 group-hover:bg-purple-700 dark:group-hover:bg-purple-500',
+                    "bg-purple-600 dark:bg-purple-400 group-hover:bg-purple-700 dark:group-hover:bg-purple-500",
                 },
                 {
                   accent: (
@@ -654,12 +654,12 @@ const home2 = (props: Props) => {
                       />
                     </svg>
                   ),
-                  bg: 'bg-blue-100 dark:bg-blue-900',
-                  title: 'Cybersecurity Solutions',
-                  titleClass: 'text-blue-700 dark:text-blue-300',
-                  desc: 'Protect your data and operations with advanced security strategies and monitoring.',
+                  bg: "bg-blue-100 dark:bg-blue-900",
+                  title: "Cybersecurity Solutions",
+                  titleClass: "text-blue-700 dark:text-blue-300",
+                  desc: "Protect your data and operations with advanced security strategies and monitoring.",
                   btnClass:
-                    'bg-blue-600 dark:bg-blue-400 group-hover:bg-blue-700 dark:group-hover:bg-blue-500',
+                    "bg-blue-600 dark:bg-blue-400 group-hover:bg-blue-700 dark:group-hover:bg-blue-500",
                 },
               ].map((card, idx) => (
                 <>
@@ -667,7 +667,7 @@ const home2 = (props: Props) => {
                     key={idx}
                     className="group relative rounded-3xl p-10 flex flex-col items-center text-center border border-gray-200 dark:border-gray-700 shadow-xl bg-gradient-to-br from-white/80 to-blue-50/80 dark:from-gray-900/80 dark:to-blue-950/60 backdrop-blur-md hover:scale-105 transition-transform duration-300 cursor-pointer"
                     style={{
-                      boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.15)',
+                      boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.15)",
                     }}
                   >
                     <span className="absolute top-6 right-6 opacity-20 group-hover:opacity-40 transition">

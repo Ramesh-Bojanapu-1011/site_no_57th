@@ -1,42 +1,42 @@
-import Image from 'next/image';
-import React, { useState } from 'react';
+import Image from "next/image";
+import React, { useState } from "react";
 
-const ADMIN_EMAIL = 'admin@enconix.in';
-const ADMIN_PASSWORD = 'admin123';
+const ADMIN_EMAIL = "admin@enconix.in";
+const ADMIN_PASSWORD = "admin123";
 
 const Auth = () => {
-  const [activeTab, setActiveTab] = useState('user');
-  const [userAction, setUserAction] = useState('login');
-  const [userLogin, setUserLogin] = useState({ email: '', password: '' });
+  const [activeTab, setActiveTab] = useState("user");
+  const [userAction, setUserAction] = useState("login");
+  const [userLogin, setUserLogin] = useState({ email: "", password: "" });
   const [userRegister, setUserRegister] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
   });
   const [showRegisterPassword, setShowRegisterPassword] = useState(false);
   const [showForgotPassword, setShowForgotPassword] = useState(false);
   const [showAdminPassword, setShowAdminPassword] = useState(false);
   const [showLoginPassword, setShowLoginPassword] = useState(false);
 
-  const [userForgot, setUserForgot] = useState({ email: '', password: '' });
-  const [adminLogin, setAdminLogin] = useState({ email: '', password: '' });
-  const [message, setMessage] = useState('');
+  const [userForgot, setUserForgot] = useState({ email: "", password: "" });
+  const [adminLogin, setAdminLogin] = useState({ email: "", password: "" });
+  const [message, setMessage] = useState("");
 
   // Helper functions for localStorage
   const getAllUsers = () =>
-    JSON.parse(localStorage.getItem('All_Users') || '[]');
+    JSON.parse(localStorage.getItem("All_Users") || "[]");
   const setAllUsers = (users: any[]) =>
-    localStorage.setItem('All_Users', JSON.stringify(users));
+    localStorage.setItem("All_Users", JSON.stringify(users));
   const setCurrentUser = (user: any) =>
-    localStorage.setItem('Current_User', JSON.stringify(user));
+    localStorage.setItem("Current_User", JSON.stringify(user));
 
   // User Register
   const handleRegister = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const users = getAllUsers();
     if (users.find((u: any) => u.email === userRegister.email)) {
-      setMessage('User already exists.');
+      setMessage("User already exists.");
       return;
     }
     const now = new Date().toISOString();
@@ -44,12 +44,12 @@ const Auth = () => {
       ...userRegister,
       registerTime: now,
       loginTime: null,
-      role: 'user',
+      role: "user",
     };
     users.push(newUser);
     setAllUsers(users);
-    setMessage('Registration successful! You can now login.');
-    setUserAction('login');
+    setMessage("Registration successful! You can now login.");
+    setUserAction("login");
   };
 
   // User Login
@@ -61,15 +61,15 @@ const Auth = () => {
         u.email === userLogin.email && u.password === userLogin.password,
     );
     if (!user) {
-      setMessage('Invalid credentials.');
+      setMessage("Invalid credentials.");
       return;
     }
     user.loginTime = new Date().toISOString();
     setCurrentUser(user);
-    setMessage('Login successful!');
+    setMessage("Login successful!");
     // Update login time in All_Users
     setAllUsers(users.map((u: any) => (u.email === user.email ? user : u)));
-    window.location.href = '/home1';
+    window.location.href = "/home1";
   };
 
   // User Forgot Password
@@ -78,13 +78,13 @@ const Auth = () => {
     const users = getAllUsers();
     const idx = users.findIndex((u: any) => u.email === userForgot.email);
     if (idx === -1) {
-      setMessage('User not found.');
+      setMessage("User not found.");
       return;
     }
     users[idx].password = userForgot.password;
     setAllUsers(users);
-    setMessage('Password updated. You can now login.');
-    setUserAction('login');
+    setMessage("Password updated. You can now login.");
+    setUserAction("login");
   };
 
   // Admin Login
@@ -96,13 +96,13 @@ const Auth = () => {
     ) {
       setCurrentUser({
         email: ADMIN_EMAIL,
-        role: 'admin',
+        role: "admin",
         loginTime: new Date().toISOString(),
       });
-      setMessage('Admin login successful!');
-      window.location.href = '/admin-dashboard';
+      setMessage("Admin login successful!");
+      window.location.href = "/admin-dashboard";
     } else {
-      setMessage('Invalid admin credentials.');
+      setMessage("Invalid admin credentials.");
     }
   };
 
@@ -119,35 +119,35 @@ const Auth = () => {
         <div className="flex justify-center mb-8 gap-4">
           <button
             className={`px-6 py-2 rounded-t-lg font-bold text-lg transition ${
-              activeTab === 'user'
-                ? 'bg-blue-600 text-white'
-                : 'bg-blue-100 dark:bg-gray-800 text-blue-700 dark:text-blue-300'
+              activeTab === "user"
+                ? "bg-blue-600 text-white"
+                : "bg-blue-100 dark:bg-gray-800 text-blue-700 dark:text-blue-300"
             }`}
             onClick={() => {
-              setActiveTab('user');
-              setMessage('');
+              setActiveTab("user");
+              setMessage("");
             }}
           >
             User
           </button>
           <button
             className={`px-6 py-2 rounded-t-lg font-bold text-lg transition ${
-              activeTab === 'admin'
-                ? 'bg-blue-600 text-white'
-                : 'bg-blue-100 dark:bg-gray-800 text-blue-700 dark:text-blue-300'
+              activeTab === "admin"
+                ? "bg-blue-600 text-white"
+                : "bg-blue-100 dark:bg-gray-800 text-blue-700 dark:text-blue-300"
             }`}
             onClick={() => {
-              setActiveTab('admin');
-              setMessage('');
+              setActiveTab("admin");
+              setMessage("");
             }}
           >
             Admin
           </button>
         </div>
 
-        {activeTab === 'user' && (
+        {activeTab === "user" && (
           <div>
-            {userAction === 'register' && (
+            {userAction === "register" && (
               <>
                 <form className="space-y-4" onSubmit={handleRegister}>
                   <input
@@ -190,7 +190,7 @@ const Auth = () => {
                     }
                   />
                   <input
-                    type={showRegisterPassword ? 'text' : 'password'}
+                    type={showRegisterPassword ? "text" : "password"}
                     required
                     placeholder="Password"
                     className="w-full px-4 py-2 rounded border"
@@ -208,7 +208,7 @@ const Auth = () => {
                       className="text-sm text-blue-600 dark:text-blue-400 hover:underline focus:outline-none"
                       onClick={() => setShowRegisterPassword((prev) => !prev)}
                     >
-                      {showRegisterPassword ? 'Hide Password' : 'Show Password'}
+                      {showRegisterPassword ? "Hide Password" : "Show Password"}
                     </button>
                   </div>
                   <button
@@ -220,12 +220,12 @@ const Auth = () => {
                 </form>
                 <div className="mt-4">
                   <span className="text-sm text-gray-600 dark:text-gray-400">
-                    Already have an account?{' '}
+                    Already have an account?{" "}
                     <span
                       className="text-blue-600 dark:text-blue-400 hover:underline cursor-pointer"
                       onClick={() => {
-                        setUserAction('login');
-                        setMessage('');
+                        setUserAction("login");
+                        setMessage("");
                       }}
                     >
                       Login
@@ -239,7 +239,7 @@ const Auth = () => {
               </>
             )}
 
-            {userAction === 'login' && (
+            {userAction === "login" && (
               <>
                 <form className="space-y-4" onSubmit={handleUserLogin}>
                   <input
@@ -253,7 +253,7 @@ const Auth = () => {
                     }
                   />
                   <input
-                    type={showLoginPassword ? 'text' : 'password'}
+                    type={showLoginPassword ? "text" : "password"}
                     required
                     placeholder="Password"
                     className="w-full px-4 py-2 rounded border"
@@ -268,14 +268,14 @@ const Auth = () => {
                       className="text-sm text-blue-600 dark:text-blue-400 hover:underline focus:outline-none"
                       onClick={() => setShowLoginPassword((prev) => !prev)}
                     >
-                      {showLoginPassword ? 'Hide Password' : 'Show Password'}
+                      {showLoginPassword ? "Hide Password" : "Show Password"}
                     </button>
                   </div>
                   <span
                     className="text-sm w-full flex justify-end text-blue-600 dark:text-blue-400 hover:underline cursor-pointer"
                     onClick={() => {
-                      setUserAction('forgot');
-                      setMessage('');
+                      setUserAction("forgot");
+                      setMessage("");
                     }}
                   >
                     Forgot Password?
@@ -289,12 +289,12 @@ const Auth = () => {
                 </form>
                 <div className="mt-4">
                   <span className="text-sm text-gray-600 dark:text-gray-400">
-                    Don't have an account?{' '}
+                    Don't have an account?{" "}
                     <span
                       className="text-blue-600 dark:text-blue-400 hover:underline cursor-pointer"
                       onClick={() => {
-                        setUserAction('register');
-                        setMessage('');
+                        setUserAction("register");
+                        setMessage("");
                       }}
                     >
                       Register
@@ -308,7 +308,7 @@ const Auth = () => {
               </>
             )}
 
-            {userAction === 'forgot' && (
+            {userAction === "forgot" && (
               <>
                 <form className="space-y-4" onSubmit={handleForgot}>
                   <input
@@ -322,7 +322,7 @@ const Auth = () => {
                     }
                   />
                   <input
-                    type={showForgotPassword ? 'text' : 'password'}
+                    type={showForgotPassword ? "text" : "password"}
                     required
                     placeholder="New Password"
                     className="w-full px-4 py-2 rounded border"
@@ -337,7 +337,7 @@ const Auth = () => {
                       className="text-sm text-blue-600 dark:text-blue-400 hover:underline focus:outline-none"
                       onClick={() => setShowForgotPassword((prev) => !prev)}
                     >
-                      {showForgotPassword ? 'Hide Password' : 'Show Password'}
+                      {showForgotPassword ? "Hide Password" : "Show Password"}
                     </button>
                   </div>
                   <button
@@ -349,12 +349,12 @@ const Auth = () => {
                 </form>
                 <div className="mt-4">
                   <span className="text-sm text-gray-600 dark:text-gray-400">
-                    Remembered your password?{' '}
+                    Remembered your password?{" "}
                     <span
                       className="text-blue-600 dark:text-blue-400 hover:underline cursor-pointer"
                       onClick={() => {
-                        setUserAction('login');
-                        setMessage('');
+                        setUserAction("login");
+                        setMessage("");
                       }}
                     >
                       Login
@@ -366,7 +366,7 @@ const Auth = () => {
           </div>
         )}
 
-        {activeTab === 'admin' && (
+        {activeTab === "admin" && (
           <form className="space-y-4" onSubmit={handleAdminLogin}>
             <input
               type="email"
@@ -379,7 +379,7 @@ const Auth = () => {
               }
             />
             <input
-              type={showAdminPassword ? 'text' : 'password'}
+              type={showAdminPassword ? "text" : "password"}
               required
               placeholder="Admin Password"
               className="w-full px-4 py-2 rounded border"
@@ -394,7 +394,7 @@ const Auth = () => {
                 className="text-sm text-blue-600 dark:text-blue-400 hover:underline focus:outline-none"
                 onClick={() => setShowAdminPassword((prev) => !prev)}
               >
-                {showAdminPassword ? 'Hide Password' : 'Show Password'}
+                {showAdminPassword ? "Hide Password" : "Show Password"}
               </button>
             </div>
             <button

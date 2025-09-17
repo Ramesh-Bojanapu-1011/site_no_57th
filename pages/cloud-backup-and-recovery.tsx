@@ -1,7 +1,7 @@
-import SiteFooter from '@/components/SiteFooter';
-import SiteHeader from '@/components/SiteHeader';
-import Head from 'next/head';
-import Image from 'next/image';
+import SiteFooter from "@/components/SiteFooter";
+import SiteHeader from "@/components/SiteHeader";
+import Head from "next/head";
+import Image from "next/image";
 
 const CloudBackupAndRecovery = () => {
   return (
@@ -148,42 +148,42 @@ const CloudBackupAndRecovery = () => {
             {(() => {
               const solutions = [
                 {
-                  icon: '/cloud-backup.svg',
-                  alt: 'Automated Backup',
-                  bg: 'bg-blue-100 dark:bg-blue-900',
-                  border: 'border-blue-200 dark:border-blue-800',
-                  title: 'Automated Backup',
-                  titleClass: 'text-blue-700 dark:text-blue-300',
+                  icon: "/cloud-backup.svg",
+                  alt: "Automated Backup",
+                  bg: "bg-blue-100 dark:bg-blue-900",
+                  border: "border-blue-200 dark:border-blue-800",
+                  title: "Automated Backup",
+                  titleClass: "text-blue-700 dark:text-blue-300",
                   items: [
-                    'Scheduled & real-time backups',
-                    'End-to-end encryption',
-                    'Multi-location redundancy',
+                    "Scheduled & real-time backups",
+                    "End-to-end encryption",
+                    "Multi-location redundancy",
                   ],
                 },
                 {
-                  icon: '/window.svg',
-                  alt: 'Disaster Recovery',
-                  bg: 'bg-purple-100 dark:bg-purple-900',
-                  border: 'border-purple-200 dark:border-purple-800',
-                  title: 'Disaster Recovery',
-                  titleClass: 'text-purple-700 dark:text-purple-300',
+                  icon: "/window.svg",
+                  alt: "Disaster Recovery",
+                  bg: "bg-purple-100 dark:bg-purple-900",
+                  border: "border-purple-200 dark:border-purple-800",
+                  title: "Disaster Recovery",
+                  titleClass: "text-purple-700 dark:text-purple-300",
                   items: [
-                    'Rapid restore & failover',
-                    'Business continuity planning',
-                    'Testing & simulation',
+                    "Rapid restore & failover",
+                    "Business continuity planning",
+                    "Testing & simulation",
                   ],
                 },
                 {
-                  icon: '/globe.svg',
-                  alt: 'Compliance',
-                  bg: 'bg-blue-100 dark:bg-blue-900',
-                  border: 'border-blue-200 dark:border-blue-800',
-                  title: 'Compliance & Monitoring',
-                  titleClass: 'text-blue-700 dark:text-blue-300',
+                  icon: "/globe.svg",
+                  alt: "Compliance",
+                  bg: "bg-blue-100 dark:bg-blue-900",
+                  border: "border-blue-200 dark:border-blue-800",
+                  title: "Compliance & Monitoring",
+                  titleClass: "text-blue-700 dark:text-blue-300",
                   items: [
-                    'GDPR, HIPAA, PCI DSS, ISO 27001',
-                    'Automated reporting & alerts',
-                    'Continuous monitoring',
+                    "GDPR, HIPAA, PCI DSS, ISO 27001",
+                    "Automated reporting & alerts",
+                    "Continuous monitoring",
                   ],
                 },
               ];
@@ -196,7 +196,7 @@ const CloudBackupAndRecovery = () => {
                       <div
                         key={sol.title}
                         className={`flex flex-col ${
-                          !isLeft ? 'md:flex-row-reverse' : 'md:flex-row'
+                          !isLeft ? "md:flex-row-reverse" : "md:flex-row"
                         } items-center   gap-10`}
                       >
                         <div
@@ -211,9 +211,9 @@ const CloudBackupAndRecovery = () => {
                         </div>
                         <div
                           className={`md:${
-                            isLeft ? 'ml-0 order-2' : 'mr-0 order-2'
+                            isLeft ? "ml-0 order-2" : "mr-0 order-2"
                           } order-1 ${
-                            isLeft ? 'text-left' : 'text-right'
+                            isLeft ? "text-left" : "text-right"
                           } flex-1 not-md:text-center`}
                         >
                           <h3
@@ -324,43 +324,43 @@ const CloudBackupAndRecovery = () => {
             {(() => {
               const steps = [
                 {
-                  icon: '/security-awareness.svg',
-                  alt: 'Training',
-                  bg: 'bg-blue-100 dark:bg-blue-900',
-                  title: 'Backup Training & Awareness',
-                  titleClass: 'text-blue-700 dark:text-blue-300',
+                  icon: "/security-awareness.svg",
+                  alt: "Training",
+                  bg: "bg-blue-100 dark:bg-blue-900",
+                  title: "Backup Training & Awareness",
+                  titleClass: "text-blue-700 dark:text-blue-300",
                   items: [
-                    'Workshops & e-learning',
-                    'Simulated recovery drills',
-                    'Employee engagement',
+                    "Workshops & e-learning",
+                    "Simulated recovery drills",
+                    "Employee engagement",
                   ],
-                  connector: 'bg-blue-200 dark:bg-blue-900',
+                  connector: "bg-blue-200 dark:bg-blue-900",
                 },
                 {
-                  icon: '/globe.svg',
-                  alt: 'Compliance',
-                  bg: 'bg-purple-100 dark:bg-purple-900',
-                  title: 'Compliance Management',
-                  titleClass: 'text-purple-700 dark:text-purple-300',
+                  icon: "/globe.svg",
+                  alt: "Compliance",
+                  bg: "bg-purple-100 dark:bg-purple-900",
+                  title: "Compliance Management",
+                  titleClass: "text-purple-700 dark:text-purple-300",
                   items: [
-                    'GDPR, HIPAA, PCI DSS, ISO 27001',
-                    'Automated reporting',
-                    'Policy & audit support',
+                    "GDPR, HIPAA, PCI DSS, ISO 27001",
+                    "Automated reporting",
+                    "Policy & audit support",
                   ],
-                  connector: 'bg-purple-200 dark:bg-purple-900',
+                  connector: "bg-purple-200 dark:bg-purple-900",
                 },
                 {
-                  icon: '/window.svg',
-                  alt: 'Culture',
-                  bg: 'bg-green-100 dark:bg-green-900',
-                  title: 'Resilient Culture',
-                  titleClass: 'text-green-700 dark:text-green-400',
+                  icon: "/window.svg",
+                  alt: "Culture",
+                  bg: "bg-green-100 dark:bg-green-900",
+                  title: "Resilient Culture",
+                  titleClass: "text-green-700 dark:text-green-400",
                   items: [
-                    'Leadership buy-in',
-                    'Continuous improvement',
-                    'Celebrating successful recoveries',
+                    "Leadership buy-in",
+                    "Continuous improvement",
+                    "Celebrating successful recoveries",
                   ],
-                  connector: 'bg-green-200 dark:bg-green-900',
+                  connector: "bg-green-200 dark:bg-green-900",
                 },
               ];
               return (

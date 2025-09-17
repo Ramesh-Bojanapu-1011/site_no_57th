@@ -1,25 +1,25 @@
-import SiteFooter from '@/components/SiteFooter';
-import SiteHeader from '@/components/SiteHeader';
-import React from 'react';
-import Image from 'next/image';
+import SiteFooter from "@/components/SiteFooter";
+import SiteHeader from "@/components/SiteHeader";
+import React from "react";
+import Image from "next/image";
 const ContactUs: React.FC = (props) => {
   // FAQAccordion and FAQ data (must be outside the ContactUs component)
   const faqs = [
     {
-      question: 'How do I get in touch with your team?',
+      question: "How do I get in touch with your team?",
       answer: (
         <>
-          Simply fill out the contact form above or email us at{' '}
+          Simply fill out the contact form above or email us at{" "}
           <span className="font-semibold">support@enkonix.com</span>. We aim to
           respond within one business day.
         </>
       ),
     },
     {
-      question: 'Where can I find your office?',
+      question: "Where can I find your office?",
       answer: (
         <>
-          Visit us at{' '}
+          Visit us at{" "}
           <span className="font-semibold">
             1234 Enkonix Ave, Suite 100, Tech City, 56789
           </span>
@@ -28,10 +28,10 @@ const ContactUs: React.FC = (props) => {
       ),
     },
     {
-      question: 'What are your working hours?',
+      question: "What are your working hours?",
       answer: (
         <>
-          Our team is available{' '}
+          Our team is available{" "}
           <span className="font-semibold">
             Monday to Friday, 9:00 AM – 6:00 PM
           </span>
@@ -40,7 +40,7 @@ const ContactUs: React.FC = (props) => {
       ),
     },
     {
-      question: 'Can I schedule a visit?',
+      question: "Can I schedule a visit?",
       answer: (
         <>
           Absolutely! Please contact us in advance to arrange a meeting so we
@@ -160,34 +160,34 @@ const ContactUs: React.FC = (props) => {
             {/* Example team members, replace with real data/images as needed */}
             {[
               {
-                name: 'Priya Patel',
-                role: 'CEO',
-                image: '/avatar1.png',
+                name: "Priya Patel",
+                role: "CEO",
+                image: "/avatar1.png",
               },
               {
-                name: 'Sarah Lee',
-                role: 'CTO',
-                image: '/avatar2.png',
+                name: "Sarah Lee",
+                role: "CTO",
+                image: "/avatar2.png",
               },
               {
-                name: 'Michael Chen',
-                role: 'Lead Developer',
-                image: '/avatar3.png',
+                name: "Michael Chen",
+                role: "Lead Developer",
+                image: "/avatar3.png",
               },
               {
-                name: 'David Kim',
-                role: 'Product Manager',
-                image: '/avatar4.png',
+                name: "David Kim",
+                role: "Product Manager",
+                image: "/avatar4.png",
               },
               {
-                name: 'Aisha Ahmed',
-                role: 'UX Designer',
-                image: '/avatar5.png',
+                name: "Aisha Ahmed",
+                role: "UX Designer",
+                image: "/avatar5.png",
               },
               {
-                name: 'Carlos Gomez',
-                role: 'Marketing Head',
-                image: '/avatar6.png',
+                name: "Carlos Gomez",
+                role: "Marketing Head",
+                image: "/avatar6.png",
               },
             ].map((member, idx) => (
               <div
@@ -234,7 +234,7 @@ const ContactUs: React.FC = (props) => {
                   </span>
                   <span
                     className={`ml-2 transition-transform ${
-                      openIdx === idx ? 'rotate-180' : ''
+                      openIdx === idx ? "rotate-180" : ""
                     }`}
                   >
                     ▼
