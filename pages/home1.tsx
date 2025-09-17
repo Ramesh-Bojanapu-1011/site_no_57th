@@ -72,7 +72,7 @@ const Home1 = (props: Props) => {
             muted
             playsInline
           >
-            <source src="/your-background-video.mp4" type="video/mp4" />
+            <source src="/home1-background-video.mp4" type="video/mp4" />
           </video>
           <div className="relative z-10 flex flex-col items-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg text-center">
@@ -207,7 +207,7 @@ const Home1 = (props: Props) => {
           <h2 className="text-4xl font-extrabold mb-10 text-center text-blue-600 dark:text-blue-400 tracking-tight">
             {t("home1.servicesSection.title")}
           </h2>
-          <div className="grid md:grid-cols-3 gap-10 text-nowrap">
+          <div className="grid md:grid-cols-3 gap-10  ">
             {/* IT Consulting */}
             <div className="relative bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-950 dark:to-purple-950 p-8 rounded-2xl shadow-lg hover:scale-105 transition group overflow-hidden">
               <div className="absolute top-4 right-4 opacity-20 group-hover:opacity-40 transition">
@@ -565,7 +565,9 @@ const Home1 = (props: Props) => {
                                 src={testimonial.image}
                                 width={80}
                                 height={80}
-                                alt={`Testimonial from ${t(testimonial.nameKey)}`}
+                                alt={`Testimonial from ${t(
+                                  testimonial.nameKey,
+                                )}`}
                               />
                               <p
                                 className={`text-base leading-relaxed font-light mb-4 ${

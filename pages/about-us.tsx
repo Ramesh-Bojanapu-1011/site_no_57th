@@ -2,34 +2,35 @@ import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import Head from "next/head";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const team = [
   {
-    name: "Ramesh",
-    role: "Founder & CEO",
+    nameKey: "about.team.0.name",
+    roleKey: "about.team.0.role",
     img: "https://randomuser.me/api/portraits/men/44.jpg",
   },
   {
-    name: "Priya Sharma",
-    role: "CTO",
+    nameKey: "about.team.1.name",
+    roleKey: "about.team.1.role",
     img: "https://randomuser.me/api/portraits/women/44.jpg",
   },
   {
-    name: "Amit Patel",
-    role: "Lead Developer",
+    nameKey: "about.team.2.name",
+    roleKey: "about.team.2.role",
     img: "https://randomuser.me/api/portraits/men/45.jpg",
   },
   {
-    name: "Sara Lee",
-    role: "UI/UX Designer",
+    nameKey: "about.team.3.name",
+    roleKey: "about.team.3.role",
     img: "https://randomuser.me/api/portraits/women/45.jpg",
   },
 ];
 
 const achievements = [
   {
-    title: "100+ Projects",
-    desc: "Successfully delivered over 100 projects across industries.",
+    titleKey: "about.achievements.0.title",
+    descKey: "about.achievements.0.desc",
     icon: (
       <svg width="40" height="40" fill="none" viewBox="0 0 24 24">
         <circle cx="12" cy="12" r="10" stroke="#38bdf8" strokeWidth="2" />
@@ -38,8 +39,8 @@ const achievements = [
     ),
   },
   {
-    title: "Award Winning",
-    desc: "Recognized for innovation and excellence in software.",
+    titleKey: "about.achievements.1.title",
+    descKey: "about.achievements.1.desc",
     icon: (
       <svg width="40" height="40" fill="none" viewBox="0 0 24 24">
         <rect
@@ -54,8 +55,8 @@ const achievements = [
     ),
   },
   {
-    title: "Global Clients",
-    desc: "Trusted by clients in 15+ countries worldwide.",
+    titleKey: "about.achievements.2.title",
+    descKey: "about.achievements.2.desc",
     icon: (
       <svg width="40" height="40" fill="none" viewBox="0 0 24 24">
         <path d="M12 2v20M2 12h20" stroke="#8b5cf6" strokeWidth="2" />
@@ -65,20 +66,17 @@ const achievements = [
 ];
 
 const AboutUs = () => {
+  const { t } = useTranslation();
   return (
     <>
       <Head>
-        <title>About Us </title>
-        <meta
-          name="description"
-          content="Learn more about Enkonix, our mission, values, and the team behind our success. Discover how we empower businesses with innovative software solutions and IT services."
-        />
+        <title>{t("about.title")}</title>
+        <meta name="description" content={t("about.metaDescription")} />
       </Head>
       <main className="bg-[#f7fafd] dark:bg-[#101624] text-gray-900 dark:text-white caret-transparent">
         <SiteHeader />
         {/* 1. Hero Section */}
         <section className="relative h-screen flex justify-center items-center flex-col bg-gradient-to-r from-blue-500 to-purple-600 dark:from-blue-900 dark:to-purple-900 text-white text-center overflow-hidden">
-          {/* Background Video */}
           <video
             className="absolute inset-0 w-full h-full object-cover z-0 opacity-40 dark:opacity-30"
             autoPlay
@@ -87,14 +85,13 @@ const AboutUs = () => {
             playsInline
           >
             <source src="/about-bg-video.mp4" type="video/mp4" />
-            {/* Fallback for browsers that don't support the video tag */}
           </video>
-          {/* Overlay for readability */}
           <div className="relative z-10 flex flex-col items-center justify-center w-full h-full">
-            <h1 className="text-5xl font-extrabold mb-4">About Us</h1>
+            <h1 className="text-5xl font-extrabold mb-4">
+              {t("about.hero.title")}
+            </h1>
             <p className="text-lg max-w-2xl mx-auto mb-8">
-              Empowering businesses with innovative software solutions, expert
-              IT services, and a passion for technology.
+              {t("about.hero.subtitle")}
             </p>
           </div>
         </section>
@@ -105,12 +102,10 @@ const AboutUs = () => {
             {/* Timeline */}
             <div className="flex flex-col gap-8">
               <h2 className="text-4xl font-extrabold mb-6 text-blue-700 dark:text-blue-300 flex items-center gap-2">
-                Our Journey
+                {t("about.timeline.title")}
               </h2>
               <div className="relative pl-8">
-                {/* Timeline vertical line */}
                 <div className="absolute left-3 top-0 h-full w-1 bg-blue-200 dark:bg-blue-900 rounded-full"></div>
-                {/* Timeline items using array and map */}
                 {[
                   {
                     icon: (
@@ -130,9 +125,9 @@ const AboutUs = () => {
                       </svg>
                     ),
                     bg: "bg-blue-500 dark:bg-blue-700",
-                    title: "2015: Founded",
+                    titleKey: "about.timeline.0.title",
                     titleClass: "text-blue-700 dark:text-blue-300",
-                    desc: "Started as a small startup with a vision for innovative IT solutions.",
+                    descKey: "about.timeline.0.desc",
                     mb: "mb-10",
                   },
                   {
@@ -154,9 +149,9 @@ const AboutUs = () => {
                       </svg>
                     ),
                     bg: "bg-purple-500 dark:bg-purple-700",
-                    title: "2018: First Major Award",
+                    titleKey: "about.timeline.1.title",
                     titleClass: "text-purple-700 dark:text-purple-300",
-                    desc: "Recognized for excellence in software development and client service.",
+                    descKey: "about.timeline.1.desc",
                     mb: "mb-10",
                   },
                   {
@@ -175,9 +170,9 @@ const AboutUs = () => {
                       </svg>
                     ),
                     bg: "bg-orange-500 dark:bg-orange-700",
-                    title: "2021: 100+ Projects",
+                    titleKey: "about.timeline.2.title",
                     titleClass: "text-orange-600 dark:text-orange-400",
-                    desc: "Delivered over 100 successful projects for clients worldwide.",
+                    descKey: "about.timeline.2.desc",
                     mb: "mb-10",
                   },
                   {
@@ -198,9 +193,9 @@ const AboutUs = () => {
                       </svg>
                     ),
                     bg: "bg-green-500 dark:bg-green-700",
-                    title: "2025: Global Expansion",
+                    titleKey: "about.timeline.3.title",
                     titleClass: "text-green-700 dark:text-green-300",
-                    desc: "Expanded our reach to serve clients in 15+ countries.",
+                    descKey: "about.timeline.3.desc",
                     mb: "",
                   },
                 ].map((item, idx) => (
@@ -212,10 +207,10 @@ const AboutUs = () => {
                     </div>
                     <div className="ml-8">
                       <h3 className={`font-bold text-lg ${item.titleClass}`}>
-                        {item.title}
+                        {t(item.titleKey)}
                       </h3>
                       <p className="text-gray-600 dark:text-gray-400">
-                        {item.desc}
+                        {t(item.descKey)}
                       </p>
                     </div>
                   </div>
@@ -224,25 +219,24 @@ const AboutUs = () => {
             </div>
             {/* Modern Image Card */}
             <div className="flex justify-center">
-              <div className="relative     rounded-3xl shadow-2xl overflow-hidden border-4 border-blue-100 dark:border-blue-900 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-950 dark:to-purple-900">
+              <div className="relative rounded-3xl shadow-2xl overflow-hidden border-4 border-blue-100 dark:border-blue-900 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-950 dark:to-purple-900">
                 <Image
                   src="https://i.pinimg.com/1200x/fb/bf/9d/fbbf9d982ffd71e75d4e3a79b5f83cce.jpg"
-                  alt="Company Story"
+                  alt={t("about.story.imageAlt")}
                   width={300}
                   height={300}
-                  className=" object-cover opacity-80"
+                  className="object-cover opacity-80"
                 />
                 <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-blue-700/80 to-transparent p-6">
                   <h3 className="text-2xl font-bold text-white mb-2">
-                    Driven by Innovation
+                    {t("about.story.cardTitle")}
                   </h3>
                   <p className="text-white/80 text-base">
-                    Our story is about growth, creativity, and a relentless
-                    pursuit of excellence in technology.
+                    {t("about.story.cardDesc")}
                   </p>
                 </div>
                 <span className="absolute top-4 right-4 bg-white dark:bg-gray-800 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-xs font-bold shadow">
-                  Since 2015
+                  {t("about.story.since")}
                 </span>
               </div>
             </div>
@@ -253,7 +247,7 @@ const AboutUs = () => {
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-purple-100 dark:from-blue-950 dark:to-purple-900">
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-4xl font-extrabold mb-10 text-purple-700 dark:text-purple-300 flex items-center justify-center gap-2">
-              Our Mission & Values
+              {t("about.mission.title")}
             </h2>
             <div className="flex flex-col md:flex-row items-center justify-center gap-8">
               {[
@@ -274,9 +268,9 @@ const AboutUs = () => {
                       </svg>
                     </span>
                   ),
-                  title: "Innovation",
+                  titleKey: "about.mission.steps.0.title",
                   titleClass: "text-blue-700 dark:text-blue-300",
-                  desc: "We embrace new technologies and creative solutions to drive progress for our clients.",
+                  descKey: "about.mission.steps.0.desc",
                   connector: "bg-blue-200 dark:bg-blue-900",
                 },
                 {
@@ -299,9 +293,9 @@ const AboutUs = () => {
                       </svg>
                     </span>
                   ),
-                  title: "Integrity",
+                  titleKey: "about.mission.steps.1.title",
                   titleClass: "text-purple-700 dark:text-purple-300",
-                  desc: "Honesty, transparency, and ethical practices are at the heart of everything we do.",
+                  descKey: "about.mission.steps.1.desc",
                   connector: "bg-purple-200 dark:bg-purple-900",
                 },
                 {
@@ -321,9 +315,9 @@ const AboutUs = () => {
                       </svg>
                     </span>
                   ),
-                  title: "Excellence",
+                  titleKey: "about.mission.steps.2.title",
                   titleClass: "text-orange-600 dark:text-orange-400",
-                  desc: "We strive for excellence in every project, ensuring top-quality results and client satisfaction.",
+                  descKey: "about.mission.steps.2.desc",
                   connector: "",
                 },
               ].map((step, idx, arr) => (
@@ -333,12 +327,11 @@ const AboutUs = () => {
                 >
                   {step.icon}
                   <h3 className={`font-bold text-xl mb-2 ${step.titleClass}`}>
-                    {step.title}
+                    {t(step.titleKey)}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    {step.desc}
+                    {t(step.descKey)}
                   </p>
-                  {/* Connector */}
                   {idx < arr.length - 1 && (
                     <span
                       className={`hidden md:block absolute right-0 top-8 w-16 h-2 ${step.connector} rounded-full`}
@@ -354,7 +347,7 @@ const AboutUs = () => {
         <section className="py-16 px-4 bg-white dark:bg-gray-900">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-blue-700 dark:text-blue-300 text-center">
-              Meet the Team
+              {t("about.team.title")}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
               {team.map((member, idx) => (
@@ -364,14 +357,14 @@ const AboutUs = () => {
                 >
                   <img
                     src={member.img}
-                    alt={member.name}
+                    alt={t(member.nameKey)}
                     className="w-24 h-24 rounded-full object-cover mb-4 border-4 border-blue-200 dark:border-blue-900"
                   />
                   <h3 className="font-bold text-lg mb-1 text-gray-900 dark:text-white">
-                    {member.name}
+                    {t(member.nameKey)}
                   </h3>
                   <p className="text-blue-700 dark:text-blue-300 text-sm">
-                    {member.role}
+                    {t(member.roleKey)}
                   </p>
                 </div>
               ))}
@@ -383,33 +376,18 @@ const AboutUs = () => {
         <section className="py-16 px-4 bg-gradient-to-br from-blue-50 to-purple-100 dark:from-blue-950 dark:to-purple-900">
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-8 text-purple-700 dark:text-purple-300">
-              Our Achievements
+              {t("about.achievements.title")}
             </h2>
-            {/* New vertical stepper layout for achievements */}
-            <div className="relative flex flex-col items-center  mx-auto">
-              {/* Vertical line */}
-              <div className="absolute md:block hidden     left-1/2 transform -translate-x-1/2 top-8 bottom-8 w-1 bg-gradient-to-b from-blue-300 via-purple-300 to-orange-300 dark:from-blue-900 dark:via-purple-900 dark:to-orange-900 rounded-full z-0"></div>
+            <div className="relative flex flex-col items-center mx-auto">
+              <div className="absolute md:block hidden left-1/2 transform -translate-x-1/2 top-8 bottom-8 w-1 bg-gradient-to-b from-blue-300 via-purple-300 to-orange-300 dark:from-blue-900 dark:via-purple-900 dark:to-orange-900 rounded-full z-0"></div>
               {achievements.map((ach, idx) => (
                 <div
                   key={idx}
-                  className={`relative z-10 flex flex-col items-center mb-12 last:mb-0 w-full ${
-                    idx % 2 === 0 ? " md:ml-0 md:mr-auto" : "md:mr-0 md:ml-auto"
-                  }`}
-                  style={{
-                    //   marginLeft: idx % 2 === 0 ? "0" : "auto",
-                    //   marginRight: idx % 2 === 0 ? "auto" : "0",
-                    maxWidth: "400px",
-                  }}
+                  className={`relative z-10 flex flex-col items-center mb-12 last:mb-0 w-full ${idx % 2 === 0 ? " md:ml-0 md:mr-auto" : "md:mr-0 md:ml-auto"}`}
+                  style={{ maxWidth: "400px" }}
                 >
-                  {/* Connector dot */}
                   <div
-                    className={`w-10 h-10 flex items-center justify-center rounded-full shadow-lg mb-4 ${
-                      idx === 0
-                        ? "bg-blue-100 dark:bg-blue-900"
-                        : idx === 1
-                          ? "bg-orange-100 dark:bg-orange-900"
-                          : "bg-purple-100 dark:bg-purple-900"
-                    }`}
+                    className={`w-10 h-10 flex items-center justify-center rounded-full shadow-lg mb-4 ${idx === 0 ? "bg-blue-100 dark:bg-blue-900" : idx === 1 ? "bg-orange-100 dark:bg-orange-900" : "bg-purple-100 dark:bg-purple-900"}`}
                     style={{
                       position: "absolute",
                       left: "50%",
@@ -421,10 +399,10 @@ const AboutUs = () => {
                   </div>
                   <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-8 flex flex-col items-center border border-blue-100 dark:border-blue-900">
                     <h3 className="font-bold text-xl mb-2 text-blue-700 dark:text-blue-300">
-                      {ach.title}
+                      {t(ach.titleKey)}
                     </h3>
                     <p className="text-gray-600 dark:text-gray-300">
-                      {ach.desc}
+                      {t(ach.descKey)}
                     </p>
                   </div>
                 </div>
@@ -437,17 +415,16 @@ const AboutUs = () => {
         <section className="py-16 px-4 bg-gradient-to-r from-blue-500 to-purple-600 dark:from-blue-900 dark:to-purple-900 text-center">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-white dark:text-blue-300 tracking-tight">
-              Ready to Work With Us?
+              {t("about.cta.title")}
             </h2>
             <p className="text-lg text-white/80 dark:text-white/70 mb-8">
-              Contact our team to discuss your project, get a free consultation,
-              or learn more about our services.
+              {t("about.cta.desc")}
             </p>
             <a
               href="/contact-us"
               className="inline-block bg-blue-600 dark:bg-blue-400 hover:bg-blue-700 dark:hover:bg-blue-500 text-white font-bold py-4 px-10 rounded-full shadow-lg transition-all text-lg"
             >
-              Contact Us
+              {t("about.cta.button")}
             </a>
           </div>
         </section>

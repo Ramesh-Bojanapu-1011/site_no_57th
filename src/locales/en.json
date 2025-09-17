@@ -280,5 +280,94 @@
       "description": "Contact us today to learn how our expert IT services and solutions can drive your business forward.",
       "button": "Contact Us"
     }
+  },
+  "about": {
+    "title": "About Us",
+    "metaDescription": "Learn more about Enkonix, our mission, values, and the team behind our success. Discover how we empower businesses with innovative software solutions and IT services.",
+    "hero": {
+      "title": "About Us",
+      "subtitle": "Empowering businesses with innovative software solutions, expert IT services, and a passion for technology."
+    },
+    "timeline": {
+      "title": "Our Journey",
+      "0": {
+        "title": "2015: Founded",
+        "desc": "Started as a small startup with a vision for innovative IT solutions."
+      },
+      "1": {
+        "title": "2018: First Major Award",
+        "desc": "Recognized for excellence in software development and client service."
+      },
+      "2": {
+        "title": "2021: 100+ Projects",
+        "desc": "Delivered over 100 successful projects for clients worldwide."
+      },
+      "3": {
+        "title": "2025: Global Expansion",
+        "desc": "Expanded our reach to serve clients in 15+ countries."
+      }
+    },
+    "story": {
+      "imageAlt": "Company Story",
+      "cardTitle": "Driven by Innovation",
+      "cardDesc": "Our story is about growth, creativity, and a relentless pursuit of excellence in technology.",
+      "since": "Since 2015"
+    },
+    "mission": {
+      "title": "Our Mission & Values",
+      "steps": {
+        "0": {
+          "title": "Innovation",
+          "desc": "We embrace new technologies and creative solutions to drive progress for our clients."
+        },
+        "1": {
+          "title": "Integrity",
+          "desc": "Honesty, transparency, and ethical practices are at the heart of everything we do."
+        },
+        "2": {
+          "title": "Excellence",
+          "desc": "We strive for excellence in every project, ensuring top-quality results and client satisfaction."
+        }
+      }
+    },
+    "team": {
+      "title": "Meet the Team",
+      "0": {
+        "name": "Ramesh",
+        "role": "Founder & CEO"
+      },
+      "1": {
+        "name": "Priya Sharma",
+        "role": "CTO"
+      },
+      "2": {
+        "name": "Amit Patel",
+        "role": "Lead Developer"
+      },
+      "3": {
+        "name": "Sara Lee",
+        "role": "UI/UX Designer"
+      }
+    },
+    "achievements": {
+      "title": "Our Achievements",
+      "0": {
+        "title": "100+ Projects",
+        "desc": "Successfully delivered over 100 projects across industries."
+      },
+      "1": {
+        "title": "Award Winning",
+        "desc": "Recognized for innovation and excellence in software."
+      },
+      "2": {
+        "title": "Global Clients",
+        "desc": "Trusted by clients in 15+ countries worldwide."
+      }
+    },
+    "cta": {
+      "title": "Ready to Work With Us?",
+      "desc": "Contact our team to discuss your project, get a free consultation, or learn more about our services.",
+      "button": "Contact Us"
+    }
   }
 }

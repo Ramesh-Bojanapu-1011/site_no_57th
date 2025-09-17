@@ -286,7 +286,7 @@ const SiteHeader = () => {
                 <ul className="ml-6 mt-1">
                   <li>
                     <Link href="/home1" className="block py-1">
-                      {t("hedder.navbar.Home")}2
+                      {t("hedder.navbar.Home")}1
                     </Link>
                   </li>
                   <li>
