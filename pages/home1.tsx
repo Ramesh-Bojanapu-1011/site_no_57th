@@ -588,7 +588,7 @@ const Home1 = (props: Props) => {
                                 width={80}
                                 height={80}
                                 alt={`Testimonial from ${t(
-                                  testimonial.nameKey
+                                  testimonial.nameKey,
                                 )}`}
                               />
                               <p
@@ -612,7 +612,7 @@ const Home1 = (props: Props) => {
                             </div>
                           </div>
                         );
-                      }
+                      },
                     );
                   })()}
                 </div>
