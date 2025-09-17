@@ -1439,5 +1439,42 @@
         "answer": "Absolutely! Please contact us in advance to arrange a meeting so we can best assist you during your visit."
       }
     }
+  },
+  "adminDashboard": {
+    "title": "Admin Dashboard",
+    "tabs": {
+      "stats": "Statistics",
+      "graph": "User Activity",
+      "users": "All Users"
+    },
+    "stats": {
+      "title": "IT Services / Cybersecurity / Cloud Services Stats",
+      "totalITServices": "Total IT Services",
+      "cybersecurityProjects": "Cybersecurity Projects",
+      "cloudDeployments": "Cloud Deployments",
+      "activeUsers": "Active Users",
+      "incidentsResolved": "Incidents Resolved"
+    },
+    "graph": {
+      "loginsTitle": "Daily User Logins",
+      "loginsBar": "Logins",
+      "pieTitle": "Users Pie Graph",
+      "totalUsers": "Total Users:",
+      "loginUsers": "Login Users:"
+    },
+    "pie": {
+      "loginUsers": "Login Users",
+      "otherUsers": "Other Users"
+    },
+    "users": {
+      "title": "All Users",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "role": "Role",
+      "registered": "Registered",
+      "lastLogin": "Last Login",
+      "noUsers": "No users found."
+    }
   }
 }

@@ -1443,5 +1443,42 @@
         "answer": "בהחלט! אנא צור איתנו קשר מראש כדי לתאם פגישה, כך שנוכל לסייע לך בצורה הטובה ביותר בזמן ביקורך."
       }
     }
+  },
+  "adminDashboard": {
+    "title": "לוח ניהול",
+    "tabs": {
+      "stats": "סטטיסטיקות",
+      "graph": "פעילות משתמשים",
+      "users": "כל המשתמשים"
+    },
+    "stats": {
+      "title": "סטטיסטיקות שירותי IT / סייבר / שירותי ענן",
+      "totalITServices": "סה״כ שירותי IT",
+      "cybersecurityProjects": "פרויקטי סייבר",
+      "cloudDeployments": "פריסות ענן",
+      "activeUsers": "משתמשים פעילים",
+      "incidentsResolved": "תקריות שנפתרו"
+    },
+    "graph": {
+      "loginsTitle": "התחברויות יומיות של משתמשים",
+      "loginsBar": "התחברויות",
+      "pieTitle": "תרשים עוגה של משתמשים",
+      "totalUsers": "סה״כ משתמשים:",
+      "loginUsers": "משתמשים מחוברים:"
+    },
+    "pie": {
+      "loginUsers": "משתמשים מחוברים",
+      "otherUsers": "משתמשים אחרים"
+    },
+    "users": {
+      "title": "כל המשתמשים",
+      "firstName": "שם פרטי",
+      "lastName": "שם משפחה",
+      "email": "אימייל",
+      "role": "תפקיד",
+      "registered": "נרשם",
+      "lastLogin": "התחברות אחרונה",
+      "noUsers": "לא נמצאו משתמשים."
+    }
   }
 }
