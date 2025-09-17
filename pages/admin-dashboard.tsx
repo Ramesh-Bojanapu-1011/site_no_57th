@@ -1,6 +1,4 @@
 import SiteHeader from '@/components/SiteHeader';
-import { ModeToggle } from '@/components/theme/ModeToggle';
-import Image from 'next/image';
 import { useState } from 'react';
 import {
   Bar,
