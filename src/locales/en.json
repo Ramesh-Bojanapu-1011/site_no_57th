@@ -369,5 +369,97 @@
       "desc": "Contact our team to discuss your project, get a free consultation, or learn more about our services.",
       "button": "Contact Us"
     }
+  },
+  "services": {
+    "title": "Our Services",
+    "metaDescription": "Learn more about our services.",
+    "hero": {
+      "title": "Our Services",
+      "subtitle": "Discover our full range of IT solutions, cybersecurity expertise, and cloud services designed to empower your business."
+    },
+    "listTitle": "Our Service Offerings",
+    "list": {
+      "0": {
+        "name": "Network Security",
+        "desc": "Protect your business from cyber threats with advanced firewall, intrusion detection, and monitoring solutions."
+      },
+      "1": {
+        "name": "Cloud Backup and Recovery",
+        "desc": "Ensure your data is safe and recoverable with automated cloud backups and disaster recovery planning."
+      },
+      "2": {
+        "name": "IT Infrastructure",
+        "desc": "Build a robust IT foundation with scalable servers, networking, and virtualization tailored to your needs."
+      },
+      "3": {
+        "name": "Endpoint Protection",
+        "desc": "Safeguard devices with antivirus, anti-malware, and device management for secure remote work."
+      },
+      "4": {
+        "name": "Security Awareness Training",
+        "desc": "Empower your team with training to recognize and avoid phishing, social engineering, and cyber risks."
+      },
+      "5": {
+        "name": "Vulnerability Assessment",
+        "desc": "Identify and remediate security gaps with expert vulnerability scanning and risk analysis."
+      }
+    },
+    "milestones": {
+      "0": {
+        "title": "Founded",
+        "desc": "Started as a small startup with a vision for innovative IT solutions."
+      },
+      "1": {
+        "title": "First Major Award",
+        "desc": "Recognized for excellence in software development and client service."
+      },
+      "2": {
+        "title": "100+ Projects",
+        "desc": "Delivered over 100 successful projects for clients worldwide."
+      },
+      "3": {
+        "title": "Global Expansion",
+        "desc": "Expanded our reach to serve clients in 15+ countries."
+      }
+    },
+    "clientStories": {
+      "0": {
+        "name": "Emily Johnson",
+        "company": "TechNova Inc.",
+        "feedback": "Our IT infrastructure is now robust and scalable. The team delivered seamless migration to the cloud and ongoing support is top-notch!"
+      },
+      "1": {
+        "name": "Michael Brown",
+        "company": "Cloudify Solutions",
+        "feedback": "We saved 30% on IT costs and improved uptime after switching to their managed cloud services. Highly recommended for any growing company!"
+      },
+      "2": {
+        "name": "Priya Patel",
+        "company": "SafeNet Corp.",
+        "feedback": "Their cybersecurity experts helped us achieve compliance and peace of mind. Threats are detected and resolved before they impact our business."
+      }
+    },
+    "team": {
+      "0": {
+        "name": "Justin Kingdony",
+        "role": "UI/UX Designer"
+      },
+      "1": {
+        "name": "Michael Johnson",
+        "role": "UI/UX Designer"
+      }
+    },
+    "knowMore": "Know More",
+    "milestonesTitle": "Our Milestones",
+    "latestAchievement": "Latest Achievement",
+    "teamTitle": "Our Expert Team",
+    "teamSubtitle": "Our Dedicated Team Is Committed To Safeguarding Your Digital Future.",
+    "clientStoriesTitle": "Client Success Stories",
+    "ctaTitle": "Ready to Elevate Your Business?",
+    "ctaDesc": "Let our experts help you secure, optimize, and scale your IT, cybersecurity, and cloud infrastructure. Take the next step toward digital transformation today!",
+    "ctaButton": "Get Your Free Consultation",
+    "ctaNoObligation": "No obligation",
+    "ctaQuickResponse": "Quick response",
+    "ctaExpertAdvice": "Expert advice"
   }
 }
