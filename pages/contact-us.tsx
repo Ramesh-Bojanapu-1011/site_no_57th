@@ -117,7 +117,7 @@ const ContactUs: React.FC = (props) => {
   ];
   const [openIdx, setOpenIdx] = React.useState<number | null>(null);
   return (
-    <main className="min-h-screen caret-transparent">
+    <main className="min-h-screen  ">
       <SiteHeader />
       {/* Hero Section */}
       <section className="relative h-[100vh] flex flex-col justify-center items-center text-center bg-gradient-to-r from-blue-700 to-purple-800 overflow-hidden">
