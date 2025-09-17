@@ -2,17 +2,17 @@ import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import Head from "next/head";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const CloudBackupAndRecovery = () => {
+  const { t } = useTranslation();
   return (
     <>
       <Head>
-        <title>
-          Cloud Backup & Recovery | IT Services, Cybersecurity & Cloud
-        </title>
+        <title>{t("cloudBackupAndRecovery.title")}</title>
         <meta
           name="description"
-          content="Protect your business with reliable cloud backup, disaster recovery, and secure IT solutions."
+          content={t("cloudBackupAndRecovery.metaDescription")}
         />
       </Head>
       <main className="bg-[#f7fafd] dark:bg-[#101624] text-gray-900 dark:text-white caret-transparent">
@@ -26,52 +26,67 @@ const CloudBackupAndRecovery = () => {
             muted
             playsInline
           >
-            <source src="/cloud-backup-bg.mp4" type="video/mp4" />
+            <source src="/cloud-backup-bg-video.mp4" type="video/mp4" />
           </video>
           <div className="relative z-10 flex flex-col items-center justify-center w-full h-full">
             <h1 className="text-5xl font-extrabold mb-4">
-              Cloud Backup & Recovery
+              {t("cloudBackupAndRecovery.hero.title")}
             </h1>
             <p className="text-lg max-w-2xl mx-auto mb-8">
-              Ensure business continuity with secure cloud backup, rapid
-              disaster recovery, and expert IT support.
+              {t("cloudBackupAndRecovery.hero.subtitle")}
             </p>
           </div>
         </section>
 
-        {/* 2. Why Cloud Backup Matters */}
+        {/* 2. Why Network Security Matters */}
         <section className="py-20 px-4 bg-gradient-to-br from-white to-blue-50 dark:from-gray-900 dark:to-blue-950">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
             {/* Left: Modern Card with Icon & Headline */}
             <div className="flex-1 flex flex-col justify-center items-start bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-950 dark:to-purple-950 rounded-3xl shadow-2xl p-10 border-4 border-blue-100 dark:border-blue-900">
               <div className="mb-6 flex items-center gap-4">
-                <Image
-                  src="/cloud-backup.svg"
-                  alt="Cloud Backup"
-                  width={48}
-                  height={48}
-                />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={50}
+                  height={50}
+                  viewBox="0 0 48 48"
+                >
+                  <g fill="none" strokeLinejoin="round" strokeWidth={4}>
+                    <path
+                      fill="#2f88ff"
+                      stroke="#000"
+                      d="M6 8.25564L24.0086 3L42 8.25564V19.0337C42 30.3622 34.7502 40.4194 24.0026 44.0005C13.2521 40.4195 6 30.36 6 19.0287V8.25564Z"
+                    ></path>
+                    <path
+                      stroke="#fff"
+                      strokeLinecap="round"
+                      d="M23.9497 14.9497V30.9497"
+                    ></path>
+                    <path
+                      stroke="#fff"
+                      strokeLinecap="round"
+                      d="M15.9497 22.9497H31.9497"
+                    ></path>
+                  </g>
+                </svg>
                 <h2 className="text-4xl font-extrabold text-blue-700 dark:text-blue-300">
-                  Why Cloud Backup Matters
+                  {t("cloudBackupAndRecovery.why.title")}
                 </h2>
               </div>
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 max-w-xl">
-                Cloud backup and recovery are vital for protecting your data,
-                minimizing downtime, and ensuring your business can bounce back
-                from any disaster.
+                {t("cloudBackupAndRecovery.why.subtitle")}
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex items-center gap-3">
                   <span className="bg-blue-200 dark:bg-blue-800 p-3 rounded-full">
                     <Image
                       src="/window.svg"
-                      alt="Data"
+                      alt="Cyber"
                       width={32}
                       height={32}
                     />
                   </span>
                   <span className="font-semibold text-blue-700 dark:text-blue-300">
-                    Data Security
+                    {t("cloudBackupAndRecovery.why.dataProtection")}
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
@@ -84,7 +99,7 @@ const CloudBackupAndRecovery = () => {
                     />
                   </span>
                   <span className="font-semibold text-purple-700 dark:text-purple-300">
-                    Business Continuity
+                    {t("cloudBackupAndRecovery.why.businessContinuity")}
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
@@ -97,20 +112,20 @@ const CloudBackupAndRecovery = () => {
                     />
                   </span>
                   <span className="font-semibold text-orange-700 dark:text-orange-400">
-                    Compliance & Trust
+                    {t("cloudBackupAndRecovery.why.complianceTrust")}
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="bg-green-200 dark:bg-green-800 p-3 rounded-full">
                     <Image
                       src="/security-awareness.svg"
-                      alt="Recovery"
+                      alt="Awareness"
                       width={32}
                       height={32}
                     />
                   </span>
                   <span className="font-semibold text-green-700 dark:text-green-400">
-                    Rapid Recovery
+                    {t("cloudBackupAndRecovery.why.threatPrevention")}
                   </span>
                 </div>
               </div>
@@ -119,8 +134,8 @@ const CloudBackupAndRecovery = () => {
             <div className="flex-1 flex justify-center items-center">
               <div className="relative">
                 <Image
-                  src="/cloud-backup-hero.png"
-                  alt="Cloud Backup Hero"
+                  src="https://i.pinimg.com/1200x/71/d4/31/71d431f4a98d470d3ae9de30eca48eaf.jpg"
+                  alt={t("cloudBackupAndRecovery.why.imageAlt")}
                   width={340}
                   height={260}
                   className="relative z-10 rounded-2xl shadow-2xl border-4 border-blue-200 dark:border-blue-900 object-cover"
@@ -130,60 +145,78 @@ const CloudBackupAndRecovery = () => {
           </div>
         </section>
 
-        {/* 3. Our Backup & Recovery Solutions */}
+        {/* 3. Our Cybersecurity Solutions */}
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-purple-100 dark:from-blue-950 dark:to-purple-900">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl font-extrabold mb-14 text-purple-700 dark:text-purple-300 text-center flex items-center justify-center gap-4">
               <span className="inline-block bg-purple-100 dark:bg-purple-900 p-3 rounded-full">
-                <Image
-                  src="/cloud-backup.svg"
-                  alt="Backup"
-                  width={32}
-                  height={32}
-                />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={50}
+                  height={50}
+                  viewBox="0 0 48 48"
+                >
+                  <g fill="none" strokeLinejoin="round" strokeWidth={4}>
+                    <path
+                      fill="#2f88ff"
+                      stroke="#000"
+                      d="M6 8.25564L24.0086 3L42 8.25564V19.0337C42 30.3622 34.7502 40.4194 24.0026 44.0005C13.2521 40.4195 6 30.36 6 19.0287V8.25564Z"
+                    ></path>
+                    <path
+                      stroke="#fff"
+                      strokeLinecap="round"
+                      d="M23.9497 14.9497V30.9497"
+                    ></path>
+                    <path
+                      stroke="#fff"
+                      strokeLinecap="round"
+                      d="M15.9497 22.9497H31.9497"
+                    ></path>
+                  </g>
+                </svg>
               </span>
-              Our Backup & Recovery Solutions
+              {t("cloudBackupAndRecovery.solutions.title")}
             </h2>
             {/* Zigzag Layout using array and map */}
             {(() => {
               const solutions = [
                 {
-                  icon: "/cloud-backup.svg",
-                  alt: "Automated Backup",
+                  icon: "/shield.svg",
+                  alt: t("cloudBackupAndRecovery.solutions.0.alt"),
                   bg: "bg-blue-100 dark:bg-blue-900",
                   border: "border-blue-200 dark:border-blue-800",
-                  title: "Automated Backup",
+                  title: t("cloudBackupAndRecovery.solutions.0.title"),
                   titleClass: "text-blue-700 dark:text-blue-300",
                   items: [
-                    "Scheduled & real-time backups",
-                    "End-to-end encryption",
-                    "Multi-location redundancy",
+                    t("cloudBackupAndRecovery.solutions.0.items.0"),
+                    t("cloudBackupAndRecovery.solutions.0.items.1"),
+                    t("cloudBackupAndRecovery.solutions.0.items.2"),
                   ],
                 },
                 {
                   icon: "/window.svg",
-                  alt: "Disaster Recovery",
+                  alt: t("cloudBackupAndRecovery.solutions.1.alt"),
                   bg: "bg-purple-100 dark:bg-purple-900",
                   border: "border-purple-200 dark:border-purple-800",
-                  title: "Disaster Recovery",
+                  title: t("cloudBackupAndRecovery.solutions.1.title"),
                   titleClass: "text-purple-700 dark:text-purple-300",
                   items: [
-                    "Rapid restore & failover",
-                    "Business continuity planning",
-                    "Testing & simulation",
+                    t("cloudBackupAndRecovery.solutions.1.items.0"),
+                    t("cloudBackupAndRecovery.solutions.1.items.1"),
+                    t("cloudBackupAndRecovery.solutions.1.items.2"),
                   ],
                 },
                 {
-                  icon: "/globe.svg",
-                  alt: "Compliance",
+                  icon: "/cloud-backup.svg",
+                  alt: t("cloudBackupAndRecovery.solutions.2.alt"),
                   bg: "bg-blue-100 dark:bg-blue-900",
                   border: "border-blue-200 dark:border-blue-800",
-                  title: "Compliance & Monitoring",
+                  title: t("cloudBackupAndRecovery.solutions.2.title"),
                   titleClass: "text-blue-700 dark:text-blue-300",
                   items: [
-                    "GDPR, HIPAA, PCI DSS, ISO 27001",
-                    "Automated reporting & alerts",
-                    "Continuous monitoring",
+                    t("cloudBackupAndRecovery.solutions.2.items.0"),
+                    t("cloudBackupAndRecovery.solutions.2.items.1"),
+                    t("cloudBackupAndRecovery.solutions.2.items.2"),
                   ],
                 },
               ];
@@ -197,7 +230,7 @@ const CloudBackupAndRecovery = () => {
                         key={sol.title}
                         className={`flex flex-col ${
                           !isLeft ? "md:flex-row-reverse" : "md:flex-row"
-                        } items-center   gap-10`}
+                        } items-center gap-10`}
                       >
                         <div
                           className={`flex-shrink-0 w-32 h-32 rounded-3xl ${sol.bg} flex items-center justify-center shadow-xl border-4 ${sol.border}`}
@@ -222,8 +255,8 @@ const CloudBackupAndRecovery = () => {
                             {sol.title}
                           </h3>
                           <ul className="text-gray-700 dark:text-gray-300 space-y-2">
-                            {sol.items.map((item) => (
-                              <li key={item}>{item}</li>
+                            {sol.items.map((item, i) => (
+                              <li key={i}>{item}</li>
                             ))}
                           </ul>
                         </div>
@@ -241,11 +274,11 @@ const CloudBackupAndRecovery = () => {
           <h2 className="text-4xl font-extrabold mb-12 text-center text-blue-600 dark:text-blue-400 flex items-center justify-center gap-3">
             <Image
               src="/cloud-backup.svg"
-              alt="IT & Cloud"
+              alt={t("cloudBackupAndRecovery.managed.titleIconAlt")}
               width={40}
               height={40}
             />
-            Managed IT & Cloud Services
+            {t("cloudBackupAndRecovery.managed.title")}
           </h2>
           <div className="grid md:grid-cols-3 gap-10">
             {/* IT Strategy Card */}
@@ -253,18 +286,18 @@ const CloudBackupAndRecovery = () => {
               <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-14 h-14 bg-blue-500/20 dark:bg-blue-900/30 rounded-full blur-xl"></div>
               <Image
                 src="/window.svg"
-                alt="IT Strategy"
+                alt={t("cloudBackupAndRecovery.managed.cards.0.iconAlt")}
                 width={48}
                 height={48}
                 className="mb-4"
               />
               <h3 className="text-2xl font-bold mb-3 text-blue-700 dark:text-blue-300">
-                IT Strategy & Consulting
+                {t("cloudBackupAndRecovery.managed.cards.0.title")}
               </h3>
               <ul className="list-disc ml-4 text-gray-700 dark:text-gray-300 text-left space-y-2">
-                <li>Custom IT roadmaps for secure growth</li>
-                <li>Digital transformation leadership</li>
-                <li>Process automation & workflow optimization</li>
+                <li>{t("cloudBackupAndRecovery.managed.cards.0.items.0")}</li>
+                <li>{t("cloudBackupAndRecovery.managed.cards.0.items.1")}</li>
+                <li>{t("cloudBackupAndRecovery.managed.cards.0.items.2")}</li>
               </ul>
             </div>
             {/* Cloud Services Card */}
@@ -272,18 +305,18 @@ const CloudBackupAndRecovery = () => {
               <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-14 h-14 bg-purple-500/20 dark:bg-purple-900/30 rounded-full blur-xl"></div>
               <Image
                 src="/cloud-backup.svg"
-                alt="Cloud Services"
+                alt={t("cloudBackupAndRecovery.managed.cards.1.iconAlt")}
                 width={48}
                 height={48}
                 className="mb-4"
               />
               <h3 className="text-2xl font-bold mb-3 text-purple-700 dark:text-purple-300">
-                Cloud Services
+                {t("cloudBackupAndRecovery.managed.cards.1.title")}
               </h3>
               <ul className="list-disc ml-4 text-gray-700 dark:text-gray-300 text-left space-y-2">
-                <li>Scalable cloud hosting & infrastructure</li>
-                <li>Disaster recovery & backup solutions</li>
-                <li>Hybrid & multi-cloud deployments</li>
+                <li>{t("cloudBackupAndRecovery.managed.cards.1.items.0")}</li>
+                <li>{t("cloudBackupAndRecovery.managed.cards.1.items.1")}</li>
+                <li>{t("cloudBackupAndRecovery.managed.cards.1.items.2")}</li>
               </ul>
             </div>
             {/* Managed Support Card */}
@@ -291,74 +324,76 @@ const CloudBackupAndRecovery = () => {
               <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-14 h-14 bg-green-500/20 dark:bg-green-900/30 rounded-full blur-xl"></div>
               <Image
                 src="/shield.svg"
-                alt="Managed Support"
+                alt={t("cloudBackupAndRecovery.managed.cards.2.iconAlt")}
                 width={48}
                 height={48}
                 className="mb-4"
               />
               <h3 className="text-2xl font-bold mb-3 text-green-700 dark:text-green-400">
-                Managed IT Support
+                {t("cloudBackupAndRecovery.managed.cards.2.title")}
               </h3>
               <ul className="list-disc ml-4 text-gray-700 dark:text-gray-300 text-left space-y-2">
-                <li>24/7 monitoring & helpdesk</li>
-                <li>Proactive maintenance & updates</li>
-                <li>Rapid issue resolution</li>
+                <li>{t("cloudBackupAndRecovery.managed.cards.2.items.0")}</li>
+                <li>{t("cloudBackupAndRecovery.managed.cards.2.items.1")}</li>
+                <li>{t("cloudBackupAndRecovery.managed.cards.2.items.2")}</li>
               </ul>
             </div>
           </div>
         </section>
 
-        {/* 5. Backup Awareness & Compliance */}
+        {/* 5. Security Awareness & Compliance */}
+
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-purple-100 dark:from-blue-950 dark:to-purple-900">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold mb-14 text-purple-700 dark:text-purple-300 text-center flex items-center justify-center gap-3">
               <Image
                 src="/security-awareness.svg"
-                alt="Awareness"
+                alt={t("cloudBackupAndRecovery.awareness.titleIconAlt")}
                 width={36}
                 height={36}
               />
-              Backup Awareness & Compliance
+              {t("cloudBackupAndRecovery.awareness.title")}
             </h2>
             {/* Horizontal Stepper Layout using array and map */}
             {(() => {
+              const { t } = useTranslation();
               const steps = [
                 {
                   icon: "/security-awareness.svg",
-                  alt: "Training",
+                  alt: t("cloudBackupAndRecovery.awareness.steps.0.alt"),
                   bg: "bg-blue-100 dark:bg-blue-900",
-                  title: "Backup Training & Awareness",
+                  title: t("cloudBackupAndRecovery.awareness.steps.0.title"),
                   titleClass: "text-blue-700 dark:text-blue-300",
                   items: [
-                    "Workshops & e-learning",
-                    "Simulated recovery drills",
-                    "Employee engagement",
+                    t("cloudBackupAndRecovery.awareness.steps.0.items.0"),
+                    t("cloudBackupAndRecovery.awareness.steps.0.items.1"),
+                    t("cloudBackupAndRecovery.awareness.steps.0.items.2"),
                   ],
                   connector: "bg-blue-200 dark:bg-blue-900",
                 },
                 {
                   icon: "/globe.svg",
-                  alt: "Compliance",
+                  alt: t("cloudBackupAndRecovery.awareness.steps.1.alt"),
                   bg: "bg-purple-100 dark:bg-purple-900",
-                  title: "Compliance Management",
+                  title: t("cloudBackupAndRecovery.awareness.steps.1.title"),
                   titleClass: "text-purple-700 dark:text-purple-300",
                   items: [
-                    "GDPR, HIPAA, PCI DSS, ISO 27001",
-                    "Automated reporting",
-                    "Policy & audit support",
+                    t("cloudBackupAndRecovery.awareness.steps.1.items.0"),
+                    t("cloudBackupAndRecovery.awareness.steps.1.items.1"),
+                    t("cloudBackupAndRecovery.awareness.steps.1.items.2"),
                   ],
                   connector: "bg-purple-200 dark:bg-purple-900",
                 },
                 {
                   icon: "/window.svg",
-                  alt: "Culture",
+                  alt: t("cloudBackupAndRecovery.awareness.steps.2.alt"),
                   bg: "bg-green-100 dark:bg-green-900",
-                  title: "Resilient Culture",
+                  title: t("cloudBackupAndRecovery.awareness.steps.2.title"),
                   titleClass: "text-green-700 dark:text-green-400",
                   items: [
-                    "Leadership buy-in",
-                    "Continuous improvement",
-                    "Celebrating successful recoveries",
+                    t("cloudBackupAndRecovery.awareness.steps.2.items.0"),
+                    t("cloudBackupAndRecovery.awareness.steps.2.items.1"),
+                    t("cloudBackupAndRecovery.awareness.steps.2.items.2"),
                   ],
                   connector: "bg-green-200 dark:bg-green-900",
                 },
@@ -367,7 +402,7 @@ const CloudBackupAndRecovery = () => {
                 <div className="flex flex-col md:flex-row items-center justify-center gap-10">
                   {steps.map((step, idx) => (
                     <div
-                      key={step.title}
+                      key={idx}
                       className="flex flex-col items-center text-center flex-1"
                     >
                       <span
@@ -386,8 +421,8 @@ const CloudBackupAndRecovery = () => {
                         {step.title}
                       </h3>
                       <ul className="text-gray-700 dark:text-gray-300 space-y-1 mb-4">
-                        {step.items.map((item) => (
-                          <li key={item}>{item}</li>
+                        {step.items.map((item, i) => (
+                          <li key={i}>{item}</li>
                         ))}
                       </ul>
 
@@ -406,17 +441,16 @@ const CloudBackupAndRecovery = () => {
         <section className="py-16 px-4 bg-gradient-to-r from-blue-500 to-purple-600 dark:from-blue-900 dark:to-purple-900 text-center">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-white dark:text-blue-300 tracking-tight">
-              Ready to Protect Your Data?
+              {t("cloudBackupAndRecovery.cta.title")}
             </h2>
             <p className="text-lg text-white/80 dark:text-white/70 mb-8">
-              Contact our cloud backup experts for a free assessment and
-              discover how we can safeguard your business.
+              {t("cloudBackupAndRecovery.cta.subtitle")}
             </p>
             <a
               href="/contact-us"
               className="inline-block bg-blue-600 dark:bg-blue-400 hover:bg-blue-700 dark:hover:bg-blue-500 text-white font-bold py-4 px-10 rounded-full shadow-lg transition-all text-lg"
             >
-              Contact Us
+              {t("cloudBackupAndRecovery.cta.button")}
             </a>
           </div>
         </section>

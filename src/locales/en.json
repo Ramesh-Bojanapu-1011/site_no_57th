@@ -579,5 +579,123 @@
       "subtitle": "Contact our cybersecurity experts for a free assessment and discover how we can protect your business.",
       "button": "Contact Us"
     }
+  },
+  "cloudBackupAndRecovery": {
+    "title": " Cloud Backup & Recovery | IT Services, Cybersecurity & Cloud",
+    "metaDescription": "Protect your business with reliable cloud backup, disaster recovery, and secure IT solutions.",
+    "hero": {
+      "title": "Cloud Backup & Recovery",
+      "subtitle": "Ensure business continuity with secure cloud backup, rapid disaster recovery, and expert IT support."
+    },
+    "why": {
+      "title": "Why Cloud Backup Matters",
+      "subtitle": "Cloud backup and recovery are vital for protecting your data, minimizing downtime, and ensuring your business can bounce back from any disaster.",
+      "dataProtection": "Data Security",
+      "businessContinuity": "Business Continuity",
+      "complianceTrust": "Compliance & Trust",
+      "threatPrevention": "Rapid Recovery",
+      "imageAlt": "Cloud Backup and Recovery Illustration"
+    },
+    "solutions": {
+      "title": "Our Backup & Recovery Solutions",
+      "0": {
+        "alt": "Automated Backup",
+        "title": "Automated Backup",
+        "items": {
+          "0": "Scheduled & real-time backups",
+          "1": "End-to-end encryption",
+          "2": "Multi-location redundancy"
+        }
+      },
+      "1": {
+        "alt": "Disaster Recovery",
+        "title": "Disaster Recovery",
+        "items": {
+          "0": "Automated failover",
+          "1": "Data replication",
+          "2": "Regular testing"
+        }
+      },
+      "2": {
+        "alt": "Compliance & Monitoring",
+        "title": "Compliance & Monitoring",
+        "items": {
+          "0": "Cloud data encryption",
+          "1": "Backup & disaster recovery",
+          "2": "Multi-cloud security"
+        }
+      }
+    },
+    "managed": {
+      "titleIconAlt": "Cloud Services Icon",
+      "title": "Managed IT & Cloud Services",
+      "cards": {
+        "0": {
+          "iconAlt": "IT Strategy Icon",
+          "title": "IT Strategy & Consulting",
+          "items": {
+            "0": "Custom IT roadmaps for secure growth",
+            "1": "Digital transformation leadership",
+            "2": "Process automation & workflow optimization"
+          }
+        },
+        "1": {
+          "iconAlt": "Cloud Services Icon",
+          "title": "Cloud Services",
+          "items": {
+            "0": "Scalable cloud hosting & infrastructure",
+            "1": "Disaster recovery & backup solutions",
+            "2": "Hybrid & multi-cloud deployments"
+          }
+        },
+        "2": {
+          "iconAlt": "Managed Support Icon",
+          "title": "Managed IT Support",
+          "items": {
+            "0": "24/7 monitoring & helpdesk",
+            "1": "Proactive maintenance & updates",
+            "2": "Rapid issue resolution"
+          }
+        }
+      }
+    },
+    "awareness": {
+      "titleIconAlt": "Backup Awareness & Compliance",
+      "title": "Backup Awareness & Compliance",
+      "steps": {
+        "0": {
+          "alt": "Backup Training & Awareness",
+          "title": "Backup Training & Awareness",
+          "items": {
+            "0": "Workshops & e-learning",
+            "1": "Simulated recovery drills",
+            "2": "Employee engagement"
+          }
+        },
+        "1": {
+          "alt": "Compliance Icon",
+          "title": "Compliance Management",
+          "items": {
+            "0": "GDPR, HIPAA, etc.",
+            "1": "Automated reporting",
+            "2": "Policy & audit support"
+          }
+        },
+        "2": {
+          "alt": "Continuous Improvement Icon",
+          "title": "Resilient Culture",
+          "items": {
+            "0": "Leadership buy-in",
+            "1": "Continuous improvement",
+            "2": "Celebrating successful recoveries"
+          }
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Protect Your Data?",
+      "subtitle": "Contact our cloud backup experts for a free assessment and discover how we can safeguard your business.",
+      "button": "Contact Us"
+    }
   }
 }
