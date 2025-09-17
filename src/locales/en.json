@@ -697,5 +697,111 @@
       "subtitle": "Contact our cloud backup experts for a free assessment and discover how we can safeguard your business.",
       "button": "Contact Us"
     }
+  },
+  "itInfrastructure": {
+    "title": "IT Infrastructure | IT Services, Cybersecurity & Cloud",
+    "metaDescription": "Empower your business with robust IT infrastructure, secure networking, and expert support.",
+    "hero": {
+      "title": "IT Infrastructure",
+      "subtitle": "Build a resilient, scalable, and secure IT foundation for your business success."
+    },
+    "why": {
+      "title": "Why IT Infrastructure Matters",
+      "subtitle": "Modern IT infrastructure is the backbone of business operations, enabling performance, security, and growth in a digital world.",
+      "networking": "Reliable Networking",
+      "cloud": "Scalable Cloud",
+      "compliance": "Compliance & Security",
+      "support": "Expert Support"
+    },
+    "solutions": {
+      "title": "Our IT Infrastructure Solutions",
+      "0": {
+        "title": "Network Design & Implementation",
+        "items": {
+          "0": "Custom network architecture",
+          "1": "Secure LAN/WAN solutions",
+          "2": "Performance optimization"
+        }
+      },
+      "1": {
+        "title": "Cloud Integration",
+        "items": {
+          "0": "Hybrid & multi-cloud deployments",
+          "1": "Migration & onboarding",
+          "2": "Scalable infrastructure"
+        }
+      },
+      "2": {
+        "title": "Security & Compliance",
+        "items": {
+          "0": "GDPR, HIPAA, PCI DSS, ISO 27001",
+          "1": "Automated reporting & monitoring",
+          "2": "Policy & audit support"
+        }
+      }
+    },
+    "managed": {
+      "title": "Managed IT & Cloud Services",
+      "cards": {
+        "0": {
+          "title": "IT Strategy & Consulting",
+          "items": {
+            "0": "Custom IT roadmaps for secure growth",
+            "1": "Digital transformation leadership",
+            "2": "Process automation & workflow optimization"
+          }
+        },
+        "1": {
+          "title": "Cloud Services",
+          "items": {
+            "0": "Scalable cloud hosting & infrastructure",
+            "1": "Disaster recovery & backup solutions",
+            "2": "Hybrid & multi-cloud deployments"
+          }
+        },
+        "2": {
+          "title": "Managed IT Support",
+          "items": {
+            "0": "24/7 monitoring & helpdesk",
+            "1": "Proactive maintenance & updates",
+            "2": "Rapid issue resolution"
+          }
+        }
+      }
+    },
+    "awareness": {
+      "title": "Infrastructure Awareness & Compliance",
+      "steps": {
+        "0": {
+          "title": "Infrastructure Training & Awareness",
+          "items": {
+            "0": "Workshops & e-learning",
+            "1": "Simulated network drills",
+            "2": "Employee engagement"
+          }
+        },
+        "1": {
+          "title": "Compliance Management",
+          "items": {
+            "0": "GDPR, HIPAA, PCI DSS, ISO 27001",
+            "1": "Automated reporting",
+            "2": "Policy & audit support"
+          }
+        },
+        "2": {
+          "title": "Resilient Culture",
+          "items": {
+            "0": "Leadership buy-in",
+            "1": "Continuous improvement",
+            "2": "Celebrating successful projects"
+          }
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Upgrade Your IT Infrastructure?",
+      "subtitle": "Contact our IT infrastructure experts for a free assessment and discover how we can empower your business.",
+      "button": "Contact Us"
+    }
   }
 }
