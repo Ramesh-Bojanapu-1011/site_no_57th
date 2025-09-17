@@ -1,1 +1,33 @@
-{}
+{
+  "home": {
+    "services": {
+      "0": "Network Security",
+      "1": "Cloud Backup and Recovery",
+      "2": "IT Infrastructure",
+      "3": "Endpoint Protection",
+      "4": "Security Awareness Training",
+      "5": "Vulnerability Assessment"
+    },
+    "navbar": {
+      "Home": "Home",
+      "About_Us": "About Us",
+      "Services": "Services",
+      "All_Services": "All Services",
+      "Blog": "Blog",
+      "Contact_Us": "Contact Us"
+    },
+    "English": "English",
+    "Arabic": "Arabic",
+    "Hebrew": "Hebrew"
+  },
+  "footer": {
+    "about": "Empowering businesses with secure, scalable IT and cloud solutions. Your trusted partner in cybersecurity and digital transformation.",
+    "quick_links": "Quick Links",
+    "services": "Services",
+    "contact_us": "Contact Us",
+    "email": "info@enkonixit.com",
+    "phone": "+1 234 567 890",
+    "address": "123 Cyber St, Cloud City",
+    "copyright": "All rights reserved."
+  }
+}

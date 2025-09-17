@@ -8,12 +8,12 @@ import { useTranslation } from "react-i18next";
 import { ModeToggle } from "./theme/ModeToggle";
 
 const services = [
-  { name: "Network Security" },
-  { name: "Cloud Backup and Recovery" },
-  { name: "IT Infrastructure" },
-  { name: "Endpoint Protection" },
-  { name: "Security Awareness Training" },
-  { name: "Vulnerability Assessment" },
+  { name: "home.services.0", link: " /network-security" },
+  { name: "home.services.1", link: " /cloud-backup" },
+  { name: "home.services.2", link: " /it-infrastructure" },
+  { name: "home.services.3", link: " /endpoint-protection" },
+  { name: "home.services.4", link: " /security-awareness" },
+  { name: "home.services.5", link: " /vulnerability-assessment" },
 ];
 
 const languages = [
@@ -116,7 +116,7 @@ const SiteHeader = () => {
                 setProfileOpen(false);
               }}
             >
-              Home <ChevronDown size={16} />
+              {t("home.navbar.Home")} <ChevronDown size={16} />
             </button>
             {homeOpen && (
               <ul className="absolute left-0 mt-2 w-36 bg-white dark:bg-gray-800 shadow-xl rounded-lg py-2 border border-blue-100 dark:border-gray-700">
@@ -125,7 +125,7 @@ const SiteHeader = () => {
                     href="/home1"
                     className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-gray-700"
                   >
-                    Home1
+                    {t("home.navbar.Home")}1
                   </Link>
                 </li>
                 <li>
@@ -133,7 +133,7 @@ const SiteHeader = () => {
                     href="/home2"
                     className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-gray-700"
                   >
-                    Home2
+                    {t("home.navbar.Home")}2
                   </Link>
                 </li>
               </ul>
@@ -144,7 +144,7 @@ const SiteHeader = () => {
               href="/about-us"
               className="px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800"
             >
-              About Us
+              {t("home.navbar.About_Us")}
             </Link>
           </li>
           {/* Services Dropdown */}
@@ -158,7 +158,7 @@ const SiteHeader = () => {
                 setProfileOpen(false);
               }}
             >
-              Services <ChevronDown size={16} />
+              {t("home.navbar.Services")} <ChevronDown size={16} />
             </button>
             {servicesOpen && (
               <ul className="absolute left-0 mt-2 w-56 bg-white dark:bg-gray-800 shadow-xl rounded-lg py-2 border border-blue-100 dark:border-gray-700">
@@ -167,18 +167,16 @@ const SiteHeader = () => {
                     href="/services"
                     className="block px-4 border-b py-2 hover:bg-blue-50 dark:hover:bg-gray-700"
                   >
-                    All Services
+                    {t("home.navbar.All_Services")}
                   </Link>
                 </li>
                 {services.map((service) => (
                   <li key={service.name} className="flex ">
                     <Link
-                      href={`/${service.name
-                        .replace(/\s+/g, "-")
-                        .toLowerCase()}`}
+                      href={`${service.link}`}
                       className="flex items-center w-full gap-2 px-4 py-2 rounded hover:bg-blue-50 dark:hover:bg-gray-700 "
                     >
-                      {service.name}
+                      {t(service.name)}
                     </Link>
                   </li>
                 ))}
@@ -190,7 +188,7 @@ const SiteHeader = () => {
               href="/blog"
               className="px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800"
             >
-              Blog
+              {t("home.navbar.Blog")}
             </Link>
           </li>
           <li>
@@ -198,7 +196,7 @@ const SiteHeader = () => {
               href="/contact-us"
               className="px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800"
             >
-              Contact Us
+              {t("home.navbar.Contact_Us")}
             </Link>
           </li>
           {/* Languages Dropdown */}
@@ -282,18 +280,18 @@ const SiteHeader = () => {
                 className="flex items-center gap-2 w-full px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 "
                 onClick={() => setHomeOpen((prev) => !prev)}
               >
-                Home <ChevronDown size={16} />
+                {t("home.navbar.Home")} <ChevronDown size={16} />
               </button>
               {homeOpen && (
                 <ul className="ml-6 mt-1">
                   <li>
                     <Link href="/home1" className="block py-1">
-                      Home1
+                      {t("home.navbar.Home")}2
                     </Link>
                   </li>
                   <li>
                     <Link href="/home2" className="block py-1">
-                      Home2
+                      {t("home.navbar.Home")}2
                     </Link>
                   </li>
                 </ul>
@@ -304,7 +302,7 @@ const SiteHeader = () => {
                 href="/about-us"
                 className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 "
               >
-                <span>About Us</span>
+                <span>{t("home.navbar.About_Us")}</span>
               </Link>
             </li>
             <li>
@@ -312,7 +310,7 @@ const SiteHeader = () => {
                 className="flex items-center gap-2 w-full px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 "
                 onClick={() => setServicesOpen((prev) => !prev)}
               >
-                Services <ChevronDown size={16} />
+                {t("home.navbar.Services")} <ChevronDown size={16} />
               </button>
               {servicesOpen && (
                 <ul className="ml-6 mt-1">
@@ -321,18 +319,16 @@ const SiteHeader = () => {
                       href="/services"
                       className="block px-4 border-b py-2 hover:bg-blue-50 dark:hover:bg-gray-700"
                     >
-                      All Services
+                      {t("home.navbar.All_Services")}
                     </Link>
                   </li>
                   {services.map((service) => (
                     <li key={service.name}>
                       <Link
-                        href={`/${service.name
-                          .replace(/\s+/g, "-")
-                          .toLowerCase()}`}
+                        href={`${service.link}`}
                         className="flex items-center gap-2 py-1 rounded hover:bg-blue-50 dark:hover:bg-gray-700 "
                       >
-                        {service.name}
+                        {t(service.name)}
                       </Link>
                     </li>
                   ))}
@@ -344,7 +340,7 @@ const SiteHeader = () => {
                 href="/blog"
                 className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 "
               >
-                Blog
+                {t("home.navbar.Blog")}
               </Link>
             </li>
             <li>
@@ -352,7 +348,7 @@ const SiteHeader = () => {
                 href="/contact-us"
                 className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 "
               >
-                Contact Us
+                {t("home.navbar.Contact_Us")}
               </Link>
             </li>
           </ul>
@@ -370,8 +366,14 @@ const SiteHeader = () => {
                   <ul className="absolute left-0 mt-2 w-32 bg-white dark:bg-gray-800 shadow-xl rounded-lg py-2 border border-blue-100 dark:border-gray-700 z-10">
                     {languages.map((lang) => (
                       <li key={lang.code}>
-                        <button className="block px-3 py-1 w-full text-left rounded hover:bg-blue-100 dark:hover:bg-gray-700  font-semibold text-blue-700 dark:text-blue-200">
-                          {lang.label}
+                        <button
+                          className="block px-3 py-1 w-full text-left rounded hover:bg-blue-100 dark:hover:bg-gray-700  font-semibold text-blue-700 dark:text-blue-200"
+                          onClick={() => {
+                            handleLanguageChange(lang.label);
+                            setLangOpen(false);
+                          }}
+                        >
+                          {t(lang.label)}
                         </button>
                       </li>
                     ))}

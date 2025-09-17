@@ -9,24 +9,26 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 const services = [
-  { name: "Network Security" },
-  { name: "Cloud Backup and Recovery" },
-  { name: "IT Infrastructure" },
-  { name: "Endpoint Protection" },
-  { name: "Security Awareness Training" },
-  { name: "Vulnerability Assessment" },
+  { key: "home.services.0", href: "/network-security" },
+  { key: "home.services.1", href: "/cloud-backup" },
+  { key: "home.services.2", href: "/it-infrastructure" },
+  { key: "home.services.3", href: "/endpoint-protection" },
+  { key: "home.services.4", href: "/security-awareness" },
+  { key: "home.services.5", href: "/vulnerability-assessment" },
 ];
 
 const quickLinks = [
-  { name: "Home", href: "/home1" },
-  { name: "About Us", href: "/about-us" },
-  { name: "Blog", href: "/blog" },
-  { name: "Contact Us", href: "/contact-us" },
+  { key: "home.navbar.Home", href: "/home1" },
+  { key: "home.navbar.About_Us", href: "/about-us" },
+  { key: "home.navbar.Blog", href: "/blog" },
+  { key: "home.navbar.Contact_Us", href: "/contact-us" },
 ];
 
 const SiteFooter = () => {
+  const { t } = useTranslation();
   return (
     <footer className="bg-gradient-to-r from-blue-50 via-white to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-gray-900 dark:text-white border-t border-blue-100 dark:border-gray-800 pt-10 pb-4 px-4">
       <div className=" max-w-screen   mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -41,10 +43,7 @@ const SiteFooter = () => {
               className="rounded-full"
             />
           </div>
-          <p className="text-sm leading-relaxed mb-4">
-            Empowering businesses with secure, scalable IT and cloud solutions.
-            Your trusted partner in cybersecurity and digital transformation.
-          </p>
+          <p className="text-sm leading-relaxed mb-4">{t("footer.about")}</p>
           <div className="flex gap-3 mt-2">
             <a href="#" aria-label="Facebook" className="hover:text-blue-600">
               <Facebook size={20} />
@@ -63,15 +62,17 @@ const SiteFooter = () => {
 
         {/* Quick Links */}
         <div>
-          <h3 className="font-bold text-base mb-3">Quick Links</h3>
+          <h3 className="font-bold text-base mb-3">
+            {t("footer.quick_links")}
+          </h3>
           <ul className="space-y-2">
             {quickLinks.map((link) => (
-              <li key={link.name}>
+              <li key={link.key}>
                 <Link
                   href={link.href}
                   className="hover:text-blue-600 transition"
                 >
-                  {link.name}
+                  {t(link.key)}
                 </Link>
               </li>
             ))}
@@ -80,15 +81,15 @@ const SiteFooter = () => {
 
         {/* Services */}
         <div>
-          <h3 className="font-bold text-base mb-3">Services</h3>
+          <h3 className="font-bold text-base mb-3">{t("footer.services")}</h3>
           <ul className="space-y-2">
-            {services.map((service, index) => (
-              <li key={index}>
+            {services.map((service) => (
+              <li key={service.key}>
                 <Link
-                  href={`/${service.name.replace(/\s+/g, "-").toLowerCase()}`}
+                  href={service.href}
                   className="hover:text-blue-600 transition"
                 >
-                  {service.name}
+                  {t(service.key)}
                 </Link>
               </li>
             ))}
@@ -97,23 +98,23 @@ const SiteFooter = () => {
 
         {/* Contact Us */}
         <div>
-          <h3 className="font-bold text-base mb-3">Contact Us</h3>
+          <h3 className="font-bold text-base mb-3">{t("footer.contact_us")}</h3>
           <ul className="space-y-2 text-sm">
             <li className="flex items-center gap-2">
-              <Mail size={18} /> info@enkonixit.com
+              <Mail size={18} /> {t("footer.email")}
             </li>
             <li className="flex items-center gap-2">
-              <Phone size={18} /> +1 234 567 890
+              <Phone size={18} /> {t("footer.phone")}
             </li>
             <li className="flex items-center gap-2">
-              <MapPin size={18} /> 123 Cyber St, Cloud City
+              <MapPin size={18} /> {t("footer.address")}
             </li>
           </ul>
         </div>
       </div>
 
       <div className="text-center text-xs text-gray-500 dark:text-gray-400 mt-8">
-        &copy; {new Date().getFullYear()} Stackly. All rights reserved.
+        &copy; {new Date().getFullYear()} Stackly. {t("footer.copyright")}
       </div>
     </footer>
   );
