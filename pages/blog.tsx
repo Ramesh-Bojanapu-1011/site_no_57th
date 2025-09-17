@@ -46,19 +46,22 @@ const blog = (props: Props) => {
                 {
                   title: t("blog.featured.articles.0.title"),
                   desc: t("blog.featured.articles.0.desc"),
-                  image: "/globe.svg",
+                  image:
+                    "https://i.pinimg.com/736x/e8/6e/33/e86e33d24afe5dc58ea326ec64912130.jpg",
                   link: "/secure-your-business-network",
                 },
                 {
                   title: t("blog.featured.articles.1.title"),
                   desc: t("blog.featured.articles.1.desc"),
-                  image: "/window.svg",
+                  image:
+                    "https://i.pinimg.com/736x/d1/eb/8f/d1eb8f3e2355f0483a50618f571b37c8.jpg",
                   link: "/cloud-backup",
                 },
                 {
                   title: t("blog.featured.articles.2.title"),
                   desc: t("blog.featured.articles.2.desc"),
-                  image: "/logo-stackly.png",
+                  image:
+                    "https://i.pinimg.com/736x/4a/09/20/4a0920f1e8e2926dbac936225f3be230.jpg",
                   link: "/security-awareness",
                 },
               ].map((blog, idx) => (

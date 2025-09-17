@@ -17,11 +17,6 @@ const CloudBackup = (props: Props) => {
         <p className="text-lg max-w-2xl mx-auto mb-8 text-white/80">
           {t("cloudBackup.hero.subtitle")}
         </p>
-        <img
-          src="/window.svg"
-          alt={t("cloudBackup.hero.imgAlt")}
-          className="w-32 h-32 mx-auto mb-8"
-        />
       </section>
 
       <section className="mx-auto py-10 px-4 bg-white/80 dark:bg-gray-900/80 shadow-xl border border-blue-100 dark:border-blue-900 backdrop-blur-lg">
