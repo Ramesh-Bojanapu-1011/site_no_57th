@@ -370,6 +370,85 @@
       "button": "Contact Us"
     }
   },
+  "blog": {
+    "title": "Blog | Enkonix Theme",
+    "metaDescription": "Latest insights, tips, and stories from Enkonix.",
+    "hero": {
+      "title": "Welcome to Our Blog",
+      "subtitle": "Explore the latest insights, tips, and stories in IT, cybersecurity, and digital transformation."
+    },
+    "featured": {
+      "title": "Featured Articles",
+      "readMore": "Read More →",
+      "articles": {
+        "0": {
+          "title": "5 Ways to Secure Your Business Network",
+          "desc": "Practical strategies to protect your company from cyber threats."
+        },
+        "1": {
+          "title": "Cloud Backup: Why It Matters",
+          "desc": "Discover the benefits of cloud backup and disaster recovery."
+        },
+        "2": {
+          "title": "Building a Culture of Security Awareness",
+          "desc": "How to empower your team to recognize and avoid cyber risks."
+        }
+      }
+    },
+    "about": {
+      "title": "About Our Blog",
+      "description": {
+        "0": "Our blog is dedicated to sharing ",
+        "1": "expert advice",
+        "2": "industry news",
+        "3": " and practical tips to help you stay ahead in the fast-evolving world of technology and security."
+      },
+      "tags": {
+        "0": "#Tech",
+        "1": "#Security",
+        "2": "#Tips"
+      }
+    },
+    "categories": {
+      "title": "Categories",
+      "subtitle": "Browse our blog by category and discover tailored insights for every interest.",
+      "items": {
+        "0": "Network Security",
+        "1": "Cloud Solutions",
+        "2": "IT Infrastructure",
+        "3": "Security Awareness",
+        "4": "Vulnerability Assessment",
+        "5": "Digital Transformation"
+      }
+    },
+    "comments": {
+      "title": "Recent Comments",
+      "items": {
+        "0": {
+          "name": "Priya Patel",
+          "comment": "Loved the article on cloud backup! Very informative."
+        },
+        "1": {
+          "name": "Sarah Lee",
+          "comment": "The security tips are practical and easy to implement."
+        },
+        "2": {
+          "name": "Michael Chen",
+          "comment": "Great insights on building a security-aware culture."
+        },
+        "3": {
+          "name": "David Kim",
+          "comment": "Looking forward to more posts on IT infrastructure."
+        }
+      }
+    },
+    "newsletter": {
+      "title": "Stay Updated",
+      "subtitle": "Subscribe to our newsletter for the latest blog updates, tips, and exclusive content.",
+      "placeholder": "Your email address",
+      "button": "Subscribe"
+    }
+  },
   "services": {
     "title": "Our Services",
     "metaDescription": "Learn more about our services.",
