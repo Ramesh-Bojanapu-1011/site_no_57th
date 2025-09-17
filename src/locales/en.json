@@ -1372,5 +1372,72 @@
       "title": "Conclusion",
       "p": "Building a culture of security awareness is an investment in your company’s future. Empower your team, keep security top of mind, and celebrate successes. Together, you can create a safer, more resilient organization."
     }
+  },
+  "contactUs": {
+    "hero": {
+      "title": "Contact Us",
+      "subtitle": "We'd love to hear from you! Reach out for support, partnership, or just to say hello.",
+      "videoFallback": "Your browser does not support the video tag."
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "namePlaceholder": "Your Name",
+      "emailPlaceholder": "Your Email",
+      "messagePlaceholder": "Your Message",
+      "button": "Send Message",
+      "success": "Thank you for your message! We'll get back to you soon.",
+      "error": "Oops! Something went wrong. Please try again later."
+    },
+    "info": {
+      "address": {
+        "title": "Our Office",
+        "line1": "1234 Enkonix Ave, Suite 100",
+        "line2": "Tech City, 56789"
+      },
+      "email": {
+        "title": "Email Us"
+      },
+      "phone": {
+        "title": "Call Us",
+        "hours": "Mon-Fri, 9am-6pm"
+      }
+    },
+    "teamTitle": "Our Team Members",
+    "team": {
+      "0": { "name": "Priya Patel", "role": "CEO" },
+      "1": { "name": "Sarah Lee", "role": "CTO" },
+      "2": { "name": "Michael Chen", "role": "Lead Developer" },
+      "3": { "name": "David Kim", "role": "Product Manager" },
+      "4": { "name": "Aisha Ahmed", "role": "UX Designer" },
+      "5": { "name": "Carlos Gomez", "role": "Marketing Head" }
+    },
+    "faqTitle": "Frequently Asked Questions",
+    "faqs": {
+      "0": {
+        "question": "How do I get in touch with your team?",
+        "answer": {
+          "0": "Simply fill out the contact form above or email us at ",
+          "1": ". We aim to respond within one business day."
+        }
+      },
+      "1": {
+        "question": "Where can I find your office?",
+        "answer": {
+          "0": "Visit us at ",
+          "1": ". Our location is also shown on the map below."
+        }
+      },
+      "2": {
+        "question": "What are your working hours?",
+        "answer": {
+          "0": "Our team is available ",
+          "1": ". Feel free to reach out during these hours for a prompt reply."
+        }
+      },
+      "3": {
+        "question": "Can I schedule a visit?",
+        "answer": "Absolutely! Please contact us in advance to arrange a meeting so we can best assist you during your visit."
+      }
+    }
   }
 }
