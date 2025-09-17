@@ -11,56 +11,54 @@ import {
 import Head from "next/head";
 import Image from "next/image";
 import React from "react";
+import { useTranslation } from "next-i18next";
 
 type Props = {};
 
 const testimonialsData = [
   {
     image: "https://randomuser.me/api/portraits/men/32.jpg",
-    text: "Our IT infrastructure is now robust and scalable. The team delivered seamless migration to the cloud and ongoing support is top-notch!",
-    name: "David Kim, CTO, FinTechPro",
+    textKey: "home1.testimonials.0.text",
+    nameKey: "home1.testimonials.0.name",
   },
   {
     image: "https://randomuser.me/api/portraits/women/44.jpg",
-    text: "Their cybersecurity experts helped us achieve compliance and peace of mind. Threats are detected and resolved before they impact our business.",
-    name: "Priya Singh, IT Manager, HealthSecure",
+    textKey: "home1.testimonials.1.text",
+    nameKey: "home1.testimonials.1.name",
   },
   {
     image: "https://randomuser.me/api/portraits/men/65.jpg",
-    text: "We saved 30% on IT costs and improved uptime after switching to their managed cloud services. Highly recommended for any growing company!",
-    name: "Alex Chen, CEO, Cloudify Solutions",
+    textKey: "home1.testimonials.2.text",
+    nameKey: "home1.testimonials.2.name",
   },
   {
     image: "https://randomuser.me/api/portraits/women/68.jpg",
-    text: "The team’s proactive approach to cybersecurity keeps our data safe and our clients confident. Their training sessions are engaging and effective.",
-    name: "Maria Lopez, Operations Director, MedTechCare",
+    textKey: "home1.testimonials.3.text",
+    nameKey: "home1.testimonials.3.name",
   },
   {
     image: "https://randomuser.me/api/portraits/men/21.jpg",
-    text: "From IT consulting to cloud migration, every step was handled professionally. We now have a future-proof digital strategy.",
-    name: "John Evans, CIO, RetailNext",
+    textKey: "home1.testimonials.4.text",
+    nameKey: "home1.testimonials.4.name",
   },
 ];
 
-const home1 = (props: Props) => {
+const Home1 = (props: Props) => {
+  const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = React.useState(0);
 
   React.useEffect(() => {
     const timer = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % testimonialsData.length);
     }, 8500);
-
     return () => clearInterval(timer);
   }, []);
 
   return (
     <>
       <Head>
-        <title>Home 1 - IT Services, Cybersecurity, Cloud</title>
-        <meta
-          name="description"
-          content="IT Services, Cybersecurity, Cloud Solutions"
-        />
+        <title>{t("home1.title")}</title>
+        <meta name="description" content={t("home1.metaDescription")} />
       </Head>
       <main className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen caret-transparent">
         <SiteHeader />
@@ -75,14 +73,13 @@ const home1 = (props: Props) => {
             playsInline
           >
             <source src="/your-background-video.mp4" type="video/mp4" />
-            {/* Fallback for browsers that don't support the video tag */}
           </video>
           <div className="relative z-10 flex flex-col items-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg text-center">
-              Empowering Your Business with IT, Cybersecurity & Cloud
+              {t("home1.hero.title")}
             </h1>
             <p className="text-lg md:text-2xl text-white/80 mb-8 max-w-2xl text-center">
-              Secure, scalable, and innovative solutions for the digital era.
+              {t("home1.hero.subtitle")}
             </p>
           </div>
         </section>
@@ -96,7 +93,7 @@ const home1 = (props: Props) => {
               <div className="relative z-10">
                 <Image
                   src="/feature-main.png"
-                  alt="IT Team Working"
+                  alt={t("home1.featureSection.mainImageAlt")}
                   width={340}
                   height={260}
                   className="rounded-2xl shadow-2xl border-4 border-blue-200 dark:border-blue-800 object-cover"
@@ -106,7 +103,7 @@ const home1 = (props: Props) => {
               <div className="absolute left-0 bottom-0 z-20">
                 <Image
                   src="/feature-team.png"
-                  alt="Team Collaboration"
+                  alt={t("home1.featureSection.teamImageAlt")}
                   width={180}
                   height={180}
                   className="rounded-full border-4 border-white shadow-xl object-cover"
@@ -120,9 +117,11 @@ const home1 = (props: Props) => {
                   </div>
                   <div>
                     <div className="text-2xl font-bold text-gray-900">
-                      1908K
+                      {t("home1.featureSection.stat1.value")}
                     </div>
-                    <div className="text-xs text-gray-500">Happy Customer</div>
+                    <div className="text-xs text-gray-500">
+                      {t("home1.featureSection.stat1.label")}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -134,9 +133,11 @@ const home1 = (props: Props) => {
                   </div>
                   <div>
                     <div className="text-base font-bold text-gray-900">
-                      Trusted To
+                      {t("home1.featureSection.stat2.value")}
                     </div>
-                    <div className="text-xs text-gray-500">Investment</div>
+                    <div className="text-xs text-gray-500">
+                      {t("home1.featureSection.stat2.label")}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -147,9 +148,11 @@ const home1 = (props: Props) => {
                     <Lightbulb className="w-7 h-7 text-purple-600" />
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-gray-900">99%</div>
+                    <div className="text-2xl font-bold text-gray-900">
+                      {t("home1.featureSection.stat3.value")}
+                    </div>
                     <div className="text-xs text-gray-500">
-                      Return On Investment
+                      {t("home1.featureSection.stat3.label")}
                     </div>
                   </div>
                 </div>
@@ -158,46 +161,42 @@ const home1 = (props: Props) => {
             {/* Right: Headline, Description, Features, CTA */}
             <div className="flex-1">
               <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-gray-900 dark:text-white tracking-tight text-left">
-                Building Smarter, Faster, & More Secure Digital Solutions With
-                Advanced IT Services & Consulting
+                {t("home1.featureSection.headline")}
               </h2>
               <p className="text-base text-gray-700 dark:text-gray-300 mb-6 max-w-lg text-left">
-                We provide comprehensive IT solutions designed to drive
-                innovation, enhance security, and streamline operations. From
-                managed IT support and cloud infrastructure to cybersecurity,
-                software development, and strategic consulting.
+                {t("home1.featureSection.description")}
               </p>
               <ul className="mb-6 space-y-2">
                 <li className="flex items-center gap-2 text-blue-700 font-semibold text-sm">
                   <span className=" w-4 h-4 rounded-full bg-blue-100 mr-2 flex items-center justify-center">
                     <ShieldCheck className="w-3 h-3 text-blue-600" />
                   </span>
-                  Advanced IT Services and Consulting for Smarter
+                  {t("home1.featureSection.features.0")}
                 </li>
                 <li className="flex items-center gap-2 text-blue-700 font-semibold text-sm">
                   <span className=" w-4 h-4 rounded-full bg-blue-100 mr-2 flex items-center justify-center">
                     <Shield className="w-3 h-3 text-blue-600" />
                   </span>
-                  Powered by Expert IT Services and Consulting
+                  {t("home1.featureSection.features.1")}
                 </li>
                 <li className="flex items-center gap-2 text-blue-700 font-semibold text-sm">
                   <span className=" w-4 h-4 rounded-full bg-blue-100 mr-2 flex items-center justify-center">
                     <Lightbulb className="w-3 h-3 text-blue-600" />
                   </span>
-                  Secure Digital Solutions with Expert IT Consulting
+                  {t("home1.featureSection.features.2")}
                 </li>
                 <li className="flex items-center gap-2 text-blue-700 font-semibold text-sm">
                   <span className=" w-4 h-4 rounded-full bg-blue-100 mr-2 flex items-center justify-center">
                     <Rocket className="w-3 h-3 text-blue-600" />
                   </span>
-                  Empowering Digital Growth with Secure, Scalable,
+                  {t("home1.featureSection.features.3")}
                 </li>
               </ul>
               <a
                 href="/about-us"
                 className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all text-base"
               >
-                About Us
+                {t("home1.featureSection.cta")}
               </a>
             </div>
           </div>
@@ -206,7 +205,7 @@ const home1 = (props: Props) => {
         {/* Services Section */}
         <section className="py-20 px-4 max-w-7xl mx-auto">
           <h2 className="text-4xl font-extrabold mb-10 text-center text-blue-600 dark:text-blue-400 tracking-tight">
-            Our IT & Cloud Services
+            {t("home1.servicesSection.title")}
           </h2>
           <div className="grid md:grid-cols-3 gap-10 text-nowrap">
             {/* IT Consulting */}
@@ -218,13 +217,13 @@ const home1 = (props: Props) => {
                 <span className="inline-block bg-blue-600 dark:bg-blue-400 text-white rounded-full p-2 mr-2">
                   <Rocket className="w-6 h-6" />
                 </span>
-                IT Strategy & Consulting
+                {t("home1.servicesSection.cards.0.title")}
               </h3>
               <ul className="list-disc ml-6 text-gray-700 dark:text-gray-300 space-y-2">
-                <li>Custom IT roadmaps for business growth</li>
-                <li>Cloud migration & modernization</li>
-                <li>Process automation & workflow optimization</li>
-                <li>Digital transformation leadership</li>
+                <li>{t("home1.servicesSection.cards.0.items.0")}</li>
+                <li>{t("home1.servicesSection.cards.0.items.1")}</li>
+                <li>{t("home1.servicesSection.cards.0.items.2")}</li>
+                <li>{t("home1.servicesSection.cards.0.items.3")}</li>
               </ul>
             </div>
             {/* Cybersecurity */}
@@ -236,13 +235,13 @@ const home1 = (props: Props) => {
                 <span className="inline-block bg-purple-600 dark:bg-purple-400 text-white rounded-full p-2 mr-2">
                   <Shield className="w-6 h-6" />
                 </span>
-                Cybersecurity Solutions
+                {t("home1.servicesSection.cards.1.title")}
               </h3>
               <ul className="list-disc ml-6 text-gray-700 dark:text-gray-300 space-y-2">
-                <li>24/7 threat monitoring & response</li>
-                <li>Advanced endpoint & network protection</li>
-                <li>Compliance management (GDPR, HIPAA, etc.)</li>
-                <li>Employee security awareness training</li>
+                <li>{t("home1.servicesSection.cards.1.items.0")}</li>
+                <li>{t("home1.servicesSection.cards.1.items.1")}</li>
+                <li>{t("home1.servicesSection.cards.1.items.2")}</li>
+                <li>{t("home1.servicesSection.cards.1.items.3")}</li>
               </ul>
             </div>
             {/* Cloud Services */}
@@ -254,13 +253,13 @@ const home1 = (props: Props) => {
                 <span className="inline-block bg-blue-600 dark:bg-blue-400 text-white rounded-full p-2 mr-2">
                   <Cloud className="w-6 h-6" />
                 </span>
-                Managed Cloud Services
+                {t("home1.servicesSection.cards.2.title")}
               </h3>
               <ul className="list-disc ml-6 text-gray-700 dark:text-gray-300 space-y-2">
-                <li>Scalable cloud hosting & infrastructure</li>
-                <li>Disaster recovery & backup solutions</li>
-                <li>Hybrid & multi-cloud deployments</li>
-                <li>Ongoing cloud optimization & support</li>
+                <li>{t("home1.servicesSection.cards.2.items.0")}</li>
+                <li>{t("home1.servicesSection.cards.2.items.1")}</li>
+                <li>{t("home1.servicesSection.cards.2.items.2")}</li>
+                <li>{t("home1.servicesSection.cards.2.items.3")}</li>
               </ul>
             </div>
           </div>
@@ -272,13 +271,10 @@ const home1 = (props: Props) => {
             {/* Left: Content */}
             <div className="flex-1">
               <h2 className="text-4xl font-extrabold mb-6 md:mb-10 text-left md:text-left text-blue-700 dark:text-blue-300 tracking-tight">
-                Why Partner With Us?
+                {t("home1.whyChooseUsSection.title")}
               </h2>
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-xl text-left">
-                As a leading provider, we offer a results-driven approach to IT,
-                cybersecurity, and cloud solutions. Our team is dedicated to
-                driving your business growth through technology, security, and
-                customer-centric service.
+                {t("home1.whyChooseUsSection.description")}
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
                 <div className="flex items-center gap-3">
@@ -286,7 +282,7 @@ const home1 = (props: Props) => {
                     <ShieldCheck className="w-7 h-7 text-blue-600 dark:text-blue-300" />
                   </div>
                   <span className="font-semibold text-blue-700 dark:text-blue-300">
-                    Business Growth
+                    {t("home1.whyChooseUsSection.cards.0")}
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
@@ -294,7 +290,7 @@ const home1 = (props: Props) => {
                     <Lightbulb className="w-7 h-7 text-purple-600 dark:text-purple-300" />
                   </div>
                   <span className="font-semibold text-purple-700 dark:text-purple-300">
-                    Technology Consultancy
+                    {t("home1.whyChooseUsSection.cards.1")}
                   </span>
                 </div>
               </div>
@@ -304,7 +300,7 @@ const home1 = (props: Props) => {
                     <Shield className="w-5 h-5 text-blue-600 dark:text-blue-300" />
                   </div>
                   <span className="text-sm text-gray-700 dark:text-gray-300">
-                    Expert IT Professionals
+                    {t("home1.whyChooseUsSection.expertIT")}
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -312,8 +308,7 @@ const home1 = (props: Props) => {
                     <HouseHeart className="w-5 h-5 text-purple-600 dark:text-purple-300" />
                   </div>
                   <span className="text-sm text-gray-700 dark:text-gray-300">
-                    Call Us:{" "}
-                    <span className="font-semibold">1-888-555-8780</span>
+                    {t("home1.whyChooseUsSection.callUs")}
                   </span>
                 </div>
               </div>
@@ -324,7 +319,7 @@ const home1 = (props: Props) => {
                 <div className="absolute -top-8 -right-8 w-56 h-56 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full blur-2xl opacity-40"></div>
                 <Image
                   src="/theme-business-woman.png"
-                  alt="Business IT Professional"
+                  alt={t("home1.whyChooseUsSection.imageAlt")}
                   width={340}
                   height={420}
                   className="relative z-10 rounded-2xl shadow-2xl border-4 border-blue-200 dark:border-blue-800 bg-white dark:bg-gray-900"
@@ -337,55 +332,52 @@ const home1 = (props: Props) => {
         {/* Insights & Resources Section */}
         <section className="py-20 px-4 max-w-7xl mx-auto">
           <h2 className="text-4xl font-extrabold mb-12 text-center text-blue-700 dark:text-blue-300 tracking-tight">
-            Latest Insights & Resources
+            {t("home1.insightsSection.title")}
           </h2>
           <div className="grid md:grid-cols-3 gap-12">
             {/* Card 1 */}
             <div className="relative bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-xl hover:scale-105 transition group flex flex-col items-start">
               <span className="absolute top-6 right-6 bg-blue-100 dark:bg-blue-800 text-blue-600 dark:text-blue-300 px-3 py-1 rounded-full text-xs font-bold">
-                New
+                {t("home1.insightsSection.cards.0.badge")}
               </span>
               <div className="mb-4">
                 <ShieldCheck className="w-10 h-10 text-blue-600 dark:text-blue-300" />
               </div>
               <h3 className="text-2xl font-bold mb-2 text-blue-700 dark:text-blue-300">
-                Cybersecurity Trends 2025
+                {t("home1.insightsSection.cards.0.title")}
               </h3>
               <p className="mb-4 text-gray-700 dark:text-gray-300">
-                Expert analysis on emerging threats and best practices for
-                business protection.
+                {t("home1.insightsSection.cards.0.excerpt")}
               </p>
             </div>
             {/* Card 2 */}
             <div className="relative bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-xl hover:scale-105 transition group flex flex-col items-start">
               <span className="absolute top-6 right-6 bg-purple-100 dark:bg-purple-800 text-purple-600 dark:text-purple-300 px-3 py-1 rounded-full text-xs font-bold">
-                Featured
+                {t("home1.insightsSection.cards.1.badge")}
               </span>
               <div className="mb-4">
                 <Cloud className="w-10 h-10 text-purple-600 dark:text-purple-300" />
               </div>
               <h3 className="text-2xl font-bold mb-2 text-purple-700 dark:text-purple-300">
-                Cloud Migration Guide
+                {t("home1.insightsSection.cards.1.title")}
               </h3>
               <p className="mb-4 text-gray-700 dark:text-gray-300">
-                Step-by-step resource for seamless migration, cost optimization,
-                and security in the cloud.
+                {t("home1.insightsSection.cards.1.excerpt")}
               </p>
             </div>
             {/* Card 3 */}
             <div className="relative bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-xl hover:scale-105 transition group flex flex-col items-start">
               <span className="absolute top-6 right-6 bg-green-100 dark:bg-green-800 text-green-600 dark:text-green-300 px-3 py-1 rounded-full text-xs font-bold">
-                Live
+                {t("home1.insightsSection.cards.2.badge")}
               </span>
               <div className="mb-4">
                 <Rocket className="w-10 h-10 text-green-600 dark:text-green-300" />
               </div>
               <h3 className="text-2xl font-bold mb-2 text-green-700 dark:text-green-300">
-                IT Strategy Webinar
+                {t("home1.insightsSection.cards.2.title")}
               </h3>
               <p className="mb-4 text-gray-700 dark:text-gray-300">
-                Join our upcoming webinar to learn how to future-proof your IT
-                infrastructure and drive innovation.
+                {t("home1.insightsSection.cards.2.excerpt")}
               </p>
             </div>
           </div>
@@ -394,11 +386,10 @@ const home1 = (props: Props) => {
         {/* Technology Partners Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-purple-50 to-blue-100 dark:from-purple-950 dark:to-blue-950">
           <h2 className="text-4xl font-extrabold mb-6 text-center text-purple-700 dark:text-purple-300 tracking-tight">
-            Our Technology Partners
+            {t("home1.partnersSection.title")}
           </h2>
           <p className="text-lg text-center text-gray-700 dark:text-gray-300 mb-10 max-w-2xl mx-auto">
-            We collaborate with industry-leading technology providers to deliver
-            secure, scalable, and innovative solutions for your business.
+            {t("home1.partnersSection.description")}
           </p>
           <div className="relative">
             <div className="flex overflow-x-auto no-scrollbar space-x-8 px-2 md:px-10 py-4 max-w-6xl mx-auto">
@@ -410,10 +401,10 @@ const home1 = (props: Props) => {
                   className="w-16 h-16 mb-3"
                 />
                 <span className="text-lg font-bold text-blue-700 dark:text-blue-300 mb-1 tracking-wide">
-                  Stackly
+                  {t("home1.partnersSection.cards.0.name")}
                 </span>
                 <span className="text-xs text-gray-500 dark:text-gray-400">
-                  Cloud Platform
+                  {t("home1.partnersSection.cards.0.category")}
                 </span>
               </div>
               {/* Partner Card 2 */}
@@ -424,10 +415,10 @@ const home1 = (props: Props) => {
                   className="w-16 h-16 mb-3 "
                 />
                 <span className="text-lg font-bold text-purple-700 dark:text-purple-300 mb-1 tracking-wide">
-                  Next.js
+                  {t("home1.partnersSection.cards.1.name")}
                 </span>
                 <span className="text-xs text-gray-500 dark:text-gray-400">
-                  Web Framework
+                  {t("home1.partnersSection.cards.1.category")}
                 </span>
               </div>
               {/* Partner Card 3 */}
@@ -439,10 +430,10 @@ const home1 = (props: Props) => {
                   className="w-16 h-16 mb-3"
                 />
                 <span className="text-lg font-bold text-blue-700 dark:text-blue-300 mb-1 tracking-wide">
-                  Vercel
+                  {t("home1.partnersSection.cards.2.name")}
                 </span>
                 <span className="text-xs text-gray-500 dark:text-gray-400">
-                  Deployment
+                  {t("home1.partnersSection.cards.2.category")}
                 </span>
               </div>
               {/* Partner Card 4 */}
@@ -517,10 +508,10 @@ const home1 = (props: Props) => {
                   ></path>
                 </svg>
                 <span className="text-lg font-bold text-purple-700 dark:text-purple-300 mb-1 tracking-wide">
-                  Azure
+                  {t("home1.partnersSection.cards.0.name")}
                 </span>
                 <span className="text-xs text-gray-500 dark:text-gray-400">
-                  Cloud Services
+                  {t("home1.partnersSection.cards.0.category")}
                 </span>
               </div>
             </div>
@@ -532,7 +523,7 @@ const home1 = (props: Props) => {
           <div className="container mx-auto px-4">
             <div className="w-full">
               <h2 className="text-4xl font-extrabold mb-10 text-center text-blue-700 dark:text-blue-300 tracking-tight">
-                What Our Clients Say
+                {t("home1.testimonials.title")}
               </h2>
               <div className="overflow-hidden">
                 <div
@@ -574,7 +565,7 @@ const home1 = (props: Props) => {
                                 src={testimonial.image}
                                 width={80}
                                 height={80}
-                                alt={`Testimonial from ${testimonial.name}`}
+                                alt={`Testimonial from ${t(testimonial.nameKey)}`}
                               />
                               <p
                                 className={`text-base leading-relaxed font-light mb-4 ${
@@ -583,7 +574,7 @@ const home1 = (props: Props) => {
                                     : "text-gray-500 dark:text-gray-400"
                                 }`}
                               >
-                                {testimonial.text}
+                                {t(testimonial.textKey)}
                               </p>
                             </div>
                             <div
@@ -593,7 +584,7 @@ const home1 = (props: Props) => {
                                   : "bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300"
                               }`}
                             >
-                              {testimonial.name}
+                              {t(testimonial.nameKey)}
                             </div>
                           </div>
                         );
@@ -622,4 +613,4 @@ const home1 = (props: Props) => {
   );
 };
 
-export default home1;
+export default Home1;

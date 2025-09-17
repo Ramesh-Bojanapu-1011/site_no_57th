@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/package",
   "name": "site_no_57th",
   "version": "0.1.0",
   "private": true,
