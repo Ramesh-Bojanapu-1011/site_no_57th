@@ -1323,5 +1323,54 @@
       "title": "Conclusion",
       "p": "Cloud backup is no longer optional—it’s a vital part of any business continuity plan. Invest in a robust solution, follow best practices, and regularly review your backup strategy to keep your data safe and your business running smoothly."
     }
+  },
+  "securityAwareness": {
+    "hero": {
+      "title": "Building a Culture of Security Awareness",
+      "subtitle": "How to empower your team to recognize and avoid cyber risks.",
+      "imgAlt": "Security Awareness"
+    },
+    "intro": {
+      "title": "Introduction",
+      "p1": "Technology alone can’t protect your business from cyber threats—your people play a critical role. Building a culture of security awareness means every employee understands the risks and knows how to respond. This blog explores practical steps to foster a security-minded workplace."
+    },
+    "why": {
+      "title": "Why Security Awareness Matters",
+      "p": "Most cyberattacks target human error, not just technical vulnerabilities. Phishing, social engineering, and accidental data leaks can be prevented if your team is alert and informed. A strong security culture reduces risk and builds trust with customers and partners.",
+      "list": {
+        "0": "Employees are the first line of defense",
+        "1": "Security awareness helps prevent costly breaches",
+        "2": "Promotes compliance with regulations and standards"
+      }
+    },
+    "steps": {
+      "title": "Key Steps to Build Security Awareness",
+      "p": "Creating a culture of security awareness requires ongoing effort and leadership support. Here are essential steps to get started:",
+      "list": {
+        "0": "Provide regular training on cyber threats and safe practices",
+        "1": "Share real-world examples of attacks and how to avoid them",
+        "2": "Encourage open communication about security concerns",
+        "3": "Recognize and reward employees who demonstrate good security habits",
+        "4": "Make security part of onboarding for new hires"
+      }
+    },
+    "tips": {
+      "title": "Practical Tips for Everyday Security",
+      "list": {
+        "0": "Think before clicking links or downloading attachments",
+        "1": "Use strong, unique passwords and enable MFA",
+        "2": "Report suspicious emails or activity immediately",
+        "3": "Lock your computer when away from your desk",
+        "4": "Keep software and devices updated"
+      }
+    },
+    "example": {
+      "title": "Real-World Example",
+      "p": "In 2024, a financial services firm reduced phishing incidents by 80% after launching a monthly security newsletter and interactive training sessions. Employees became more confident in spotting threats and reporting issues, saving the company time and money."
+    },
+    "conclusion": {
+      "title": "Conclusion",
+      "p": "Building a culture of security awareness is an investment in your company’s future. Empower your team, keep security top of mind, and celebrate successes. Together, you can create a safer, more resilient organization."
+    }
   }
 }
