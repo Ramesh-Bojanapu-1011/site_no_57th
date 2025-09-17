@@ -149,7 +149,6 @@ const ITInfrastructure = () => {
                     'Secure LAN/WAN solutions',
                     'Performance optimization',
                   ],
-                  layout: 'left',
                 },
                 {
                   icon: '/cloud-backup.svg',
@@ -163,7 +162,6 @@ const ITInfrastructure = () => {
                     'Migration & onboarding',
                     'Scalable infrastructure',
                   ],
-                  layout: 'right',
                 },
                 {
                   icon: '/globe.svg',
@@ -177,19 +175,19 @@ const ITInfrastructure = () => {
                     'Automated reporting & monitoring',
                     'Policy & audit support',
                   ],
-                  layout: 'left',
                 },
               ];
               return (
                 <div className="flex flex-col gap-16">
                   {solutions.map((sol, idx) => {
-                    const isLeft = sol.layout === 'left';
+                    // Alternate zigzag: even idx left, odd idx right
+                    const isLeft = idx % 2 === 0;
                     return (
                       <div
-                        key={idx}
-                        className={`flex flex-col md:flex-row${
-                          !isLeft ? '-reverse' : ''
-                        } items-center md:items-start gap-10`}
+                        key={sol.title}
+                        className={`flex flex-col ${
+                          !isLeft ? 'md:flex-row-reverse' : 'md:flex-row'
+                        } items-center   gap-10`}
                       >
                         <div
                           className={`flex-shrink-0 w-32 h-32 rounded-3xl ${sol.bg} flex items-center justify-center shadow-xl border-4 ${sol.border}`}

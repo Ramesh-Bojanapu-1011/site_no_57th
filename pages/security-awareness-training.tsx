@@ -131,7 +131,6 @@ const SecurityAwarenessTraining = () => {
         </section>
 
         {/* 3. Our Security Awareness Solutions */}
-
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-purple-100 dark:from-blue-950 dark:to-purple-900">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl font-extrabold mb-14 text-purple-700 dark:text-purple-300 text-center flex items-center justify-center gap-4">
@@ -160,7 +159,6 @@ const SecurityAwarenessTraining = () => {
                     'Interactive e-learning modules',
                     'Practical threat recognition exercises',
                   ],
-                  layout: 'left',
                 },
                 {
                   icon: '/cloud-backup.svg',
@@ -174,7 +172,6 @@ const SecurityAwarenessTraining = () => {
                     'Social engineering scenario training',
                     'Immediate feedback and reporting',
                   ],
-                  layout: 'right',
                 },
                 {
                   icon: '/globe.svg',
@@ -188,19 +185,19 @@ const SecurityAwarenessTraining = () => {
                     'Security policy awareness',
                     'Continuous compliance monitoring',
                   ],
-                  layout: 'left',
                 },
               ];
               return (
                 <div className="flex flex-col gap-16">
                   {solutions.map((sol, idx) => {
-                    const isLeft = sol.layout === 'left';
+                    // Alternate zigzag: even idx left, odd idx right
+                    const isLeft = idx % 2 === 0;
                     return (
                       <div
-                        key={idx}
-                        className={`flex flex-col md:flex-row${
-                          !isLeft ? '-reverse' : ''
-                        } items-center md:items-start gap-10`}
+                        key={sol.title}
+                        className={`flex flex-col ${
+                          !isLeft ? 'md:flex-row-reverse' : 'md:flex-row'
+                        } items-center   gap-10`}
                       >
                         <div
                           className={`flex-shrink-0 w-32 h-32 rounded-3xl ${sol.bg} flex items-center justify-center shadow-xl border-4 ${sol.border}`}
@@ -213,10 +210,10 @@ const SecurityAwarenessTraining = () => {
                           />
                         </div>
                         <div
-                          className={`${
-                            isLeft
-                              ? 'md:ml-0 md:order-2 order-1 text-left'
-                              : 'md:mr-0 md:order-2 order-1 text-right'
+                          className={`md:${
+                            isLeft ? 'ml-0 order-2' : 'mr-0 order-2'
+                          } order-1 ${
+                            isLeft ? 'text-left' : 'text-right'
                           } flex-1 not-md:text-center`}
                         >
                           <h3
@@ -224,7 +221,7 @@ const SecurityAwarenessTraining = () => {
                           >
                             {sol.title}
                           </h3>
-                          <ul className="text-gray-700  dark:text-gray-300 space-y-2">
+                          <ul className="text-gray-700 dark:text-gray-300 space-y-2">
                             {sol.items.map((item) => (
                               <li key={item}>{item}</li>
                             ))}

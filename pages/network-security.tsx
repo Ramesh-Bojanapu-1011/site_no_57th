@@ -150,7 +150,6 @@ const NetworkSecurity = () => {
                     'Advanced firewalls & intrusion detection',
                     'Proactive threat intelligence',
                   ],
-                  layout: 'left',
                 },
                 {
                   icon: '/window.svg',
@@ -164,7 +163,6 @@ const NetworkSecurity = () => {
                     'Zero-trust access controls',
                     'Automated patch management',
                   ],
-                  layout: 'right',
                 },
                 {
                   icon: '/cloud-backup.svg',
@@ -178,19 +176,19 @@ const NetworkSecurity = () => {
                     'Automated backup & disaster recovery',
                     'Hybrid & multi-cloud protection',
                   ],
-                  layout: 'left',
                 },
               ];
               return (
                 <div className="flex flex-col gap-16">
                   {solutions.map((sol, idx) => {
-                    const isLeft = sol.layout === 'left';
+                    // Alternate zigzag: even idx left, odd idx right
+                    const isLeft = idx % 2 === 0;
                     return (
                       <div
-                        key={idx}
-                        className={`flex flex-col md:flex-row${
-                          !isLeft ? '-reverse' : ''
-                        } items-center md:items-start gap-10`}
+                        key={sol.title}
+                        className={`flex flex-col ${
+                          !isLeft ? 'md:flex-row-reverse' : 'md:flex-row'
+                        } items-center   gap-10`}
                       >
                         <div
                           className={`flex-shrink-0 w-32 h-32 rounded-3xl ${sol.bg} flex items-center justify-center shadow-xl border-4 ${sol.border}`}
