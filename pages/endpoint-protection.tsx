@@ -2,15 +2,17 @@ import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import Head from "next/head";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const EndpointProtection = () => {
+  const { t } = useTranslation();
   return (
     <>
       <Head>
-        <title>Endpoint Protection | IT Services, Cybersecurity & Cloud</title>
+        <title>{t("endpointProtection.title")}</title>
         <meta
           name="description"
-          content="Safeguard your devices with advanced endpoint protection, zero-trust security, and expert IT support."
+          content={t("endpointProtection.metaDescription")}
         />
       </Head>
       <main className="bg-[#f7fafd] dark:bg-[#101624] text-gray-900 dark:text-white caret-transparent">
@@ -28,11 +30,10 @@ const EndpointProtection = () => {
           </video>
           <div className="relative z-10 flex flex-col items-center justify-center w-full h-full">
             <h1 className="text-5xl font-extrabold mb-4">
-              Endpoint Protection
+              {t("endpointProtection.hero.title")}
             </h1>
             <p className="text-lg max-w-2xl mx-auto mb-8">
-              Defend every device with multi-layered endpoint security,
-              zero-trust controls, and proactive threat response.
+              {t("endpointProtection.hero.subtitle")}
             </p>
           </div>
         </section>
@@ -50,13 +51,11 @@ const EndpointProtection = () => {
                   height={48}
                 />
                 <h2 className="text-4xl font-extrabold text-blue-700 dark:text-blue-300">
-                  Why Endpoint Protection Matters
+                  {t("endpointProtection.why.title")}
                 </h2>
               </div>
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 max-w-xl">
-                Endpoint protection is essential for securing every device,
-                preventing breaches, and maintaining business integrity in a
-                connected world.
+                {t("endpointProtection.why.subtitle")}
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex items-center gap-3">
@@ -69,7 +68,7 @@ const EndpointProtection = () => {
                     />
                   </span>
                   <span className="font-semibold text-blue-700 dark:text-blue-300">
-                    Device Security
+                    {t("endpointProtection.why.deviceSecurity")}
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
@@ -82,7 +81,7 @@ const EndpointProtection = () => {
                     />
                   </span>
                   <span className="font-semibold text-purple-700 dark:text-purple-300">
-                    Cloud Integration
+                    {t("endpointProtection.why.cloudIntegration")}
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
@@ -95,7 +94,7 @@ const EndpointProtection = () => {
                     />
                   </span>
                   <span className="font-semibold text-orange-700 dark:text-orange-400">
-                    Compliance & Trust
+                    {t("endpointProtection.why.complianceTrust")}
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
@@ -108,7 +107,7 @@ const EndpointProtection = () => {
                     />
                   </span>
                   <span className="font-semibold text-green-700 dark:text-green-400">
-                    Threat Prevention
+                    {t("endpointProtection.why.threatPrevention")}
                   </span>
                 </div>
               </div>
@@ -140,7 +139,7 @@ const EndpointProtection = () => {
                   height={32}
                 />
               </span>
-              Our Endpoint Protection Solutions
+              {t("endpointProtection.solutions.title")}
             </h2>
             {/* Zigzag Layout using array and map */}
             {(() => {
@@ -150,12 +149,12 @@ const EndpointProtection = () => {
                   alt: "Advanced Threat Defense",
                   bg: "bg-blue-100 dark:bg-blue-900",
                   border: "border-blue-200 dark:border-blue-800",
-                  title: "Advanced Threat Defense",
+                  title: t("endpointProtection.solutions.0.title"),
                   titleClass: "text-blue-700 dark:text-blue-300",
                   items: [
-                    "AI-powered malware detection",
-                    "Real-time threat intelligence",
-                    "Ransomware protection",
+                    t("endpointProtection.solutions.0.items.0"),
+                    t("endpointProtection.solutions.0.items.1"),
+                    t("endpointProtection.solutions.0.items.2"),
                   ],
                 },
                 {
@@ -163,12 +162,12 @@ const EndpointProtection = () => {
                   alt: "Zero-Trust Security",
                   bg: "bg-purple-100 dark:bg-purple-900",
                   border: "border-purple-200 dark:border-purple-800",
-                  title: "Zero-Trust Security",
+                  title: t("endpointProtection.solutions.1.title"),
                   titleClass: "text-purple-700 dark:text-purple-300",
                   items: [
-                    "Strict identity verification",
-                    "Micro-segmentation of devices",
-                    "Adaptive access controls",
+                    t("endpointProtection.solutions.1.items.0"),
+                    t("endpointProtection.solutions.1.items.1"),
+                    t("endpointProtection.solutions.1.items.2"),
                   ],
                 },
                 {
@@ -176,12 +175,12 @@ const EndpointProtection = () => {
                   alt: "Automated Compliance",
                   bg: "bg-blue-100 dark:bg-blue-900",
                   border: "border-blue-200 dark:border-blue-800",
-                  title: "Automated Compliance & Monitoring",
+                  title: t("endpointProtection.solutions.2.title"),
                   titleClass: "text-blue-700 dark:text-blue-300",
                   items: [
-                    "Continuous compliance checks",
-                    "Automated reporting & alerts",
-                    "24/7 device monitoring",
+                    t("endpointProtection.solutions.2.items.0"),
+                    t("endpointProtection.solutions.2.items.1"),
+                    t("endpointProtection.solutions.2.items.2"),
                   ],
                 },
               ];
@@ -243,7 +242,7 @@ const EndpointProtection = () => {
               width={40}
               height={40}
             />
-            Managed IT & Cloud Services
+            {t("endpointProtection.managed.title")}
           </h2>
           <div className="grid md:grid-cols-3 gap-10">
             {/* IT Strategy Card */}
@@ -257,12 +256,12 @@ const EndpointProtection = () => {
                 className="mb-4"
               />
               <h3 className="text-2xl font-bold mb-3 text-blue-700 dark:text-blue-300">
-                IT Strategy & Consulting
+                {t("endpointProtection.managed.cards.0.title")}
               </h3>
               <ul className="list-disc ml-4 text-gray-700 dark:text-gray-300 text-left space-y-2">
-                <li>Custom IT roadmaps for secure growth</li>
-                <li>Digital transformation leadership</li>
-                <li>Process automation & workflow optimization</li>
+                <li>{t("endpointProtection.managed.cards.0.items.0")}</li>
+                <li>{t("endpointProtection.managed.cards.0.items.1")}</li>
+                <li>{t("endpointProtection.managed.cards.0.items.2")}</li>
               </ul>
             </div>
             {/* Cloud Services Card */}
@@ -276,12 +275,12 @@ const EndpointProtection = () => {
                 className="mb-4"
               />
               <h3 className="text-2xl font-bold mb-3 text-purple-700 dark:text-purple-300">
-                Cloud Services
+                {t("endpointProtection.managed.cards.1.title")}
               </h3>
               <ul className="list-disc ml-4 text-gray-700 dark:text-gray-300 text-left space-y-2">
-                <li>Scalable cloud hosting & infrastructure</li>
-                <li>Disaster recovery & backup solutions</li>
-                <li>Hybrid & multi-cloud deployments</li>
+                <li>{t("endpointProtection.managed.cards.1.items.0")}</li>
+                <li>{t("endpointProtection.managed.cards.1.items.1")}</li>
+                <li>{t("endpointProtection.managed.cards.1.items.2")}</li>
               </ul>
             </div>
             {/* Managed Support Card */}
@@ -295,12 +294,12 @@ const EndpointProtection = () => {
                 className="mb-4"
               />
               <h3 className="text-2xl font-bold mb-3 text-green-700 dark:text-green-400">
-                Managed IT Support
+                {t("endpointProtection.managed.cards.2.title")}
               </h3>
               <ul className="list-disc ml-4 text-gray-700 dark:text-gray-300 text-left space-y-2">
-                <li>24/7 monitoring & helpdesk</li>
-                <li>Proactive maintenance & updates</li>
-                <li>Rapid issue resolution</li>
+                <li>{t("endpointProtection.managed.cards.2.items.0")}</li>
+                <li>{t("endpointProtection.managed.cards.2.items.1")}</li>
+                <li>{t("endpointProtection.managed.cards.2.items.2")}</li>
               </ul>
             </div>
           </div>
@@ -316,7 +315,7 @@ const EndpointProtection = () => {
                 width={36}
                 height={36}
               />
-              Endpoint Awareness & Compliance
+              {t("endpointProtection.awareness.title")}
             </h2>
             {/* Horizontal Stepper Layout using array and map */}
             {(() => {
@@ -325,12 +324,12 @@ const EndpointProtection = () => {
                   icon: "/security-awareness.svg",
                   alt: "Training",
                   bg: "bg-blue-100 dark:bg-blue-900",
-                  title: "Endpoint Training & Awareness",
+                  title: t("endpointProtection.awareness.steps.0.title"),
                   titleClass: "text-blue-700 dark:text-blue-300",
                   items: [
-                    "Workshops & e-learning",
-                    "Simulated threat drills",
-                    "Employee engagement",
+                    t("endpointProtection.awareness.steps.0.items.0"),
+                    t("endpointProtection.awareness.steps.0.items.1"),
+                    t("endpointProtection.awareness.steps.0.items.2"),
                   ],
                   connector: "bg-blue-200 dark:bg-blue-900",
                 },
@@ -338,12 +337,12 @@ const EndpointProtection = () => {
                   icon: "/globe.svg",
                   alt: "Compliance",
                   bg: "bg-purple-100 dark:bg-purple-900",
-                  title: "Compliance Management",
+                  title: t("endpointProtection.awareness.steps.1.title"),
                   titleClass: "text-purple-700 dark:text-purple-300",
                   items: [
-                    "GDPR, HIPAA, PCI DSS, ISO 27001",
-                    "Automated reporting",
-                    "Policy & audit support",
+                    t("endpointProtection.awareness.steps.1.items.0"),
+                    t("endpointProtection.awareness.steps.1.items.1"),
+                    t("endpointProtection.awareness.steps.1.items.2"),
                   ],
                   connector: "bg-purple-200 dark:bg-purple-900",
                 },
@@ -351,12 +350,12 @@ const EndpointProtection = () => {
                   icon: "/window.svg",
                   alt: "Culture",
                   bg: "bg-green-100 dark:bg-green-900",
-                  title: "Resilient Culture",
+                  title: t("endpointProtection.awareness.steps.2.title"),
                   titleClass: "text-green-700 dark:text-green-400",
                   items: [
-                    "Leadership buy-in",
-                    "Continuous improvement",
-                    "Celebrating successful threat prevention",
+                    t("endpointProtection.awareness.steps.2.items.0"),
+                    t("endpointProtection.awareness.steps.2.items.1"),
+                    t("endpointProtection.awareness.steps.2.items.2"),
                   ],
                   connector: "bg-green-200 dark:bg-green-900",
                 },
@@ -404,17 +403,16 @@ const EndpointProtection = () => {
         <section className="py-16 px-4 bg-gradient-to-r from-blue-500 to-purple-600 dark:from-blue-900 dark:to-purple-900 text-center">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-white dark:text-blue-300 tracking-tight">
-              Ready to Secure Your Endpoints?
+              {t("endpointProtection.cta.title")}
             </h2>
             <p className="text-lg text-white/80 dark:text-white/70 mb-8">
-              Contact our endpoint protection experts for a free assessment and
-              discover how we can safeguard your devices.
+              {t("endpointProtection.cta.subtitle")}
             </p>
             <a
               href="/contact-us"
               className="inline-block bg-blue-600 dark:bg-blue-400 hover:bg-blue-700 dark:hover:bg-blue-500 text-white font-bold py-4 px-10 rounded-full shadow-lg transition-all text-lg"
             >
-              Contact Us
+              {t("endpointProtection.cta.button")}
             </a>
           </div>
         </section>

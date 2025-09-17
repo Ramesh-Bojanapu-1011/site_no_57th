@@ -803,5 +803,111 @@
       "subtitle": "Contact our IT infrastructure experts for a free assessment and discover how we can empower your business.",
       "button": "Contact Us"
     }
+  },
+  "endpointProtection": {
+    "title": "Endpoint Protection | IT Services, Cybersecurity & Cloud",
+    "metaDescription": "Safeguard your devices with advanced endpoint protection, zero-trust security, and expert IT support.",
+    "hero": {
+      "title": "Endpoint Protection",
+      "subtitle": "Defend every device with multi-layered endpoint security, zero-trust controls, and proactive threat response."
+    },
+    "why": {
+      "title": "Why Endpoint Protection Matters",
+      "subtitle": "Endpoint protection is essential for securing every device, preventing breaches, and maintaining business integrity in a connected world.",
+      "deviceSecurity": "Device Security",
+      "cloudIntegration": "Cloud Integration",
+      "complianceTrust": "Compliance & Trust",
+      "threatPrevention": "Threat Prevention"
+    },
+    "solutions": {
+      "title": "Our Endpoint Protection Solutions",
+      "0": {
+        "title": "Advanced Threat Defense",
+        "items": {
+          "0": "AI-powered malware detection",
+          "1": "Real-time threat intelligence",
+          "2": "Ransomware protection"
+        }
+      },
+      "1": {
+        "title": "Zero-Trust Security",
+        "items": {
+          "0": "Strict identity verification",
+          "1": "Micro-segmentation of devices",
+          "2": "Adaptive access controls"
+        }
+      },
+      "2": {
+        "title": "Automated Compliance & Monitoring",
+        "items": {
+          "0": "Continuous compliance checks",
+          "1": "Automated reporting & alerts",
+          "2": "24/7 device monitoring"
+        }
+      }
+    },
+    "managed": {
+      "title": "Managed IT & Cloud Services",
+      "cards": {
+        "0": {
+          "title": "IT Strategy & Consulting",
+          "items": {
+            "0": "Custom IT roadmaps for secure growth",
+            "1": "Digital transformation leadership",
+            "2": "Process automation & workflow optimization"
+          }
+        },
+        "1": {
+          "title": "Cloud Services",
+          "items": {
+            "0": "Scalable cloud hosting & infrastructure",
+            "1": "Disaster recovery & backup solutions",
+            "2": "Hybrid & multi-cloud deployments"
+          }
+        },
+        "2": {
+          "title": "Managed IT Support",
+          "items": {
+            "0": "24/7 monitoring & helpdesk",
+            "1": "Proactive maintenance & updates",
+            "2": "Rapid issue resolution"
+          }
+        }
+      }
+    },
+    "awareness": {
+      "title": "Endpoint Awareness & Compliance",
+      "steps": {
+        "0": {
+          "title": "Endpoint Training & Awareness",
+          "items": {
+            "0": "Workshops & e-learning",
+            "1": "Simulated threat drills",
+            "2": "Employee engagement"
+          }
+        },
+        "1": {
+          "title": "Compliance Management",
+          "items": {
+            "0": "GDPR, HIPAA, PCI DSS, ISO 27001",
+            "1": "Automated reporting",
+            "2": "Policy & audit support"
+          }
+        },
+        "2": {
+          "title": "Resilient Culture",
+          "items": {
+            "0": "Leadership buy-in",
+            "1": "Continuous improvement",
+            "2": "Celebrating successful threat prevention"
+          }
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Secure Your Endpoints?",
+      "subtitle": "Contact our endpoint protection experts for a free assessment and discover how we can safeguard your devices.",
+      "button": "Contact Us"
+    }
   }
 }
