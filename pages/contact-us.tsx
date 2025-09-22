@@ -242,7 +242,7 @@ const ContactUs: React.FC = (props) => {
                 key={idx}
                 className="bg-white/80 dark:bg-gray-900/80 rounded-2xl shadow-lg p-8 border border-blue-100 dark:border-blue-900 backdrop-blur-lg flex flex-col items-center text-center hover:scale-105 transition-all"
               >
-                <Image
+                <img
                   src={member.image}
                   alt={member.name}
                   width={80}
