@@ -9,10 +9,12 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "randomuser.me",
+        port: "",
       },
       {
         protocol: "https",
         hostname: "i.pinimg.com",
+        port: "",
       },
     ],
   },
