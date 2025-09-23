@@ -2,6 +2,7 @@ import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
 const team = [
@@ -447,8 +448,8 @@ const AboutUs = () => {
                       idx === 0
                         ? "bg-blue-100 dark:bg-blue-900"
                         : idx === 1
-                          ? "bg-orange-100 dark:bg-orange-900"
-                          : "bg-purple-100 dark:bg-purple-900"
+                        ? "bg-orange-100 dark:bg-orange-900"
+                        : "bg-purple-100 dark:bg-purple-900"
                     }`}
                     style={{
                       position: "absolute",
@@ -482,12 +483,12 @@ const AboutUs = () => {
             <p className="text-lg text-white/80 dark:text-white/70 mb-8">
               {t("about.cta.desc")}
             </p>
-            <a
+            <Link
               href="/contact-us"
               className="inline-block bg-blue-600 dark:bg-blue-400 hover:bg-blue-700 dark:hover:bg-blue-500 text-white font-bold py-4 px-10 rounded-full shadow-lg transition-all text-lg"
             >
               {t("about.cta.button")}
-            </a>
+            </Link>
           </div>
         </section>
         <SiteFooter />

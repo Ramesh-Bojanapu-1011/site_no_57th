@@ -1,7 +1,6 @@
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import React from "react";
-import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
 const ContactUs: React.FC = (props) => {
