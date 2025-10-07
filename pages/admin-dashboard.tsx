@@ -372,13 +372,13 @@ const AdminDashboard = () => {
       key: "graph",
       label: t("adminDashboard.tabs.graph"),
       icon: <BarChart3 className="h-5 w-5" />,
-      activeClass: "bg-purple-600",
+      activeClass: "bg-indigo-600",
     },
     {
       key: "users",
       label: t("adminDashboard.tabs.users"),
       icon: <Users className="h-5 w-5" />,
-      activeClass: "bg-emerald-600",
+      activeClass: "bg-indigo-600",
     },
   ];
 
@@ -399,7 +399,7 @@ const AdminDashboard = () => {
           </div>
 
           {/* Tab Navigation */}
-          <div className="max-w-7xl mx-auto mb-8 flex items-center justify-center md:justify-start p-1.5 rounded-xl bg-slate-200/80 dark:bg-slate-800/80 space-x-2">
+          <div className="max-w-7xl mx-auto mb-8 flex items-center justify-center md:justify-start w-fit p-1.5 rounded-xl bg-slate-200/80 dark:bg-slate-800/80 space-x-2">
             {tabs.map((tab) => (
               <TabButton
                 key={tab.key}
