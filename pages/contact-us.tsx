@@ -119,7 +119,7 @@ const ContactUs: React.FC = (props) => {
     <main className="min-h-screen  ">
       <SiteHeader />
       {/* Hero Section */}
-      <section className="relative h-[100vh] flex flex-col justify-center items-center text-center bg-gradient-to-r from-blue-700 to-purple-800 overflow-hidden caret-transparent">
+      <section className="relative h-[100vh] flex flex-col justify-center items-center text-center bg-gradient-to-r from-blue-600 to-purple-900 overflow-hidden caret-transparent">
         {/* Background Video */}
         <video
           autoPlay
@@ -128,7 +128,7 @@ const ContactUs: React.FC = (props) => {
           playsInline
           className="absolute inset-0 w-full h-full object-cover z-0"
         >
-          <source src="/bg-video.mp4" type="video/mp4" />
+          <source src="/contactus_bg-video.mp4" type="video/mp4" />
           {t("contactUs.hero.videoFallback")}
         </video>
         {/* Overlay for readability */}

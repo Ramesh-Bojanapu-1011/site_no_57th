@@ -175,7 +175,12 @@ const SiteHeader = () => {
           <li>
             <Link
               href="/about-us"
-              className="px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800"
+              className={`px-3 py-2 rounded-lg 
+                ${
+                  router.pathname === "/about-us"
+                    ? "text-blue-900 dark:text-blue-200 font-bold"
+                    : ""
+                }hover:bg-blue-100 dark:hover:bg-gray-800`}
             >
               {t("hedder.navbar.About_Us")}
             </Link>
@@ -198,7 +203,7 @@ const SiteHeader = () => {
                 <li>
                   <Link
                     href="/services"
-                    className="block px-4 border-b py-2 hover:bg-blue-50 dark:hover:bg-gray-700"
+                    className={`block px-4 border-b py-2 hover:bg-blue-50 dark:hover:bg-gray-700 `}
                   >
                     {t("hedder.navbar.All_Services")}
                   </Link>
@@ -219,7 +224,12 @@ const SiteHeader = () => {
           <li>
             <Link
               href="/blog"
-              className="px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800"
+              className={`px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800
+                ${
+                  router.pathname === "/blog"
+                    ? "text-blue-900 dark:text-blue-200 font-bold"
+                    : ""
+                }`}
             >
               {t("hedder.navbar.Blog")}
             </Link>
@@ -227,7 +237,12 @@ const SiteHeader = () => {
           <li>
             <Link
               href="/contact-us"
-              className="px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800"
+              className={`px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800
+                ${
+                  router.pathname === "/contact-us"
+                    ? "text-blue-900 dark:text-blue-200 font-bold"
+                    : ""
+                }`}
             >
               {t("hedder.navbar.Contact_Us")}
             </Link>
@@ -362,7 +377,12 @@ const SiteHeader = () => {
             <li>
               <Link
                 href="/about-us"
-                className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 "
+                className={`flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800
+                  ${
+                    router.pathname === "/about-us"
+                      ? "text-blue-900 dark:text-blue-200 font-bold"
+                      : ""
+                  } `}
               >
                 <span>{t("hedder.navbar.About_Us")}</span>
               </Link>
@@ -400,7 +420,12 @@ const SiteHeader = () => {
             <li>
               <Link
                 href="/blog"
-                className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 "
+                className={`flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800
+                  ${
+                    router.pathname === "/blog"
+                      ? "text-blue-900 dark:text-blue-200 font-bold"
+                      : ""
+                  } `}
               >
                 {t("hedder.navbar.Blog")}
               </Link>
@@ -408,7 +433,11 @@ const SiteHeader = () => {
             <li>
               <Link
                 href="/contact-us"
-                className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 "
+                className={`flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 ${
+                  router.pathname === "/contact-us"
+                    ? "text-blue-900 dark:text-blue-200 font-bold"
+                    : ""
+                } `}
               >
                 {t("hedder.navbar.Contact_Us")}
               </Link>

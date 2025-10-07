@@ -76,10 +76,10 @@ const Home1 = (props: Props) => {
             <source src="/home1-background-video.mp4" type="video/mp4" />
           </video>
           <div className="relative z-10 flex flex-col items-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg text-center">
+            <h1 className="text-4xl min-[769px]text-6xl font-bold mb-4 text-white drop-shadow-lg text-center">
               {t("home1.hero.title")}
             </h1>
-            <p className="text-lg md:text-2xl text-white/80 mb-8 max-w-2xl text-center">
+            <p className="text-lg min-[769px]text-2xl text-white/80 mb-8 max-w-2xl text-center">
               {t("home1.hero.subtitle")}
             </p>
           </div>
@@ -87,81 +87,23 @@ const Home1 = (props: Props) => {
 
         {/* Hero Feature Section - Reference Style */}
         <section className="py-16 px-4 bg-[#eaf2f7] dark:bg-gray-900">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+          <div className="max-w-7xl mx-auto flex flex-col min-[769px]:flex-row items-center gap-12">
             {/* Left: Overlapping Images & Stat Cards */}
-            <div className="flex-1 flex justify-center items-center relative min-h-[380px]">
+            <div className="flex-1 flex justify-center items-center relative ">
               {/* Main Image */}
-              <div className="relative z-10">
+              <div className="relative  w-full h-full  z-10">
                 <Image
                   src="https://i.pinimg.com/736x/f1/37/b1/f137b1914b1b9358e9ff9c0a76b852f3.jpg"
                   alt={t("home1.featureSection.mainImageAlt")}
                   width={540}
                   height={460}
-                  className="rounded-2xl shadow-2xl border-4 border-blue-200 dark:border-blue-800 object-cover"
+                  className="rounded-2xl shadow-2xl border-4 border-blue-200 min-h-full min-w-full  dark:border-blue-800 object-cover"
                 />
-              </div>
-              {/* Overlapping Circle Image */}
-              <div className="absolute left-0 bottom-0 z-20">
-                <Image
-                  src="/feature-team.png"
-                  alt={t("home1.featureSection.teamImageAlt")}
-                  width={180}
-                  height={180}
-                  className="rounded-full border-4 border-white shadow-xl object-cover"
-                />
-              </div>
-              {/* Stat Card 1 */}
-              <div className="absolute -top-8 -left-8 z-30">
-                <div className="flex items-center gap-3 bg-white rounded-2xl shadow-lg px-6 py-4 border-2 border-pink-200">
-                  <div className="bg-pink-100 p-3 rounded-full">
-                    <ShieldCheck className="w-7 h-7 text-pink-600" />
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-gray-900">
-                      {t("home1.featureSection.stat1.value")}
-                    </div>
-                    <div className="text-xs text-gray-500">
-                      {t("home1.featureSection.stat1.label")}
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* Stat Card 2 */}
-              <div className="absolute left-0 top-1/2 -translate-y-1/2 z-30">
-                <div className="flex items-center gap-3 bg-white rounded-2xl shadow-lg px-6 py-4 border-2 border-green-200">
-                  <div className="bg-green-100 p-3 rounded-full">
-                    <Shield className="w-7 h-7 text-green-600" />
-                  </div>
-                  <div>
-                    <div className="text-base font-bold text-gray-900">
-                      {t("home1.featureSection.stat2.value")}
-                    </div>
-                    <div className="text-xs text-gray-500">
-                      {t("home1.featureSection.stat2.label")}
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* Stat Card 3 */}
-              <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 z-30">
-                <div className="flex items-center gap-3 bg-white rounded-2xl shadow-lg px-6 py-4 border-2 border-purple-200">
-                  <div className="bg-purple-100 p-3 rounded-full">
-                    <Lightbulb className="w-7 h-7 text-purple-600" />
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-gray-900">
-                      {t("home1.featureSection.stat3.value")}
-                    </div>
-                    <div className="text-xs text-gray-500">
-                      {t("home1.featureSection.stat3.label")}
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
             {/* Right: Headline, Description, Features, CTA */}
             <div className="flex-1">
-              <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-gray-900 dark:text-white tracking-tight text-left">
+              <h2 className="text-3xl min-[769px]text-4xl font-extrabold mb-4 text-gray-900 dark:text-white tracking-tight text-left">
                 {t("home1.featureSection.headline")}
               </h2>
               <p className="text-base text-gray-700 dark:text-gray-300 mb-6 max-w-lg text-left">
@@ -195,7 +137,7 @@ const Home1 = (props: Props) => {
               </ul>
               <Link
                 href="/about-us"
-                className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all text-base"
+                className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all text-base"
               >
                 {t("home1.featureSection.cta")}
               </Link>
@@ -208,76 +150,87 @@ const Home1 = (props: Props) => {
           <h2 className="text-4xl font-extrabold mb-10 text-center text-blue-600 dark:text-blue-400 tracking-tight">
             {t("home1.servicesSection.title")}
           </h2>
-          <div className="grid md:grid-cols-3 gap-10  ">
-            {/* IT Consulting */}
-            <div className="relative bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-950 dark:to-purple-950 p-8 rounded-2xl shadow-lg hover:scale-105 transition group overflow-hidden">
-              <div className="absolute top-4 right-4 opacity-20 group-hover:opacity-40 transition">
-                <Rocket className="w-16 h-16 text-blue-500 dark:text-blue-400" />
+          <div className="grid min-[769px]grid-cols-3 gap-10  ">
+            {[
+              {
+                key: 0,
+                bg: "bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-950 dark:to-purple-950",
+                icon: <Rocket className="w-6 h-6" />,
+                iconBg: "bg-blue-600 dark:bg-blue-400",
+                titleColor: "text-blue-700 dark:text-blue-300",
+                title: t("home1.servicesSection.cards.0.title"),
+                items: [
+                  t("home1.servicesSection.cards.0.items.0"),
+                  t("home1.servicesSection.cards.0.items.1"),
+                  t("home1.servicesSection.cards.0.items.2"),
+                  t("home1.servicesSection.cards.0.items.3"),
+                ],
+              },
+              {
+                key: 1,
+                bg: "bg-gradient-to-br from-purple-100 to-blue-100 dark:from-purple-950 dark:to-blue-950",
+                icon: <Shield className="w-6 h-6" />,
+                iconBg: "bg-purple-600 dark:bg-purple-400",
+                titleColor: "text-purple-700 dark:text-purple-300",
+                title: t("home1.servicesSection.cards.1.title"),
+                items: [
+                  t("home1.servicesSection.cards.1.items.0"),
+                  t("home1.servicesSection.cards.1.items.1"),
+                  t("home1.servicesSection.cards.1.items.2"),
+                  t("home1.servicesSection.cards.1.items.3"),
+                ],
+              },
+              {
+                key: 2,
+                bg: "bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-950 dark:to-purple-950",
+                icon: <Cloud className="w-6 h-6" />,
+                iconBg: "bg-blue-600 dark:bg-blue-400",
+                titleColor: "text-blue-700 dark:text-blue-300",
+                title: t("home1.servicesSection.cards.2.title"),
+                items: [
+                  t("home1.servicesSection.cards.2.items.0"),
+                  t("home1.servicesSection.cards.2.items.1"),
+                  t("home1.servicesSection.cards.2.items.2"),
+                  t("home1.servicesSection.cards.2.items.3"),
+                ],
+              },
+            ].map((card) => (
+              <div
+                key={card.key}
+                className={`relative ${card.bg} p-8 rounded-2xl shadow-lg hover:scale-105 transition group overflow-hidden`}
+              >
+                <h3
+                  className={`text-2xl font-bold mb-3 text-blue-700 dark:text-blue-300 flex items-center gap-2`}
+                >
+                  <span
+                    className={`inline-block ${card.iconBg} text-white rounded-full p-2 mr-2`}
+                  >
+                    {card.icon}
+                  </span>
+                  {card.title}
+                </h3>
+                <ul className="list-disc ml-6 text-gray-700 dark:text-gray-300 space-y-2">
+                  {card.items.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+                </ul>
               </div>
-              <h3 className="text-2xl font-bold mb-3 text-blue-700 dark:text-blue-300 flex items-center gap-2">
-                <span className="inline-block bg-blue-600 dark:bg-blue-400 text-white rounded-full p-2 mr-2">
-                  <Rocket className="w-6 h-6" />
-                </span>
-                {t("home1.servicesSection.cards.0.title")}
-              </h3>
-              <ul className="list-disc ml-6 text-gray-700 dark:text-gray-300 space-y-2">
-                <li>{t("home1.servicesSection.cards.0.items.0")}</li>
-                <li>{t("home1.servicesSection.cards.0.items.1")}</li>
-                <li>{t("home1.servicesSection.cards.0.items.2")}</li>
-                <li>{t("home1.servicesSection.cards.0.items.3")}</li>
-              </ul>
-            </div>
-            {/* Cybersecurity */}
-            <div className="relative bg-gradient-to-br from-purple-100 to-blue-100 dark:from-purple-950 dark:to-blue-950 p-8 rounded-2xl shadow-lg hover:scale-105 transition group overflow-hidden">
-              <div className="absolute top-4 right-4 opacity-20 group-hover:opacity-40 transition">
-                <Shield className="w-16 h-16 text-purple-500 dark:text-purple-400" />
-              </div>
-              <h3 className="text-2xl font-bold mb-3 text-purple-700 dark:text-purple-300 flex items-center gap-2">
-                <span className="inline-block bg-purple-600 dark:bg-purple-400 text-white rounded-full p-2 mr-2">
-                  <Shield className="w-6 h-6" />
-                </span>
-                {t("home1.servicesSection.cards.1.title")}
-              </h3>
-              <ul className="list-disc ml-6 text-gray-700 dark:text-gray-300 space-y-2">
-                <li>{t("home1.servicesSection.cards.1.items.0")}</li>
-                <li>{t("home1.servicesSection.cards.1.items.1")}</li>
-                <li>{t("home1.servicesSection.cards.1.items.2")}</li>
-                <li>{t("home1.servicesSection.cards.1.items.3")}</li>
-              </ul>
-            </div>
-            {/* Cloud Services */}
-            <div className="relative bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-950 dark:to-purple-950 p-8 rounded-2xl shadow-lg hover:scale-105 transition group overflow-hidden">
-              <div className="absolute top-4 right-4 opacity-20 group-hover:opacity-40 transition">
-                <Cloud className="w-16 h-16 text-blue-500 dark:text-blue-400" />
-              </div>
-              <h3 className="text-2xl font-bold mb-3 text-blue-700 dark:text-blue-300 flex items-center gap-2">
-                <span className="inline-block bg-blue-600 dark:bg-blue-400 text-white rounded-full p-2 mr-2">
-                  <Cloud className="w-6 h-6" />
-                </span>
-                {t("home1.servicesSection.cards.2.title")}
-              </h3>
-              <ul className="list-disc ml-6 text-gray-700 dark:text-gray-300 space-y-2">
-                <li>{t("home1.servicesSection.cards.2.items.0")}</li>
-                <li>{t("home1.servicesSection.cards.2.items.1")}</li>
-                <li>{t("home1.servicesSection.cards.2.items.2")}</li>
-                <li>{t("home1.servicesSection.cards.2.items.3")}</li>
-              </ul>
-            </div>
+            ))}
           </div>
         </section>
 
         {/* Why Choose Us - Enhanced Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-purple-100 dark:from-blue-950 dark:to-purple-900">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+          <div className="max-w-7xl mx-auto flex flex-col min-[769px]flex-row items-center gap-12">
             {/* Left: Content */}
             <div className="flex-1">
-              <h2 className="text-4xl font-extrabold mb-6 md:mb-10 text-left md:text-left text-blue-700 dark:text-blue-300 tracking-tight">
+              <h2 className="text-4xl font-extrabold mb-6 min-[769px]mb-10 text-left min-[769px]text-left text-blue-700 dark:text-blue-300 tracking-tight">
                 {t("home1.whyChooseUsSection.title")}
               </h2>
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-xl text-left">
                 {t("home1.whyChooseUsSection.description")}
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2   mb-8">
                 <div className="flex items-center gap-3">
                   <div className="bg-blue-100 dark:bg-blue-800 p-3 rounded-full">
                     <ShieldCheck className="w-7 h-7 text-blue-600 dark:text-blue-300" />
@@ -295,7 +248,7 @@ const Home1 = (props: Props) => {
                   </span>
                 </div>
               </div>
-              <div className="flex flex-col sm:flex-row gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2   mb-8">
                 <div className="flex items-center gap-2">
                   <div className="bg-white dark:bg-gray-900 p-2 rounded-full border border-gray-200 dark:border-gray-700">
                     <Shield className="w-5 h-5 text-blue-600 dark:text-blue-300" />
@@ -317,7 +270,6 @@ const Home1 = (props: Props) => {
             {/* Right: Themed Image */}
             <div className="flex-1 flex justify-center items-center">
               <div className="relative">
-                <div className="absolute -top-8 -right-8 w-56 h-56 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full blur-2xl opacity-40"></div>
                 <Image
                   src="https://i.pinimg.com/1200x/10/03/24/10032454d5eafe518d7a38a897612130.jpg"
                   alt={t("home1.whyChooseUsSection.imageAlt")}
@@ -335,52 +287,65 @@ const Home1 = (props: Props) => {
           <h2 className="text-4xl font-extrabold mb-12 text-center text-blue-700 dark:text-blue-300 tracking-tight">
             {t("home1.insightsSection.title")}
           </h2>
-          <div className="grid md:grid-cols-3 gap-12">
-            {/* Card 1 */}
-            <div className="relative bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-xl hover:scale-105 transition group flex flex-col items-start">
-              <span className="absolute top-6 right-6 bg-blue-100 dark:bg-blue-800 text-blue-600 dark:text-blue-300 px-3 py-1 rounded-full text-xs font-bold">
-                {t("home1.insightsSection.cards.0.badge")}
-              </span>
-              <div className="mb-4">
-                <ShieldCheck className="w-10 h-10 text-blue-600 dark:text-blue-300" />
+          <div className="grid min-[769px]grid-cols-3 gap-12">
+            {[
+              {
+                key: 0,
+                badgeClass:
+                  "bg-blue-100 dark:bg-blue-800 text-blue-600 dark:text-blue-300",
+                icon: (
+                  <ShieldCheck className="w-10 h-10 text-blue-600 dark:text-blue-300" />
+                ),
+                titleClass: "text-blue-700 dark:text-blue-300",
+                badge: t("home1.insightsSection.cards.0.badge"),
+                title: t("home1.insightsSection.cards.0.title"),
+                excerpt: t("home1.insightsSection.cards.0.excerpt"),
+              },
+              {
+                key: 1,
+                badgeClass:
+                  "bg-purple-100 dark:bg-purple-800 text-purple-600 dark:text-purple-300",
+                icon: (
+                  <Cloud className="w-10 h-10 text-blue-600 dark:text-blue-300" />
+                ),
+                titleClass: "text-purple-700 dark:text-purple-300",
+                badge: t("home1.insightsSection.cards.1.badge"),
+                title: t("home1.insightsSection.cards.1.title"),
+                excerpt: t("home1.insightsSection.cards.1.excerpt"),
+              },
+              {
+                key: 2,
+                badgeClass:
+                  "bg-green-100 dark:bg-green-800 text-green-600 dark:text-green-300",
+                icon: (
+                  <Rocket className="w-10 h-10 text-blue-600 dark:text-blue-300" />
+                ),
+                titleClass: "text-green-700 dark:text-green-300",
+                badge: t("home1.insightsSection.cards.2.badge"),
+                title: t("home1.insightsSection.cards.2.title"),
+                excerpt: t("home1.insightsSection.cards.2.excerpt"),
+              },
+            ].map((card) => (
+              <div
+                key={card.key}
+                className="relative bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-xl hover:scale-105 transition group flex flex-col items-start"
+              >
+                <span
+                  className={`absolute top-6 right-6 px-3 py-1 rounded-full text-xs font-bold bg-blue-100 dark:bg-blue-800 text-blue-600 dark:text-blue-300`}
+                >
+                  {card.badge}
+                </span>
+                <div className="mb-4">{card.icon}</div>
+                <h3
+                  className={`text-2xl font-bold mb-2 text-blue-700 dark:text-blue-300`}
+                >
+                  {card.title}
+                </h3>
+                <p className="mb-4 text-gray-700 dark:text-gray-300">
+                  {card.excerpt}
+                </p>
               </div>
-              <h3 className="text-2xl font-bold mb-2 text-blue-700 dark:text-blue-300">
-                {t("home1.insightsSection.cards.0.title")}
-              </h3>
-              <p className="mb-4 text-gray-700 dark:text-gray-300">
-                {t("home1.insightsSection.cards.0.excerpt")}
-              </p>
-            </div>
-            {/* Card 2 */}
-            <div className="relative bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-xl hover:scale-105 transition group flex flex-col items-start">
-              <span className="absolute top-6 right-6 bg-purple-100 dark:bg-purple-800 text-purple-600 dark:text-purple-300 px-3 py-1 rounded-full text-xs font-bold">
-                {t("home1.insightsSection.cards.1.badge")}
-              </span>
-              <div className="mb-4">
-                <Cloud className="w-10 h-10 text-purple-600 dark:text-purple-300" />
-              </div>
-              <h3 className="text-2xl font-bold mb-2 text-purple-700 dark:text-purple-300">
-                {t("home1.insightsSection.cards.1.title")}
-              </h3>
-              <p className="mb-4 text-gray-700 dark:text-gray-300">
-                {t("home1.insightsSection.cards.1.excerpt")}
-              </p>
-            </div>
-            {/* Card 3 */}
-            <div className="relative bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-xl hover:scale-105 transition group flex flex-col items-start">
-              <span className="absolute top-6 right-6 bg-green-100 dark:bg-green-800 text-green-600 dark:text-green-300 px-3 py-1 rounded-full text-xs font-bold">
-                {t("home1.insightsSection.cards.2.badge")}
-              </span>
-              <div className="mb-4">
-                <Rocket className="w-10 h-10 text-green-600 dark:text-green-300" />
-              </div>
-              <h3 className="text-2xl font-bold mb-2 text-green-700 dark:text-green-300">
-                {t("home1.insightsSection.cards.2.title")}
-              </h3>
-              <p className="mb-4 text-gray-700 dark:text-gray-300">
-                {t("home1.insightsSection.cards.2.excerpt")}
-              </p>
-            </div>
+            ))}
           </div>
         </section>
 
@@ -393,7 +358,7 @@ const Home1 = (props: Props) => {
             {t("home1.partnersSection.description")}
           </p>
           <div className="relative">
-            <div className="flex overflow-x-auto no-scrollbar space-x-8 px-2 md:px-10 py-4 max-w-6xl mx-auto">
+            <div className="flex overflow-x-auto no-scrollbar space-x-8 px-2 min-[769px]px-10 py-4 max-w-6xl mx-auto">
               {/* Partner Card 1 */}
               <div className="min-w-[220px] flex-shrink-0 bg-white/70 dark:bg-gray-900/70 backdrop-blur-lg border border-purple-200 dark:border-purple-800 rounded-2xl shadow-lg hover:scale-105 transition-all duration-300 flex flex-col items-center py-8 px-6 group">
                 {/* Azure */}
@@ -563,7 +528,7 @@ const Home1 = (props: Props) => {
                     return [prevIndex, activeIndex, nextIndex].map(
                       (indexToShow, idx) => {
                         let cardClass =
-                          "flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-5 transition-all duration-300 ";
+                          "flex-shrink-0 w-full min-[769px]w-1/2 lg:w-1/3 p-5 transition-all duration-300 ";
                         if (indexToShow === activeIndex) {
                           cardClass += "opacity-100 scale-105 z-10";
                         } else {

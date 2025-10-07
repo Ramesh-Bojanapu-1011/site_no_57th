@@ -1,3 +1,4 @@
+import { Eye, EyeClosed } from "lucide-react";
 import Image from "next/image";
 import React, { useState } from "react";
 
@@ -117,32 +118,35 @@ const Auth = () => {
           className="mx-auto mb-4"
         />
         <div className="flex justify-center mb-8 gap-4">
-          <button
-            className={`px-6 py-2 rounded-t-lg font-bold text-lg transition ${
-              activeTab === "user"
-                ? "bg-blue-600 text-white"
-                : "bg-blue-100 dark:bg-gray-800 text-blue-700 dark:text-blue-300"
-            }`}
-            onClick={() => {
-              setActiveTab("user");
-              setMessage("");
-            }}
-          >
-            User
-          </button>
-          <button
-            className={`px-6 py-2 rounded-t-lg font-bold text-lg transition ${
-              activeTab === "admin"
-                ? "bg-blue-600 text-white"
-                : "bg-blue-100 dark:bg-gray-800 text-blue-700 dark:text-blue-300"
-            }`}
-            onClick={() => {
-              setActiveTab("admin");
-              setMessage("");
-            }}
-          >
-            Admin
-          </button>
+          {/* Tab Switcher */}
+          <div className="w-full bg-gray-200 dark:bg-gray-800 rounded-lg p-1 flex mb-6">
+            <button
+              onClick={() => {
+                setActiveTab("user");
+                setMessage("");
+              }}
+              className={`w-1/2 p-2 rounded-md text-sm font-semibold transition-colors ${
+                activeTab === "user"
+                  ? "bg-white dark:bg-gray-700 text-blue-600 shadow"
+                  : "text-gray-600 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700/50"
+              }`}
+            >
+              User
+            </button>
+            <button
+              onClick={() => {
+                setActiveTab("admin");
+                setMessage("");
+              }}
+              className={`w-1/2 p-2 rounded-md text-sm font-semibold transition-colors ${
+                activeTab === "admin"
+                  ? "bg-white dark:bg-gray-700 text-blue-600 shadow"
+                  : "text-gray-600 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700/50"
+              }`}
+            >
+              Admin
+            </button>
+          </div>
         </div>
 
         {activeTab === "user" && (
@@ -205,10 +209,10 @@ const Auth = () => {
                   <div className="w-full flex justify-end mt-1">
                     <button
                       type="button"
-                      className="text-sm text-blue-600 dark:text-blue-400 hover:underline focus:outline-none"
+                      className="text-sm  absolute       right-10 mb-0 inline-block  bottom-[195px]     text-blue-600 dark:text-blue-400 hover:underline focus:outline-none"
                       onClick={() => setShowRegisterPassword((prev) => !prev)}
                     >
-                      {showRegisterPassword ? "Hide Password" : "Show Password"}
+                      {showRegisterPassword ? <EyeClosed /> : <Eye />}
                     </button>
                   </div>
                   <button
@@ -262,15 +266,15 @@ const Auth = () => {
                       setUserLogin({ ...userLogin, password: e.target.value })
                     }
                   />
-                  <div className="w-full flex justify-end mt-1">
-                    <button
-                      type="button"
-                      className="text-sm text-blue-600 dark:text-blue-400 hover:underline focus:outline-none"
-                      onClick={() => setShowLoginPassword((prev) => !prev)}
-                    >
-                      {showLoginPassword ? "Hide Password" : "Show Password"}
-                    </button>
-                  </div>
+
+                  <button
+                    type="button"
+                    className="text-sm  absolute       right-10 mb-0 inline-block  bottom-[210px]     text-blue-600 dark:text-blue-400 hover:underline focus:outline-none"
+                    onClick={() => setShowLoginPassword((prev) => !prev)}
+                  >
+                    {showLoginPassword ? <EyeClosed /> : <Eye />}
+                  </button>
+
                   <span
                     className="text-sm w-full flex justify-end text-blue-600 dark:text-blue-400 hover:underline cursor-pointer"
                     onClick={() => {
@@ -334,10 +338,10 @@ const Auth = () => {
                   <div className="w-full flex justify-end mt-1">
                     <button
                       type="button"
-                      className="text-sm text-blue-600 dark:text-blue-400 hover:underline focus:outline-none"
+                      className="text-sm  absolute       right-10 mb-0 inline-block  bottom-[155px]     text-blue-600 dark:text-blue-400 hover:underline focus:outline-none"
                       onClick={() => setShowForgotPassword((prev) => !prev)}
                     >
-                      {showForgotPassword ? "Hide Password" : "Show Password"}
+                      {showForgotPassword ? <EyeClosed /> : <Eye />}
                     </button>
                   </div>
                   <button
@@ -391,10 +395,10 @@ const Auth = () => {
             <div className="w-full flex justify-end mt-1">
               <button
                 type="button"
-                className="text-sm text-blue-600 dark:text-blue-400 hover:underline focus:outline-none"
+                className="text-sm  absolute       right-10 mb-0 inline-block  bottom-[115px]     text-blue-600 dark:text-blue-400 hover:underline focus:outline-none"
                 onClick={() => setShowAdminPassword((prev) => !prev)}
               >
-                {showAdminPassword ? "Hide Password" : "Show Password"}
+                {showAdminPassword ? <EyeClosed /> : <Eye />}
               </button>
             </div>
             <button
