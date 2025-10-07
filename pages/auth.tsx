@@ -117,6 +117,7 @@ const Auth = () => {
           height={100}
           className="mx-auto mb-4"
         />
+
         <div className="flex justify-center mb-8 gap-4">
           {/* Tab Switcher */}
           <div className="w-full bg-gray-200 dark:bg-gray-800 rounded-lg p-1 flex mb-6">
@@ -158,6 +159,9 @@ const Auth = () => {
           <div>
             {userAction === "register" && (
               <>
+                <div className="mb-6 text-gray-700 dark:text-gray-300 text-base font-medium">
+                  Join us today! Fill in the details to create your account.
+                </div>
                 <form className="space-y-4" onSubmit={handleRegister}>
                   <input
                     type="text"
@@ -250,6 +254,9 @@ const Auth = () => {
 
             {userAction === "login" && (
               <>
+                <div className="mb-6 text-gray-700 dark:text-gray-300 text-base font-medium">
+                  Welcome back! Please login to continue.
+                </div>
                 <form className="space-y-4" onSubmit={handleUserLogin}>
                   <input
                     type="email"

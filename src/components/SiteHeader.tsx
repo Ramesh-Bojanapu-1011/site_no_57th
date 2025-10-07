@@ -107,7 +107,7 @@ const SiteHeader = () => {
     if (typeof window !== "undefined") {
       const users = JSON.parse(localStorage.getItem("All_Users") || "[]");
       const userLogin = JSON.parse(
-        localStorage.getItem("Current_User") || "null"
+        localStorage.getItem("Current_User") || "null",
       );
       const user = users.find((u: any) => u.email === userLogin?.email);
       if (user) {
