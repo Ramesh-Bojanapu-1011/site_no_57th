@@ -107,7 +107,7 @@ const SiteHeader = () => {
     if (typeof window !== "undefined") {
       const users = JSON.parse(localStorage.getItem("All_Users") || "[]");
       const userLogin = JSON.parse(
-        localStorage.getItem("Current_User") || "null",
+        localStorage.getItem("Current_User") || "null"
       );
       const user = users.find((u: any) => u.email === userLogin?.email);
       if (user) {
@@ -291,14 +291,20 @@ const SiteHeader = () => {
             >
               {currentUser ? (
                 <>
-                  {typeof currentUser.firstName === "string" &&
-                  currentUser.firstName.length > 0
-                    ? currentUser.firstName[0]
-                    : ""}
-                  {typeof currentUser.lastName === "string" &&
-                  currentUser.lastName.length > 0
-                    ? currentUser.lastName[0]
-                    : ""}
+                  {currentUser.role === "admin" ? (
+                    <>AD</>
+                  ) : (
+                    <>
+                      {typeof currentUser.firstName === "string" &&
+                      currentUser.firstName.length > 0
+                        ? currentUser.firstName[0]
+                        : ""}
+                      {typeof currentUser.lastName === "string" &&
+                      currentUser.lastName.length > 0
+                        ? currentUser.lastName[0]
+                        : ""}
+                    </>
+                  )}
                 </>
               ) : (
                 <>AD</>
@@ -479,14 +485,20 @@ const SiteHeader = () => {
                 >
                   {currentUser ? (
                     <>
-                      {typeof currentUser.firstName === "string" &&
-                      currentUser.firstName.length > 0
-                        ? currentUser.firstName[0]
-                        : ""}
-                      {typeof currentUser.lastName === "string" &&
-                      currentUser.lastName.length > 0
-                        ? currentUser.lastName[0]
-                        : ""}
+                      {currentUser.role === "admin" ? (
+                        <>AD</>
+                      ) : (
+                        <>
+                          {typeof currentUser.firstName === "string" &&
+                          currentUser.firstName.length > 0
+                            ? currentUser.firstName[0]
+                            : ""}
+                          {typeof currentUser.lastName === "string" &&
+                          currentUser.lastName.length > 0
+                            ? currentUser.lastName[0]
+                            : ""}
+                        </>
+                      )}
                     </>
                   ) : (
                     <>AD</>
@@ -494,7 +506,7 @@ const SiteHeader = () => {
                   <ChevronDown size={16} />
                 </button>
                 {profileOpen && (
-                  <ul className="absolute right-0 mt-2 w-32 bg-white dark:bg-gray-800 shadow-xl rounded-lg py-2 border border-blue-100 dark:border-gray-700 z-10">
+                  <ul className="absolute text-nowrap right-0 mt-2   bg-white dark:bg-gray-800 shadow-xl rounded-lg py-2 border border-blue-100 dark:border-gray-700 z-10">
                     {currentUser &&
                       currentUser.role === "admin" &&
                       window.location.pathname != "/admin-dashboard" && (
@@ -509,7 +521,7 @@ const SiteHeader = () => {
                       )}
                     <li>
                       <button
-                        className="flex items-center gap-2 py-1 w-full rounded hover:bg-blue-100 dark:hover:bg-gray-700  font-semibold text-red-600 dark:text-red-400"
+                        className="flex items-center gap-2 px-4 py-2 hover:bg-blue-50 dark:hover:bg-gray-700 w-full"
                         onClick={() => handleLogout()}
                       >
                         <LogOut size={16} /> Logout

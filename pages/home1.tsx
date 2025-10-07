@@ -76,10 +76,10 @@ const Home1 = (props: Props) => {
             <source src="/home1-background-video.mp4" type="video/mp4" />
           </video>
           <div className="relative z-10 flex flex-col items-center">
-            <h1 className="text-4xl min-[769px]text-6xl font-bold mb-4 text-white drop-shadow-lg text-center">
+            <h1 className="text-4xl min-[769px]:text-6xl font-bold mb-4 text-white drop-shadow-lg text-center">
               {t("home1.hero.title")}
             </h1>
-            <p className="text-lg min-[769px]text-2xl text-white/80 mb-8 max-w-2xl text-center">
+            <p className="text-lg min-[769px]:text-2xl text-white/80 mb-8 max-w-2xl text-center">
               {t("home1.hero.subtitle")}
             </p>
           </div>
@@ -103,7 +103,7 @@ const Home1 = (props: Props) => {
             </div>
             {/* Right: Headline, Description, Features, CTA */}
             <div className="flex-1">
-              <h2 className="text-3xl min-[769px]text-4xl font-extrabold mb-4 text-gray-900 dark:text-white tracking-tight text-left">
+              <h2 className="text-3xl min-[769px]:text-4xl font-extrabold mb-4 text-gray-900 dark:text-white tracking-tight text-left">
                 {t("home1.featureSection.headline")}
               </h2>
               <p className="text-base text-gray-700 dark:text-gray-300 mb-6 max-w-lg text-left">
@@ -150,7 +150,7 @@ const Home1 = (props: Props) => {
           <h2 className="text-4xl font-extrabold mb-10 text-center text-blue-600 dark:text-blue-400 tracking-tight">
             {t("home1.servicesSection.title")}
           </h2>
-          <div className="grid min-[769px]grid-cols-3 gap-10  ">
+          <div className="grid min-[769px]:grid-cols-3 gap-10  ">
             {[
               {
                 key: 0,
@@ -221,10 +221,10 @@ const Home1 = (props: Props) => {
 
         {/* Why Choose Us - Enhanced Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-purple-100 dark:from-blue-950 dark:to-purple-900">
-          <div className="max-w-7xl mx-auto flex flex-col min-[769px]flex-row items-center gap-12">
+          <div className="max-w-7xl mx-auto flex flex-col min-[769px]:flex-row items-center gap-12">
             {/* Left: Content */}
             <div className="flex-1">
-              <h2 className="text-4xl font-extrabold mb-6 min-[769px]mb-10 text-left min-[769px]text-left text-blue-700 dark:text-blue-300 tracking-tight">
+              <h2 className="text-4xl font-extrabold mb-6 min-[769px]:mb-10 text-left min-[769px]:text-left text-blue-700 dark:text-blue-300 tracking-tight">
                 {t("home1.whyChooseUsSection.title")}
               </h2>
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-xl text-left">
@@ -287,7 +287,7 @@ const Home1 = (props: Props) => {
           <h2 className="text-4xl font-extrabold mb-12 text-center text-blue-700 dark:text-blue-300 tracking-tight">
             {t("home1.insightsSection.title")}
           </h2>
-          <div className="grid min-[769px]grid-cols-3 gap-12">
+          <div className="grid min-[769px]:grid-cols-3 gap-12">
             {[
               {
                 key: 0,
@@ -358,7 +358,7 @@ const Home1 = (props: Props) => {
             {t("home1.partnersSection.description")}
           </p>
           <div className="relative">
-            <div className="flex overflow-x-auto no-scrollbar space-x-8 px-2 min-[769px]px-10 py-4 max-w-6xl mx-auto">
+            <div className="flex overflow-x-auto no-scrollbar space-x-8 px-2 min-[769px]:px-10 py-4 max-w-6xl mx-auto">
               {/* Partner Card 1 */}
               <div className="min-w-[220px] flex-shrink-0 bg-white/70 dark:bg-gray-900/70 backdrop-blur-lg border border-purple-200 dark:border-purple-800 rounded-2xl shadow-lg hover:scale-105 transition-all duration-300 flex flex-col items-center py-8 px-6 group">
                 {/* Azure */}
@@ -528,7 +528,7 @@ const Home1 = (props: Props) => {
                     return [prevIndex, activeIndex, nextIndex].map(
                       (indexToShow, idx) => {
                         let cardClass =
-                          "flex-shrink-0 w-full min-[769px]w-1/2 lg:w-1/3 p-5 transition-all duration-300 ";
+                          "flex-shrink-0 w-full min-[769px]:w-1/2 lg:w-1/3 p-5 transition-all duration-300 ";
                         if (indexToShow === activeIndex) {
                           cardClass += "opacity-100 scale-105 z-10";
                         } else {

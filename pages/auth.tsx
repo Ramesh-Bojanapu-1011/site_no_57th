@@ -148,6 +148,11 @@ const Auth = () => {
             </button>
           </div>
         </div>
+        {message && (
+          <div className="mt-6 text-base font-semibold text-blue-700 dark:text-blue-300">
+            {message}
+          </div>
+        )}
 
         {activeTab === "user" && (
           <div>
@@ -408,12 +413,6 @@ const Auth = () => {
               Admin Login
             </button>
           </form>
-        )}
-
-        {message && (
-          <div className="mt-6 text-base font-semibold text-blue-700 dark:text-blue-300">
-            {message}
-          </div>
         )}
       </div>
     </div>
