@@ -189,7 +189,7 @@ const ChartCard = ({ title, children }: any) => (
 // --- Stats Tab Content ---
 const StatsTabContent = ({ stats, t }: any) => (
   <section className="w-full max-w-7xl animate-fade-in">
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
       {stats.map((stat: any) => (
         <StatCard key={stat.key} stat={stat} t={t} />
       ))}

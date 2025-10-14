@@ -379,8 +379,9 @@ const home2 = (props: Props) => {
         <title>{t("home2.title")}</title>
         <meta name="description" content={t("home2.metaDescription")} />
       </Head>
-      <main className="caret-transparent">
-        <SiteHeader />
+      <SiteHeader />
+      <main className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white h-screen caret-transparent overflow-auto">
+        
         {/* Hero Section - Software Innovation & Development */}
         <section className="relative flex flex-col min-[769px]:flex-row items-center justify-between bg-gradient-to-r from-blue-500 to-purple-600 dark:from-blue-900 dark:to-purple-900 text-white px-8 py-20 overflow-hidden">
           {/* Background Video */}
@@ -396,9 +397,7 @@ const home2 = (props: Props) => {
           </video>
           {/* Left: Headline, Description, CTA */}
           <div className="flex-1 z-10 max-w-xl relative">
-            <span className="  font-semibold tracking-wide mb-4 block text-sm">
-              {t("home2.heroSubtitle")}
-            </span>
+             
             <h1 className="text-4xl min-[769px]:text-5xl font-extrabold leading-tight mb-6 text-white dark:text-white">
               {t("home2.heroTitle")}
             </h1>
@@ -437,8 +436,8 @@ const home2 = (props: Props) => {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  data-aos="zoom-in"
-                  data-aos-once="false"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
                   className="relative rounded-3xl p-8 flex flex-col items-center text-center border border-gray-200 dark:border-gray-700 shadow-xl bg-gradient-to-br from-white/80 to-blue-50/80 dark:from-gray-900/80 dark:to-blue-950/60 backdrop-blur-md hover:scale-105 transition-transform duration-300"
                   style={{ boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.15)" }}
                 >

@@ -16,8 +16,8 @@ const SecurityAwarenessTraining = () => {
           content={t("securityAwarenessTraining.metaDescription")}
         />
       </Head>
-      <main className="bg-[#f7fafd] dark:bg-[#101624] text-gray-900 dark:text-white caret-transparent">
-        <SiteHeader />
+      <SiteHeader />
+      <main className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white h-screen caret-transparent overflow-auto">
         {/* 1. Hero Section */}
         <section className="relative h-screen flex flex-col justify-center items-center bg-gradient-to-r from-blue-500 to-purple-600 dark:from-blue-900 dark:to-purple-900 text-white text-center overflow-hidden">
           <video

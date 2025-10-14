@@ -23,8 +23,8 @@ const blog = (props: Props) => {
         <title>{t("blog.title")}</title>
         <meta name="description" content={t("blog.metaDescription")} />
       </Head>
-      <main className="bg-[#101624] text-white min-h-screen caret-transparent">
-        <SiteHeader />
+      <SiteHeader />
+      <main className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white h-screen caret-transparent overflow-auto">
         {/* Hero Section */}
         <section className="relative h-[100vh] flex flex-col justify-center items-center text-center bg-gradient-to-r from-blue-700 to-purple-800 overflow-hidden">
           {/* Background Video */}

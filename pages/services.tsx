@@ -14,6 +14,7 @@ const services = (props: Props) => {
     {
       nameKey: "services.list.0.name",
       descKey: "services.list.0.desc",
+      link: "/network-security",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -32,6 +33,7 @@ const services = (props: Props) => {
     {
       nameKey: "services.list.1.name",
       descKey: "services.list.1.desc",
+      link: "/cloud-backup-and-recovery",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -51,6 +53,7 @@ const services = (props: Props) => {
     {
       nameKey: "services.list.2.name",
       descKey: "services.list.2.desc",
+      link: "/it-infrastructure",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -99,6 +102,7 @@ const services = (props: Props) => {
     {
       nameKey: "services.list.3.name",
       descKey: "services.list.3.desc",
+      link: "/endpoint-protection",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -160,6 +164,7 @@ const services = (props: Props) => {
     {
       nameKey: "services.list.4.name",
       descKey: "services.list.4.desc",
+      link: "/security-awareness-training",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -183,6 +188,7 @@ const services = (props: Props) => {
     },
     {
       nameKey: "services.list.5.name",
+      link: "/vulnerability-assessment",
       descKey: "services.list.5.desc",
       icon: (
         <svg
@@ -208,8 +214,8 @@ const services = (props: Props) => {
         <title>{t("services.title")}</title>
         <meta name="description" content={t("services.metaDescription")} />
       </Head>
-      <main className="bg-[#f7fafd] dark:bg-[#101624] text-gray-900 dark:text-white caret-transparent">
-        <SiteHeader />
+      <SiteHeader />
+      <main className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white h-screen caret-transparent overflow-auto">
         {/* Hero Section */}
         <section className="relative h-[100vh] flex flex-col justify-center items-center text-center bg-gradient-to-r from-blue-500 to-purple-600 dark:from-blue-900 dark:to-purple-900 overflow-hidden">
           <video
@@ -255,10 +261,14 @@ const services = (props: Props) => {
                       {t(service.descKey)}
                     </p>
                     <Link
-                      href={`/${t(service.nameKey).replace(/\s+/g, "-").toLowerCase()}`}
-                      className="inline-block mt-2 text-sm text-purple-600 dark:text-purple-300 font-semibold hover:underline"
+                      href={`/${service.link}`}
+                      className="inline-flex mt-3 items-center gap-2 px-4 py-2 bg-purple-600 dark:bg-purple-500 text-white dark:text-white font-semibold rounded-full shadow hover:bg-purple-700 dark:hover:bg-purple-600 transition focus:outline-none focus:ring-2 focus:ring-purple-300"
+                      aria-label={`${t("services.knowMore")} ${t(
+                        service.nameKey
+                      )}`}
                     >
-                      {t("services.knowMore")} &rarr;
+                      <span>{t("services.knowMore")}</span>
+                      <span aria-hidden>→</span>
                     </Link>
                   </div>
                 </div>
